@@ -10,7 +10,8 @@ There is a number of possible solutions for maintaining cloud interoperability:
 * Run all workloads in containers leveraging [Kubernetes](https://kubernetes.io/)
 * Rely on a 3rd party Platform-as-a-Service e.g. [Pivotal Cloud Foundry](https://pivotal.io/platform)
 * Introduce an adapter pattern into your software to abstract business logic from cloud specific code
-The purpose of this course is take to analyze the pros and cons analysis of the different approaches  
+
+The purpose of this course is to analyze the pros and cons of the different approaches  
 And to experience the different approaches with pragmatic hands-on labs and group discussions  
 
 ## Audience
