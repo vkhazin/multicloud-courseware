@@ -1,4 +1,4 @@
-# Multi-Cloud or Inter-Cloud Courseware
+# Multi-Cloud Workloads Courseware
 
 ## Overview
 
@@ -20,4 +20,4 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Software developers writing code that needs to run on different or multiple cloud providers
 * DevOps engineers that will be implementing inter-cloud ci/cd
 
-## Duration: 2 days
+### Duration: 2 days
