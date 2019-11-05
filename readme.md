@@ -21,3 +21,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * DevOps engineers that will be implementing inter-cloud ci/cd
 
 ### Duration: 2 days
+
+### Notes:
+
+* Microsoft Azure Arc
