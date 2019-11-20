@@ -1,0 +1,23 @@
+{
+  "name": "multicloud-courseware",
+  "version": "1.0.0",
+  "description": "Multi-cloud or Inter-cloud Workloads",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkhazin/multicloud-courseware.git"
+  },
+  "author": "Vlad Khazin (vladimir.khazin@icssolutions.ca)",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/vkhazin/multicloud-courseware/issues"
+  },
+  "homepage": "https://github.com/vkhazin/multicloud-courseware#readme"
+}
