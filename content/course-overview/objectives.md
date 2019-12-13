@@ -1,7 +1,7 @@
 # Objectives
 
 * Review the common design patterns deployment models: IaaS, PaaS, KaaS, DBaaS, and Serverless
-* Highlight best design practices for the cloud-native applications: \[the twelve factors app\][https://12factor.net/](https://12factor.net/)
+* Highlight best design practices for the cloud-native applications: [the twelve factors app](https://12factor.net/)
 * Automate deployment of IaaS to a couple of public cloud providers: Aws, GCP or Azure leveraging [terraform](https://www.terraform.io/)
 * Deploy an end-point application to a virtual machine leveraging an automated deployment process
 * Contrast a cloud-specific logging and monitoring facilities to a centralized logging/monitoring services leveraging 3rd party service
