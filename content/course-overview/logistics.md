@@ -1,4 +1,4 @@
-# Logisitic
+# Logistics
 
 * Start: \_\_\_
 * A couple of morning breaks for 10 min each
@@ -10,7 +10,7 @@
 * Exercises are mini-hackathons, step-by-step instructions are provided... sometimes
 * Questions, open discussions, and comments are encouraged
 * Keep it professional and polite
-* Let's have fun
+* Must have fun!
 
 
 
