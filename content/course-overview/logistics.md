@@ -1,9 +1,9 @@
 # Logistics
 
 * Start: \_\_\_
-* A couple of morning breaks for 10 min each
+* A couple of morning breaks for 10 min each, no fixed timing
 * Lunch break 12:00 to 13:00
-* A couple of afternoon breaks for 10 min each
+* A couple of afternoon breaks for 10 min each, no fixed timing
 * Finish: \_\_\_
 * Materials are available on-line during and after the course
 * Materials contain external links - please follow them as we paddle along
