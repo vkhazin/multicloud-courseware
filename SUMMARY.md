@@ -16,6 +16,7 @@
 * [Introduction](/./content/course-intro/intro.md)
 * [Cloud Providers](/./content/course-intro/cloud-providers.md)
 * [AWS Revenue Growth](/./content/course-intro/aws-revenue-growth.md)
+* [Benefits](/./content/course-intro/benefits.md)
 
 
 
