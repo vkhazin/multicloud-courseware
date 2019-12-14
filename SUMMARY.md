@@ -15,7 +15,7 @@
 
 * [Introduction](/./content/course-intro/intro.md)
 * [Cloud Providers](/./content/course-intro/cloud-providers.md)
-* [Benefits](https://legacy.gitbook.com/book/vkhazin/multicloud-courseware/edit#)
+* [Benefits](/./content/course-intro/benefits.md)
 * [Service Models](/./content/course-intro/service-models.md)
 * [Why Multi-Cloud](/./content/course-intro/why-multicloud.md)
 
