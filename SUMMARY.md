@@ -14,10 +14,13 @@
 ## Course Introduction
 
 * [Introduction](/./content/course-intro/intro.md)
+* [Concepts](/./content/course-intro/concepts.md)
 * [Cloud Providers](/./content/course-intro/cloud-providers.md)
 * [Benefits](/./content/course-intro/benefits.md)
+* [Why Multi-Cloud](https://legacy.gitbook.com/book/vkhazin/multicloud-courseware/edit#)
+* [Identity & Permissions](/./content/course-intro/identity-permissions.md)
+* Lab: Cloud Console
 * [Service Models](/./content/course-intro/service-models.md)
-* [Why Multi-Cloud](/./content/course-intro/why-multicloud.md)
 
 
 
