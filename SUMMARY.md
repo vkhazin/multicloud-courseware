@@ -19,7 +19,7 @@
 * [Benefits](/./content/course-intro/benefits.md)
 * [Why Multi-Cloud](https://legacy.gitbook.com/book/vkhazin/multicloud-courseware/edit#)
 * [Identity & Permissions](/./content/course-intro/identity-permissions.md)
-* Lab: Cloud Console
+* [Lab: Cloud Console](/./content/course-intro/lab-console.md)
 * [Service Models](/./content/course-intro/service-models.md)
 
 
