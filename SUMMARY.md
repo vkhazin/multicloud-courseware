@@ -21,6 +21,7 @@
 * [Identity & Permissions](/./content/course-intro/identity-permissions.md)
 * [Lab: Cloud Console](/./content/course-intro/lab-console.md)
 * [Multi-Cloud Identity](/./content/course-intro/multicloud-identity.md)
+* Lab: Multi-Cloud SSO
 * [Service Models](/./content/course-intro/service-models.md)
 
 
