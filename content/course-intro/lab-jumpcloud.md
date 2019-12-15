@@ -49,9 +49,10 @@
    12. Select `User Groups` and select the group name created in the previous steps
    13. Select `save user`
 8. Incognito Browser Tab/Window
-   1. Proceed to https://console.jumpcloud.com
+   1. Proceed to [https://console.jumpcloud.com](https://console.jumpcloud.com)
    2. Sign-in with credentials for the new user
-   3. Proceed to Aws application
+   3. Proceed to Aws console
+   4. You should see Aws console as if you have logged in with IAM credentials
 9. Troubleshooting
    1. SAML attributes are finicky: name of the provider, name of the role, and Url must match between the two parties exactly to the case-spelling
    2. Watch out for extra spaces in values
