@@ -1,6 +1,6 @@
 # Getting Started
 
-* Course materials can be accessed [online1](https://vkhazin.gitbooks.io/multicloud-courseware) or [online2]()
+* Course materials can be accessed [online1](https://vkhazin.gitbooks.io/multicloud-courseware) or [online2](), and downloaded from [gitbook](https://legacy.gitbook.com/download/pdf/book/vkhazin/multicloud-courseware)
 * If you did not have a chance to fill-out [pre-course survey](https://www.surveymonkey.com/r/SRBF5DF), please do so now
 * Take a moment to register at GitHub.com - you can clone the course repo and make your own comments throughout the course
 * Select [repository url](https://github.com/vkhazin/multicloud-courseware.git) and then 'fork' link to create a repo for yourself 
