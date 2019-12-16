@@ -21,8 +21,11 @@
 * [Identity & Permissions](/./content/course-intro/identity-permissions.md)
 * [Lab: Cloud Console](/./content/course-intro/lab-console.md)
 * [Multi-Cloud Identity](/./content/course-intro/multicloud-identity.md)
-* Lab: Multi-Cloud SSO
+* [Lab: Multi-Cloud SSO](/./content/course-intro/lab-jumpcloud.md)
 * [Service Models](/./content/course-intro/service-models.md)
+* [Distributed Workloads](/./content/course-intro/distributed-workloads.md)
+* [12 Factor App](/./content/course-intro/12-factor-app.md)
+* [Micro-Services](/./content/course-intro/micro-services.md)
 
 
 
