@@ -26,6 +26,7 @@
 * [Distributed Workloads](/./content/course-intro/distributed-workloads.md)
 * [12 Factor App](/./content/course-intro/12-factor-app.md)
 * [Micro-Services](/./content/course-intro/micro-services.md)
+* [Summary](/./content/course-intro/summary.md)
 
 
 
