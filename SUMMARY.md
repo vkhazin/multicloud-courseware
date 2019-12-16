@@ -17,7 +17,7 @@
 * [Concepts](/./content/course-intro/concepts.md)
 * [Cloud Providers](/./content/course-intro/cloud-providers.md)
 * [Benefits](/./content/course-intro/benefits.md)
-* [Why Multi-Cloud](https://legacy.gitbook.com/book/vkhazin/multicloud-courseware/edit#)
+* [Why Multi-Cloud](/./content/course-intro/why-multicloud.md)
 * [Identity & Permissions](/./content/course-intro/identity-permissions.md)
 * [Lab: Cloud Console](/./content/course-intro/lab-console.md)
 * [Multi-Cloud Identity](/./content/course-intro/multicloud-identity.md)
