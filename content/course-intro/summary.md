@@ -1,12 +1,11 @@
 # Chapter Summary
 
-* The motivation for cloud adoption
-* Concepts and basic setup
-* Authentication options
-* Different Service Models: from IaaS to SaaS
-* Fallacies of distributed computing
-* Cloud-native architecture 
-* Micro-services principals
+* What is the motivation behind cloud adoption?
+* What are the authentication options to consider?
+* What are the different Service Models available on the cloud?
+* What are the fallacies of distributed computing and why it is important?
+* What are the principals of cloud-native architecture?
+* What are micro-services principals?
 
 
 
