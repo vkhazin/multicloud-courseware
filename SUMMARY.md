@@ -28,5 +28,11 @@
 * [Micro-Services](/./content/course-intro/micro-services.md)
 * [Summary](/./content/course-intro/summary.md)
 
+## Infrastructure as Code
+
+* [Introduction](/./content/iac/intro.md)
+* [Manual Infrastructure](/./content/iac/manual-infra.md)
+* [Cloud Infrastructure](/./content/iac/intro.md)
+* 
 
 
