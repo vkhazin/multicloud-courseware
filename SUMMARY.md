@@ -33,6 +33,7 @@
 * [Introduction](/./content/iac/intro.md)
 * [Manual Infrastructure](/./content/iac/manual-infra.md)
 * [Cloud Infrastructure](/./content/iac/intro.md)
+* [Immutable Infrastructure](/./content/iac/immutable-infra.md)
 
 
 

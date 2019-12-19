@@ -8,7 +8,7 @@
 * Manual configuration of VM, Load-Balancer and Firewall by different individuals/teams
 * Manual configuration by the developer on each provisioned VM
 * An error-prone, hardly reliable or reproducible process
-* Scalable to dozens, maybe, hundreds of instances
+* Scalable to dozens, maybe, hundreds of instances and a low churn
 
 
 
