@@ -5,7 +5,7 @@
 * Cloud-specific Provider is responsible for understanding API interactions and exposing resources
 * Configuration files describe the components needed, for an application or fir ab entire data centre
 * Execution plan describes what to do to reach the desired state
-* Partial sample templates for a VM for the different cloud providers:
+* Sample VM template for the different cloud providers:
 
 ```
 # Aws
