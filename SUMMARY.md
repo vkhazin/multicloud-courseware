@@ -35,7 +35,8 @@
 * [Cloud Infrastructure](/./content/iac/intro.md)
 * [Immutable Infrastructure](/./content/iac/immutable-infra.md)
 * [Tools](/./content/iac/tools.md)
-* Terraform Introduction
+* [Terraform Introduction](/./content/iac/terraform-intro.md)
+* [Terraform Provider](/./content/iac/terraform-provider.md)
 
 
 
