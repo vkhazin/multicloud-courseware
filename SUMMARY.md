@@ -39,6 +39,7 @@
 * [Terraform Provider](/./content/iac/terraform-provider.md)
 * [Lab: Terraform](/content/iac/lab-terraform.md)
 * [Application Deployment](/./content/iac/app-deployment.md)
+* [Summary](/./content/iac/summary.md)
 
 
 
