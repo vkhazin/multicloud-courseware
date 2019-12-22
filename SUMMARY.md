@@ -41,5 +41,9 @@
 * [Application Deployment](/./content/iac/app-deployment.md)
 * [Summary](/./content/iac/summary.md)
 
+## Monitoring
+
+* [Introduction](/./content/monitoring/intro.md)
+
 
 

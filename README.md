@@ -64,7 +64,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 
 ### Logging and Monitoring
 
-* Cloud Provider specific logging and monitoring
+* Cloud provider-specific logging and monitoring
 * The motivation for a 3rd Party Service Provider
 * Selecting a service provider
 * Integrating IaaS with a service provider
