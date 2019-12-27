@@ -301,6 +301,14 @@ unzip -o terraform.zip -d ./bin &&
 rm -f terraform.zip
 ```
 
+Create a new file: `variables.tf` with the following content:
+
+```
+variable "project_id" {
+  default = "gcp-terraform"
+}
+```
+
 Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
 
 ```
@@ -308,6 +316,29 @@ provider "google" {
   project = var.project_id
 }
 ```
+
+Create a new file `./gcp-terraform/network.tf`:
+
+```
+resource "google_compute_network" "network" {
+  name                    = "network"
+  auto_create_subnetworks = false
+  routing_mode            = "GLOBAL"
+  project                 = var.project_id
+}
+
+resource "google_compute_subnetwork" "subnetwork" {
+  name          = "subnetwork"
+  ip_cidr_range = "10.0.0.0/24"
+  region        = var.gcp_region
+  network       = google_compute_network.network.name
+  project       = var.project_id
+}
+```
+
+Create a new file `./gcp-terraform/security.tf`:
+
+
 
 
 
