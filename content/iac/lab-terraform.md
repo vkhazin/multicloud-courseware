@@ -2,15 +2,46 @@
 
 ## AWS
 
+Open a web browser to https://console.aws.amazon.com
+
+From the services select `Cloud9`, please note you may need to select a region where Cloud9 is available
+
+Create a new environment with any name, micro or small instance type and Amazon Linux for the platform
+
+To install terraform run using terminal panel:
+
+```
+mkdir ./aws-terraform && 
+cd ./aws-terraform/ && 
+mkdir ./bin && 
+wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
+unzip -o terraform.zip -d ./bin 
+&& rm -f terraform.zip       
+```
+
+Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
+
+```
+variable "aws_region" {
+  defaul = "us-east-1"
+}
+```
+
+Define the [provider](https://www.terraform.io/docs/providers/index.html) in the new file `./aws-terraform/provider.tf`:
+
+
+
+
+
 ## Azure
 
-1. Open [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
 2. Select `bash` shell
 3. Select `Open editor`
 4. In the terminal type `az account list` to confirm a proper authentication
 5. Create a new folder `azure-terraform` to place the files
 6. Select the `refresh` icon in case folder structure does not reflect the new folder/file
-7. To install terraform:
+7. To install terraform run using the terminal panel:
 8. ```
    cd ./azure-terraform/ &&
    mkdir ./bin &&
