@@ -142,7 +142,7 @@
     ...
     Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
     ```
-21. Open [Aws Portal](https://console.aws.amazon.com) and explore the resources created
+21. Open [Aws Console](https://console.aws.amazon.com) and explore the resources created
 22. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
 23. Expected output:
 24. ```
@@ -301,6 +301,8 @@ unzip -o terraform.zip -d ./bin &&
 rm -f terraform.zip
 ```
 
+Generate new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
+
 Create a new file: `variables.tf` with the following content:
 
 ```
@@ -337,6 +339,79 @@ resource "google_compute_subnetwork" "subnetwork" {
 ```
 
 Create a new file `./gcp-terraform/security.tf`:
+
+```
+resource "google_compute_firewall" "allow-tag-ssh" {
+  name          = "${google_compute_network.network.name}-ingress-tag-ssh"
+  description   = "Allow SSH to machines with 'ssh' tag"
+  network       = google_compute_network.network.name
+  project       = var.project_id
+  source_ranges = ["0.0.0.0/0"]
+  target_tags   = ["ssh"]
+
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+}
+```
+
+Create a new file `./gcp-terrafrom/ubuntu-vm.tf`:
+
+```
+resource "google_compute_instance" "default" {
+  name         = "ubuntu-vm"
+  machine_type = "f1-micro"
+  zone         = "us-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image = "ubuntu-os-cloud/ubuntu-1804-lts"
+    }
+  }
+  network_interface {
+    subnetwork = google_compute_subnetwork.subnetwork.name
+    access_config {
+      // Include this section to give the VM an external ip address
+    }
+  }
+  metadata = {
+    sshKeys = "gcpadmin:${file("gcpadmin-key.pub")}"
+  }
+
+  // Apply the firewall rule to allow external IPs to access this instance
+  tags = ["ssh"]
+}
+```
+
+Validate the templates:
+
+```
+./bin/terraform init &&
+./bin/terraform validate
+```
+
+Address any issues reported
+
+Apply the changes: `./bin/terraform apply --auto-approve`
+
+Expected outcome:
+
+```
+...
+Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+```
+
+Open [GCP Console ](https://portal.azure.com)and explore the resources created
+
+When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+
+Expected outcome:
+
+```
+...
+Destroy complete! Resources: 10 destroyed.
+```
 
 
 
