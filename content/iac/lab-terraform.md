@@ -2,7 +2,7 @@
 
 ## AWS
 
-Open a web browser to https://console.aws.amazon.com
+Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
 
 From the services select `Cloud9`, please note you may need to select a region where Cloud9 is available
 
@@ -16,7 +16,7 @@ cd ./aws-terraform/ &&
 mkdir ./bin && 
 wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
 unzip -o terraform.zip -d ./bin 
-&& rm -f terraform.zip       
+&& rm -f terraform.zip
 ```
 
 Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
@@ -29,9 +29,59 @@ variable "aws_region" {
 
 Define the [provider](https://www.terraform.io/docs/providers/index.html) in the new file `./aws-terraform/provider.tf`:
 
+```
+provider "aws" {
+  region     = var.aws_region
+}
+```
 
+Create a new file `./aws-terraform/network.tf`:
 
+```
+resource "aws_vpc" "vpc" {
+  cidr_block           = "10.0.0.0/16"
+  enable_dns_hostnames = true
+  tags = {
+    Name = "Dev Vpc"
+  }
+}
 
+resource "aws_subnet" "public-subnet" {
+  vpc_id     = aws_vpc.vpc.id
+  cidr_block = "10.0.0.0/24"
+  tags = {
+    Name = "Dev Public Subnet"
+  }
+}
+
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.vpc.id
+}
+
+resource "aws_route_table" "route-table" {
+  vpc_id = aws_vpc.vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.igw.id
+  }
+
+  tags = {
+    Name = "Dev Vpc Route Table"
+  }
+}
+
+resource "aws_route_table_association" "rt-association" {
+  subnet_id      = aws_subnet.public-subnet.id
+  route_table_id = aws_route_table.route-table.id
+  depends_on = [
+    aws_subnet.public-subnet,
+    aws_route_table.route-table
+  ]
+}
+```
+
+Create a new file `./aws-terraform/security.tf`:
 
 ## Azure
 
