@@ -11,8 +11,8 @@
    cd ./aws-terraform/ && 
    mkdir ./bin && 
    wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
-   unzip -o terraform.zip -d ./bin 
-   && rm -f terraform.zip
+   unzip -o terraform.zip -d ./bin &&
+   rm -f terraform.zip
    ```
 6. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
 7. ```
@@ -20,7 +20,7 @@
      defaul = "us-east-1"
    }
    ```
-8. Define the [provider](https://www.terraform.io/docs/providers/index.html) in the new file `./aws-terraform/provider.tf`:
+8. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./aws-terraform/provider.tf`:
 9. ```
    provider "aws" {
      region     = var.aws_region
@@ -167,7 +167,7 @@
    rm -f terraform.zip
    ```
 9. Using the terminal create a new file: `touch ./azure-terraform/provider.tf`
-10. Define the [provider](https://www.terraform.io/docs/providers/index.html) in the new file:
+10. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file:
 11. ```
     provider "azurerm" {
       version = ">= 1.3.3"
@@ -282,9 +282,32 @@
     Destroy complete! Resources: 10 destroyed.
     ```
 
-
-
 ## GCP
+
+Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)
+
+Authenticate and select `Activate Cloud Shell`
+
+Select `Launch Editor`
+
+To install terraform run using terminal panel:
+
+```
+mkdir ./gcp-terraform && 
+cd ./gcp-terraform/ && 
+mkdir ./bin && 
+wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
+unzip -o terraform.zip -d ./bin &&
+rm -f terraform.zip
+```
+
+Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
+
+```
+provider "google" {
+  project = var.project_id
+}
+```
 
 
 
