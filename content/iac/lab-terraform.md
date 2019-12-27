@@ -150,8 +150,6 @@
     Destroy complete! Resources: 10 destroyed.
     ```
 
-
-
 ## Azure
 
 1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
@@ -278,7 +276,9 @@
     ```
 28. Open [Azure Portal](https://portal.azure.com) and explore the resources created
 29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-30. Expected outcome: `Destroy complete! Resources: 10 destroyed.`
+30. Expected outcome: 
+31. `...`
+    `Destroy complete! Resources: 10 destroyed.`
 
 ## GCP
 
