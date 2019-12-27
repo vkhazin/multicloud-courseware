@@ -288,7 +288,11 @@ Open a web browser to [https://console.cloud.google.com/](https://console.cloud.
 
 Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with name: `gcp-terraform`
 
-Wait for the creation process to complete
+Navigate to the project home and copy `Project ID`, different from the project name
+
+Wait for the creation process to complete...
+
+Navigate to `Compute Engine` and wait for the API getting enabled...
 
 Select `Activate Cloud Shell`
 
@@ -403,7 +407,7 @@ Expected outcome:
 
 ```
 ...
-Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
 ```
 
 Open [GCP Console](https://console.cloud.google.com) and explore the resources created
@@ -414,8 +418,8 @@ Expected outcome:
 
 ```
 ...
-Destroy complete! Resources: 10 destroyed.
+Destroy complete! Resources: 4 destroyed.
 ```
 
-
+You may want to delete the project we have created as well
 
