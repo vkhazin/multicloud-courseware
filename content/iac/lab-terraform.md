@@ -26,14 +26,17 @@
    }
    ```
 10. Create a new file: `variables.tf` with the following content:  
-    `variable "azure_region" {    
-      default = "Central US"    
+    `variable "azure_region" {      
+      default = "Central US"      
     }`
 
 11. Create a new file: `resource-group.tf` with the following content:  
+    `resource "azurerm_resource_group" "resource-group" {  
+      name     = "rg-tf-resource-group"  
+      location = var.azure_region  
+    }`  
 
-12. 
-13. ## GCP
+## GCP
 
 
 
