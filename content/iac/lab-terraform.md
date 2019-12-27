@@ -2,86 +2,155 @@
 
 ## AWS
 
-Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
+1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
+2. From the services select `Cloud9`, please note you may need to select a region where Cloud9 is available
+3. Create a new environment with any name, micro or small instance type and Amazon Linux for the platform
+4. To install terraform run using terminal panel:
+5. ```
+   mkdir ./aws-terraform && 
+   cd ./aws-terraform/ && 
+   mkdir ./bin && 
+   wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
+   unzip -o terraform.zip -d ./bin 
+   && rm -f terraform.zip
+   ```
+6. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
+7. ```
+   variable "aws_region" {
+     defaul = "us-east-1"
+   }
+   ```
+8. Define the [provider](https://www.terraform.io/docs/providers/index.html) in the new file `./aws-terraform/provider.tf`:
+9. ```
+   provider "aws" {
+     region     = var.aws_region
+   }
+   ```
+10. Create a new file `./aws-terraform/network.tf`:
+11. ```
+    resource "aws_vpc" "vpc" {
+      cidr_block           = "10.0.0.0/16"
+      enable_dns_hostnames = true
+      tags = {
+        Name = "Dev Vpc"
+      }
+    }
 
-From the services select `Cloud9`, please note you may need to select a region where Cloud9 is available
+    resource "aws_subnet" "public-subnet" {
+      vpc_id     = aws_vpc.vpc.id
+      cidr_block = "10.0.0.0/24"
+      tags = {
+        Name = "Dev Public Subnet"
+      }
+    }
 
-Create a new environment with any name, micro or small instance type and Amazon Linux for the platform
+    resource "aws_internet_gateway" "igw" {
+      vpc_id = aws_vpc.vpc.id
+    }
 
-To install terraform run using terminal panel:
+    resource "aws_route_table" "route-table" {
+      vpc_id = aws_vpc.vpc.id
 
-```
-mkdir ./aws-terraform && 
-cd ./aws-terraform/ && 
-mkdir ./bin && 
-wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
-unzip -o terraform.zip -d ./bin 
-&& rm -f terraform.zip
-```
+      route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = aws_internet_gateway.igw.id
+      }
 
-Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
+      tags = {
+        Name = "Dev Vpc Route Table"
+      }
+    }
 
-```
-variable "aws_region" {
-  defaul = "us-east-1"
-}
-```
+    resource "aws_route_table_association" "rt-association" {
+      subnet_id      = aws_subnet.public-subnet.id
+      route_table_id = aws_route_table.route-table.id
+      depends_on = [
+        aws_subnet.public-subnet,
+        aws_route_table.route-table
+      ]
+    }
+    ```
+12. Create a new file `./aws-terraform/security.tf`:
+13. ```
+    resource "tls_private_key" "ssh-key" {
+      algorithm = "RSA"
+      rsa_bits  = 4096
+    }
 
-Define the [provider](https://www.terraform.io/docs/providers/index.html) in the new file `./aws-terraform/provider.tf`:
+    resource "aws_key_pair" "ssh-key-pair" {
+      key_name   = "tf-ssh-key"
+      public_key = tls_private_key.ssh-key.public_key_openssh
+    }
 
-```
-provider "aws" {
-  region     = var.aws_region
-}
-```
+    resource "aws_security_group" "sg" {
+      name        = "Dev Security Group"
+      description = "Allow SSH inbound traffic"
+      vpc_id      = aws_vpc.vpc.id
+    }
 
-Create a new file `./aws-terraform/network.tf`:
+    resource "aws_security_group_rule" "ssh_inbound_access" {
+      from_port         = 22
+      protocol          = "tcp"
+      security_group_id = aws_security_group.sg.id
+      to_port           = 22
+      type              = "ingress"
+      cidr_blocks       = [
+        "0.0.0.0/0"
+      ]
+    }
+    ```
+14. Create a new file: `ubuntu-vm.tf` with the following content:
+15. ```
+    data "aws_ami" "instance_ami" {
+      most_recent = true
+      owners      = [
+        "099720109477"
+      ]
 
-```
-resource "aws_vpc" "vpc" {
-  cidr_block           = "10.0.0.0/16"
-  enable_dns_hostnames = true
-  tags = {
-    Name = "Dev Vpc"
-  }
-}
+      filter {
+        name   = "name"
+        values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+      }
 
-resource "aws_subnet" "public-subnet" {
-  vpc_id     = aws_vpc.vpc.id
-  cidr_block = "10.0.0.0/24"
-  tags = {
-    Name = "Dev Public Subnet"
-  }
-}
+      filter {
+        name   = "virtualization-type"
+        values = ["hvm"]
+      }
 
-resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.vpc.id
-}
+      filter {
+        name   = "root-device-type"
+        values = ["ebs"]
+      }
+    }
 
-resource "aws_route_table" "route-table" {
-  vpc_id = aws_vpc.vpc.id
+    resource "aws_instance" "ubuntu-vm" {
+      ami                         = data.aws_ami.instance_ami.id
+      instance_type               = "t3.micro"
+      subnet_id                   = aws_subnet.public-subnet.id
+      vpc_security_group_ids      = [
+        aws_security_group.sg.id
+      ]
+      associate_public_ip_address = true
+      key_name                    = aws_key_pair.ssh-key-pair.key_name
+    }
+    ```
+16. Validate the templates: `./bin/terraform init && ./bin/terrafrom/validate`
+17. Address any issues reported
+18. Apply the changes: `./bin/terraform apply --auto-approve`
+19. Expected output:
+20. ```
+    ...
+    Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+    ```
+21. Open [Aws Portal](https://console.aws.amazon.com) and explore the resources created
+22. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+23. Expected output:
+24. ```
+    ...
+    Destroy complete! Resources: 10 destroyed.
+    ```
 
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.igw.id
-  }
 
-  tags = {
-    Name = "Dev Vpc Route Table"
-  }
-}
-
-resource "aws_route_table_association" "rt-association" {
-  subnet_id      = aws_subnet.public-subnet.id
-  route_table_id = aws_route_table.route-table.id
-  depends_on = [
-    aws_subnet.public-subnet,
-    aws_route_table.route-table
-  ]
-}
-```
-
-Create a new file `./aws-terraform/security.tf`:
 
 ## Azure
 
@@ -174,7 +243,7 @@ Create a new file `./aws-terraform/security.tf`:
       content = tls_private_key.key.private_key_pem
     }
     ```
-20. Create a new file: `ubuntu-vn.tf` with the following content:
+20. Create a new file: `ubuntu-vm.tf` with the following content:
 21. ```
     resource "azurerm_public_ip" "public_ip" {
       location = var.azure_region
@@ -195,13 +264,13 @@ Create a new file `./aws-terraform/security.tf`:
       }
     }
     ```
-22. Validate the template:
+22. Validate the templates:
 23. ```
     ./bin/terraform init &&
     ./bin/terraform validate
     ```
 24. Address any issues reported
-25. Apply the changes to Azure: `./bin/terraform apply --auto-approve`
+25. Apply the changes: `./bin/terraform apply --auto-approve`
 26. Expected outcome:
 27. ```
     ...
