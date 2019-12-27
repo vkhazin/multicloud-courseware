@@ -284,142 +284,115 @@
 
 ## GCP
 
-Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)and authenticate
-
-Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with name: `gcp-terraform`
-
-Navigate to the project home and copy `Project ID`, different from the project name
-
-Wait for the creation process to complete...
-
-Navigate to `Compute Engine` and wait for the API getting enabled...
-
-Select `Activate Cloud Shell`
-
-Select `Launch Editor`
-
-To install terraform run using terminal panel:
-
-```
-mkdir ./gcp-terraform && 
-cd ./gcp-terraform/ && 
-mkdir ./bin && 
-wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
-unzip -o terraform.zip -d ./bin &&
-rm -f terraform.zip
-```
-
-Generate new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
-
-Create a new file: `variables.tf` with the following content:
-
-```
-variable "project_id" {
-  default = "gcp-terraform"
-}
-```
-
-Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
-
-```
-provider "google" {
-  project = var.project_id
-}
-```
-
-Create a new file `./gcp-terraform/network.tf`:
-
-```
-resource "google_compute_network" "network" {
-  name                    = "network"
-  auto_create_subnetworks = false
-  routing_mode            = "GLOBAL"
-  project                 = var.project_id
-}
-
-resource "google_compute_subnetwork" "subnetwork" {
-  name          = "subnetwork"
-  ip_cidr_range = "10.0.0.0/24"
-  region        = var.gcp_region
-  network       = google_compute_network.network.name
-  project       = var.project_id
-}
-```
-
-Create a new file `./gcp-terraform/security.tf`:
-
-```
-resource "google_compute_firewall" "allow-tag-ssh" {
-  name          = "${google_compute_network.network.name}-ingress-tag-ssh"
-  description   = "Allow SSH to machines with 'ssh' tag"
-  network       = google_compute_network.network.name
-  project       = var.project_id
-  source_ranges = ["0.0.0.0/0"]
-  target_tags   = ["ssh"]
-
-  allow {
-    protocol = "tcp"
-    ports    = ["22"]
-  }
-}
-```
-
-Create a new file `./gcp-terrafrom/ubuntu-vm.tf`:
-
-```
-resource "google_compute_instance" "default" {
-  name         = "ubuntu-vm"
-  machine_type = "f1-micro"
-  zone         = "us-central1-a"
-
-  boot_disk {
-    initialize_params {
-      image = "ubuntu-os-cloud/ubuntu-1804-lts"
+1. Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)and authenticate
+2. GCP API's are eventually consistent we may need to wait here and there before we continue
+3. Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with name: `gcp-terraform`
+4. Navigate to the project home and copy `Project ID`, different from the project name
+5. Wait for the creation process to complete...
+6. Navigate to `Compute Engine` and wait for the API getting enabled...
+7. Select `Activate Cloud Shell`
+8. Select `Launch Editor`
+9. To install terraform run using terminal panel:
+10. ```
+    mkdir ./gcp-terraform && 
+    cd ./gcp-terraform/ && 
+    mkdir ./bin && 
+    wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
+    unzip -o terraform.zip -d ./bin &&
+    rm -f terraform.zip
+    ```
+11. Generate new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
+12. Create a new file: `variables.tf` with the following content:
+13. ```
+    variable "project_id" {
+      default = "gcp-terraform"
     }
-  }
-  network_interface {
-    subnetwork = google_compute_subnetwork.subnetwork.name
-    access_config {
-      // Include this section to give the VM an external ip address
+    ```
+14. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
+15. ```
+    provider "google" {
+      project = var.project_id
     }
-  }
-  metadata = {
-    sshKeys = "gcpadmin:${file("gcpadmin-key.pub")}"
-  }
+    ```
+16. Create a new file `./gcp-terraform/network.tf`:
+17. ```
+    resource "google_compute_network" "network" {
+      name                    = "network"
+      auto_create_subnetworks = false
+      routing_mode            = "GLOBAL"
+      project                 = var.project_id
+    }
 
-  // Apply the firewall rule to allow external IPs to access this instance
-  tags = ["ssh"]
-}
-```
+    resource "google_compute_subnetwork" "subnetwork" {
+      name          = "subnetwork"
+      ip_cidr_range = "10.0.0.0/24"
+      region        = var.gcp_region
+      network       = google_compute_network.network.name
+      project       = var.project_id
+    }
+    ```
+18. Create a new file `./gcp-terraform/security.tf`:
+19. ```
+    resource "google_compute_firewall" "allow-tag-ssh" {
+      name          = "${google_compute_network.network.name}-ingress-tag-ssh"
+      description   = "Allow SSH to machines with 'ssh' tag"
+      network       = google_compute_network.network.name
+      project       = var.project_id
+      source_ranges = ["0.0.0.0/0"]
+      target_tags   = ["ssh"]
 
-Validate the templates:
+      allow {
+        protocol = "tcp"
+        ports    = ["22"]
+      }
+    }
+    ```
+20. Create a new file `./gcp-terrafrom/ubuntu-vm.tf`:
+21. ```
+    resource "google_compute_instance" "default" {
+      name         = "ubuntu-vm"
+      machine_type = "f1-micro"
+      zone         = "us-central1-a"
 
-```
-./bin/terraform init &&
-./bin/terraform validate
-```
+      boot_disk {
+        initialize_params {
+          image = "ubuntu-os-cloud/ubuntu-1804-lts"
+        }
+      }
+      network_interface {
+        subnetwork = google_compute_subnetwork.subnetwork.name
+        access_config {
+          // Include this section to give the VM an external ip address
+        }
+      }
+      metadata = {
+        sshKeys = "gcpadmin:${file("gcpadmin-key.pub")}"
+      }
 
-Address any issues reported
+      // Apply the firewall rule to allow external IPs to access this instance
+      tags = ["ssh"]
+    }
+    ```
+22. Validate the templates:
+23. ```
+    ./bin/terraform init &&
+    ./bin/terraform validate
+    ```
+24. Address any issues reported
+25. Apply the changes: `./bin/terraform apply --auto-approve`
+26. Expected outcome:
+27. ```
+    ...
+    Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+    ```
+28. Open [GCP Console](https://console.cloud.google.com) and explore the resources created
+29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+30. Expected outcome:
+31. ```
+    ...
+    Destroy complete! Resources: 4 destroyed.
+    ```
+32. You may want to delete the project `gcp-terraform` we have created as well
 
-Apply the changes: `./bin/terraform apply --auto-approve`
 
-Expected outcome:
-
-```
-...
-Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
-```
-
-Open [GCP Console](https://console.cloud.google.com) and explore the resources created
-
-When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-
-Expected outcome:
-
-```
-...
-Destroy complete! Resources: 4 destroyed.
-```
-
-You may want to delete the project we have created as well
 
