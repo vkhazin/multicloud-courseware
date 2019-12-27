@@ -276,9 +276,13 @@
     ```
 28. Open [Azure Portal](https://portal.azure.com) and explore the resources created
 29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-30. Expected outcome: 
-31. `...`
-    `Destroy complete! Resources: 10 destroyed.`
+30. Expected outcome:
+31. ```
+    ...
+    Destroy complete! Resources: 10 destroyed.
+    ```
+
+
 
 ## GCP
 
