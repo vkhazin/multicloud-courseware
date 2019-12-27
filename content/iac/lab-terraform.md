@@ -1,5 +1,7 @@
 # Lab: Terraform Aws, Azure and GCP
 
+_Keep all the files - we will need them in the next labs_
+
 ## AWS
 
 1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
