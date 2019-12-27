@@ -25,15 +25,15 @@
      version = ">= 1.3.3"
    }
    ```
-10. Create a new file: `variables.tf` with the following content:`  
-    variable "azure-region" {  
-      default = "  
+10. Create a new file: `variables.tf` with the following content:  
+    `variable "azure_region" {    
+      default = "Central US"    
     }`
 
-11. 
+11. Create a new file: `resource-group.tf` with the following content:  
+
 12. 
-13. 
-## GCP
+13. ## GCP
 
 
 
