@@ -286,6 +286,10 @@
 
 Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)
 
+Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with name: `gcp-terraform`
+
+Wait for the creation process to complete
+
 Authenticate and select `Activate Cloud Shell`
 
 Select `Launch Editor`
@@ -402,7 +406,7 @@ Expected outcome:
 Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
 ```
 
-Open [GCP Console ](https://portal.azure.com)and explore the resources created
+Open [GCP Console](https://console.cloud.google.com) and explore the resources created
 
 When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
 
@@ -412,8 +416,6 @@ Expected outcome:
 ...
 Destroy complete! Resources: 10 destroyed.
 ```
-
-
 
 
 
