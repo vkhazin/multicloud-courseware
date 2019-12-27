@@ -284,13 +284,13 @@
 
 ## GCP
 
-Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)
+Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)and authenticate
 
 Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with name: `gcp-terraform`
 
 Wait for the creation process to complete
 
-Authenticate and select `Activate Cloud Shell`
+Select `Activate Cloud Shell`
 
 Select `Launch Editor`
 
