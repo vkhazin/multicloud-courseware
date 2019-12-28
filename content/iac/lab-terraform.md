@@ -138,7 +138,7 @@
     ```
 16. Validate the templates: `./bin/terraform init && ./bin/terrafrom validate`
 17. Address any issues reported
-18. Apply the changes: `./bin/terraform apply --auto-approvevalidate`
+18. Apply the changes: `./bin/terraform apply --auto-approve`
 19. Expected output:
 20. ```
     ...
@@ -298,22 +298,18 @@
       }
     }
     ```
-23. Validate the templates:
-24. ```
-    ./bin/terraform init &&
-    ./bin/terraform validate
-    ```
-25. Address any issues reported
-26. Apply the changes: `./bin/terraform apply --auto-approve`
-27. Expected outcome:
-28. ```
+23. Validate the templates: `./bin/terraform init && ./bin/terraform validate`
+24. Address any issues reported
+25. Apply the changes: `./bin/terraform apply --auto-approve`
+26. Expected outcome:
+27. ```
     ...
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
-29. Open [Azure Portal](https://portal.azure.com) and explore the resources created
-30. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-31. Expected outcome:
-32. ```
+28. Open [Azure Portal](https://portal.azure.com) and explore the resources created
+29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+30. Expected outcome:
+31. ```
     ...
     Destroy complete! Resources: X destroyed.
     ```
