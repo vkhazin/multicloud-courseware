@@ -44,8 +44,8 @@
 ## Monitoring
 
 * [Introduction](/./content/monitoring/intro.md)
-* Cloud Specific Monitoring
-* [Lab: Cloud Native Monitoring](/content/monitoring/lab-cloud-native-monitoring.md)
+* [Cloud-Native Monitoring](/./content/monitoring/cloud-native-monitoring.md)
+* [Lab: Cloud-Native Monitoring](/content/monitoring/lab-cloud-native-monitoring.md)
 
 
 
