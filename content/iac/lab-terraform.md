@@ -1,6 +1,6 @@
 # Lab: Terraform Aws, Azure and GCP
 
-_Keep all the files - we will need them in the next labs_
+### _Keep all the files - we will need them in the next labs_
 
 ## AWS
 
@@ -157,39 +157,40 @@ _Keep all the files - we will need them in the next labs_
 1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
 2. Select `bash` shell
 3. Select `Open editor`
-4. In the terminal type `az account list` to confirm a proper authentication
-5. Create a new folder `azure-terraform` to place the files
-6. Select the `refresh` icon in case folder structure does not reflect the new folder/file
-7. To install terraform run using the terminal panel:
-8. ```
+4. Authenticate to az cli: `az login`
+5. In the terminal type `az account list` to confirm a proper authentication
+6. Create a new folder `azure-terraform` to place the files
+7. Select the `refresh` icon in case folder structure does not reflect the new folder/file
+8. To install terraform run using the terminal panel:
+9. ```
    cd ./azure-terraform/ &&
    mkdir ./bin &&
    wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip &&
    unzip -o terraform.zip -d ./bin &&
    rm -f terraform.zip
    ```
-9. Using the terminal create a new file: `touch ./azure-terraform/provider.tf`
-10. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file:
-11. ```
+10. Using the terminal create a new file: `touch ./azure-terraform/provider.tf`
+11. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file:
+12. ```
     provider "azurerm" {
       version = ">= 1.3.3"
     }
     ```
-12. Create a new file: `variables.tf` with the following content:
-13. ```
+13. Create a new file: `variables.tf` with the following content:
+14. ```
     variable "azure_region" {      
       default = "Central US"      
     }
     ```
-14. Create a new file: `resource-group.tf` with the following content:
-15. ```
+15. Create a new file: `resource-group.tf` with the following content:
+16. ```
     resource "azurerm_resource_group" "resource-group" {  
       name     = "rg-tf-resource-group"  
       location = var.azure_region  
     }
     ```
-16. Create a new file: `vnet.tf` with the following content:
-17. ```
+17. Create a new file: `vnet.tf` with the following content:
+18. ```
     resource "azurerm_virtual_network" "vnet" {
        address_space = ["10.0.0.0/16"]
        location = var.azure_region
@@ -204,8 +205,8 @@ _Keep all the files - we will need them in the next labs_
         virtual_network_name = azurerm_virtual_network.vnet.name
      }
     ```
-18. Create a new file: `security.tf` with the following content:
-19. ```
+19. Create a new file: `security.tf` with the following content:
+20. ```
     resource "azurerm_network_security_group" "sg-public" {
        location = var.azure_region
        name = "sg-public"
@@ -243,8 +244,8 @@ _Keep all the files - we will need them in the next labs_
       content = tls_private_key.key.private_key_pem
     }
     ```
-20. Create a new file: `ubuntu-vm.tf` with the following content:
-21. ```
+21. Create a new file: `ubuntu-vm.tf` with the following content:
+22. ```
     resource "azurerm_public_ip" "public_ip" {
       location = var.azure_region
       name = "ubuntu-ip"
@@ -264,22 +265,22 @@ _Keep all the files - we will need them in the next labs_
       }
     }
     ```
-22. Validate the templates:
-23. ```
+23. Validate the templates:
+24. ```
     ./bin/terraform init &&
     ./bin/terraform validate
     ```
-24. Address any issues reported
-25. Apply the changes: `./bin/terraform apply --auto-approve`
-26. Expected outcome:
-27. ```
+25. Address any issues reported
+26. Apply the changes: `./bin/terraform apply --auto-approve`
+27. Expected outcome:
+28. ```
     ...
     Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
     ```
-28. Open [Azure Portal](https://portal.azure.com) and explore the resources created
-29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-30. Expected outcome:
-31. ```
+29. Open [Azure Portal](https://portal.azure.com) and explore the resources created
+30. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+31. Expected outcome:
+32. ```
     ...
     Destroy complete! Resources: 10 destroyed.
     ```
