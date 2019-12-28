@@ -1,4 +1,4 @@
-# Lab: Cloud Native Monitoring
+# Lab: Cloud-Native Monitoring
 
 1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
 2. Select `bash` shell
