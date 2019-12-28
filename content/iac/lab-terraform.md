@@ -157,7 +157,7 @@
 1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
 2. Select `bash` shell
 3. Select `Open editor`
-4. Authenticate to az cli: `az login`
+4. Authenticate to az cli: `az login` and follow the instructions
 5. In the terminal type `az account list` to confirm a proper authentication
 6. Create a new folder `azure-terraform` to place the files
 7. Select the `refresh` icon in case folder structure does not reflect the new folder/file
@@ -262,6 +262,39 @@
         private_ip_address_allocation = "Dynamic"
         public_ip_address_id = azurerm_public_ip.public_ip.id
         subnet_id = azurerm_subnet.subnet.id
+      }
+    }
+
+    resource "azurerm_virtual_machine" "ubuntu-vm" {
+      location = var.azure_region
+      name = "ubuntu-vm"
+      network_interface_ids = [
+        "${azurerm_network_interface.nic.id}"
+      ]
+      resource_group_name = azurerm_resource_group.resource-group.name
+      vm_size = "Standard_B1s"
+      storage_os_disk {
+        name              = "vmdist"
+        caching           = "ReadWrite"
+        create_option     = "FromImage"
+        managed_disk_type = "Standard_LRS"
+      }
+      storage_image_reference {
+        publisher = "Canonical"
+        offer     = "UbuntuServer"
+        sku       = "18.04-LTS"
+        version   = "latest"
+      }
+      os_profile {
+        admin_username = "ubuntu"
+        computer_name = "ubuntu"
+      }
+      os_profile_linux_config {
+        disable_password_authentication = true
+        ssh_keys {
+          key_data = tls_private_key.key.public_key_openssh
+          path = "/home/ubuntu/.ssh/authorized_keys"
+        }
       }
     }
     ```
