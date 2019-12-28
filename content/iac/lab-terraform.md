@@ -142,14 +142,14 @@
 19. Expected output:
 20. ```
     ...
-    Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+    Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
 21. Open [Aws Console](https://console.aws.amazon.com) and explore the resources created
 22. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
 23. Expected output:
 24. ```
     ...
-    Destroy complete! Resources: 10 destroyed.
+    Destroy complete! Resources: X destroyed.
     ```
 
 ## Azure
@@ -308,14 +308,14 @@
 27. Expected outcome:
 28. ```
     ...
-    Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+    Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
 29. Open [Azure Portal](https://portal.azure.com) and explore the resources created
 30. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
 31. Expected outcome:
 32. ```
     ...
-    Destroy complete! Resources: 10 destroyed.
+    Destroy complete! Resources: X destroyed.
     ```
 
 ## GCP
@@ -419,14 +419,14 @@
 26. Expected outcome:
 27. ```
     ...
-    Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+    Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
 28. Open [GCP Console](https://console.cloud.google.com) and explore the resources created
 29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
 30. Expected outcome:
 31. ```
     ...
-    Destroy complete! Resources: 4 destroyed.
+    Destroy complete! Resources: X destroyed.
     ```
 32. You may want to delete the project `gcp-terraform` we have created as well
 
