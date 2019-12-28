@@ -14,7 +14,7 @@ Expected outcome:
 
 ```
 ...
-Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+Apply complete! Resources: X added, 0 changed, 0 destroyed.
 ```
 
 Proceed to [Azure Portal](https://portal.azure.com/) and verify the VM is running
@@ -27,5 +27,7 @@ Let's collect logs from the VM we have deployed
 
 Azure Portal console is changing frequently, [here](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-collect-azurevm) are the latest steps to configure the log collection from VM
 
-Please follow the steps described in Microsoft Azure Documentation until you are able to see logs collected from the deployed VM
+Please follow the steps described in Microsoft Azure Documentation
+
+What we expect to see is VM logs collected and aggregated in `Log Analytics workspace` and 
 
