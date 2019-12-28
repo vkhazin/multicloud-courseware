@@ -136,7 +136,7 @@
       key_name                    = aws_key_pair.ssh-key-pair.key_name
     }
     ```
-16. Validate the templates: `./bin/terraform init && ./bin/terrafrom/validate`
+16. Validate the templates: `./bin/terraform init && ./bin/terrafrom validate`
 17. Address any issues reported
 18. Apply the changes: `./bin/terraform apply --auto-approve`
 19. Expected output:
