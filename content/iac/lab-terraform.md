@@ -138,7 +138,7 @@
     ```
 16. Validate the templates: `./bin/terraform init && ./bin/terrafrom validate`
 17. Address any issues reported
-18. Apply the changes: `./bin/terraform apply --auto-approve`
+18. Apply the changes: `./bin/terraform apply --auto-approvevalidate`
 19. Expected output:
 20. ```
     ...
