@@ -1,5 +1,7 @@
 # Lab: Cloud-Native Monitoring
 
+## Azure
+
 1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
 2. Select `bash` shell
 3. Select `Open editor`
