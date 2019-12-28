@@ -220,10 +220,10 @@
        network_security_group_name = azurerm_network_security_group.sg-public.name
        priority = 100
        protocol = "tcp"
-       source_port_range = "22"
+       source_port_range = "*"
        destination_port_range = "22"
-       source_address_prefixes = ["0.0.0.0"]
-       destination_address_prefixes = ["0.0.0.0"]
+       source_address_prefix = "0.0.0.0"
+       destination_address_prefix = "10.0.0.0/24"
        resource_group_name = azurerm_resource_group.resource-group.name
      }
 
