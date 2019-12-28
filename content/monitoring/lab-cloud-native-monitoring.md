@@ -2,28 +2,20 @@
 
 ## Aws
 
-Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
-
-From the services select `Cloud9` and launch the environment previously used for terraform
-
-Apply the terraform templates: cd ./aws-terraform &&`./bin/terraform apply --auto-approve`
-
-Expected outcome:
-
-```
-...
-Apply complete! Resources: X added, 0 changed, 0 destroyed.
-```
-
-Using console navigate to `CloudWatch` -&gt; `EC2 Dashboard`
-
-Explore metrics readily available
-
-Select `Dashboards` -&gt; `Create dashboard` -&gt; `Line Widget` -&gt; `Configure`
-
-Find `EC2` -&gt; `CPUUtilization` to add to the widget
-
-Add as many other metrics as you choose and save the dashboard
+1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
+2. From the services select `Cloud9` and launch the environment previously used for terraform
+3. Apply the terraform templates: cd ./aws-terraform &&`./bin/terraform apply --auto-approve`
+4. Expected outcome:
+5. ```
+   ...
+   Apply complete! Resources: X added, 0 changed, 0 destroyed.
+   ```
+6. Using console navigate to `CloudWatch` -&gt; `EC2 Dashboard`
+7. Explore metrics readily available
+8. Select `Dashboards` -&gt; `Create dashboard` -&gt; `Line Widget` -&gt; `Configure`
+9. Find `EC2` -&gt; `CPUUtilization` to add to the widget
+10. Add as many other metrics as you choose and save the dashboard
+11. To collect syslog an [agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html) will be required
 
 ## Azure
 
@@ -46,6 +38,7 @@ Add as many other metrics as you choose and save the dashboard
 14. What we expect to see is `Heartbeat` and `Perf` logs collected in `Log Analytics workspace`
 15. Note the common mistake: not saving the changes
 16. And there is a delay in collecting the logs, rebooting the VM may help
+17. Explorer `Connected Sources`, there is a way to send logs from any Linux host by installing an agent
 
 
 
