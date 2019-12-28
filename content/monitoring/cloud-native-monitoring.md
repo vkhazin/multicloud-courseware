@@ -1,4 +1,4 @@
-# Cloud Specific Monitoring
+# Cloud Native Monitoring
 
 * [AWS CloudWatch](https://docs.aws.amazon.com/cloudwatch/index.html)
 * [Azure Monitoring](https://docs.microsoft.com/en-us/azure/azure-monitor/)
