@@ -45,7 +45,7 @@
 
 * [Introduction](/./content/monitoring/intro.md)
 * [Cloud Specific Monitoring](/./content/monitoring/cloud-specific-monitoring.md)
-* [Lab: Azure Monitoring](/./content/monitoring/cloud-specific-monitoring.md)
+* [Lab: Azure Monitoring](/./content/monitoring/lab-azure-monitor.md)
 
 
 
