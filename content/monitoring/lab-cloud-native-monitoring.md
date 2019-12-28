@@ -19,9 +19,11 @@ Using console navigate to `CloudWatch` -&gt; `EC2 Dashboard`
 
 Explore metrics readily available
 
+Select `Dashboards` -&gt; `Create dashboard` -&gt; `Line Widget` -&gt; `Configure`
 
+Find `EC2` -&gt; `CPUUtilization` to add to the widget
 
-
+Add as many other metrics as you choose and save the dashboard
 
 ## Azure
 
