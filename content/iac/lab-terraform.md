@@ -19,7 +19,7 @@
 6. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
 7. ```
    variable "aws_region" {
-     defaul = "us-east-1"
+     default = "us-east-1"
    }
    ```
 8. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./aws-terraform/provider.tf`:
@@ -136,7 +136,7 @@
       key_name                    = aws_key_pair.ssh-key-pair.key_name
     }
     ```
-16. Validate the templates: `./bin/terraform init && ./bin/terrafrom validate`
+16. Validate the templates: `./bin/terraform init && ./bin/terraform validate`
 17. Address any issues reported
 18. Apply the changes: `./bin/terraform apply --auto-approve`
 19. Expected output:
