@@ -29,5 +29,9 @@ Azure Portal console is changing frequently, [here](https://docs.microsoft.com/e
 
 Please follow the steps described in Microsoft Azure Documentation
 
-What we expect to see is `Heartbeat` logs collected in `Log Analytics workspace` 
+What we expect to see is `Heartbeat` and `Perf` logs collected in `Log Analytics workspace`
+
+Note the common mistake: not saving the changes
+
+And there is a delay in connecting the logs, rebooting the VM may help
 
