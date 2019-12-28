@@ -27,5 +27,5 @@ Let's collect logs from the VM we have deployed
 
 Azure Portal console is changing frequently, [here](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-collect-azurevm) are the latest steps to configure the log collection from VM
 
-
+Please follow the steps described in Microsoft Azure Documentation until you are able to see logs collected from the deployed VM
 
