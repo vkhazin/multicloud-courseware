@@ -1,4 +1,4 @@
-# Lab: Azure Monitoring
+# Lab: Azure Monitor
 
 Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
 
@@ -18,6 +18,8 @@ Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
 ```
 
 Proceed to [Azure Portal](https://portal.azure.com/) and verify the VM is running
+
+Select 
 
 
 
