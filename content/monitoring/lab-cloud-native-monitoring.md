@@ -1,5 +1,28 @@
 # Lab: Cloud-Native Monitoring
 
+## Aws
+
+Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
+
+From the services select `Cloud9` and launch the environment previously used for terraform
+
+Apply the terraform templates: cd ./aws-terraform &&`./bin/terraform apply --auto-approve`
+
+Expected outcome:
+
+```
+...
+Apply complete! Resources: X added, 0 changed, 0 destroyed.
+```
+
+Using console navigate to `CloudWatch` -&gt; `EC2 Dashboard`
+
+Explore metrics readily available
+
+
+
+
+
 ## Azure
 
 1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
@@ -20,7 +43,7 @@
 13. Please follow the steps described in Microsoft Azure Documentation
 14. What we expect to see is `Heartbeat` and `Perf` logs collected in `Log Analytics workspace`
 15. Note the common mistake: not saving the changes
-16. And there is a delay in connecting the logs, rebooting the VM may help
+16. And there is a delay in collecting the logs, rebooting the VM may help
 
 
 
