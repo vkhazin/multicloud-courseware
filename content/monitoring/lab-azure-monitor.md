@@ -29,5 +29,5 @@ Azure Portal console is changing frequently, [here](https://docs.microsoft.com/e
 
 Please follow the steps described in Microsoft Azure Documentation
 
-What we expect to see is VM logs collected and aggregated in `Log Analytics workspace` and 
+What we expect to see is `Heartbeat` logs collected in `Log Analytics workspace` 
 
