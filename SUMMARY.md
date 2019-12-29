@@ -55,6 +55,7 @@
 * [Introduction](/content/docker-kubernetes/intro.md)
 * [Motivation and Enthusiasm](/content/docker-kubernetes/docker-motivation.md)
 * [Container vs. VM](/content/docker-kubernetes/container-vs-vm.md)
+* [Author a Dockerfile](/content/docker-kubernetes/author-dockerfile.md)
 
 
 
