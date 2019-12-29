@@ -136,6 +136,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 ### Future Ideas:
 
 * Microsoft Azure Arc
+* Create repos for terraform setup
 
 
 
