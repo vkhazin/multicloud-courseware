@@ -1,4 +1,4 @@
-# Docker Motivation
+# Docker Motivations
 
 * Eliminates 'works on my machine' by escaping matrix dependencies
 * Run applications side-by-side with predictable and portable deployments
