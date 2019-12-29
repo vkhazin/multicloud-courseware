@@ -96,7 +96,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 ### PaaS Logging and Monitoring
 
 * Platform native tools
-* Logging and Monitoring Practices
+* Monitoring Practices
 * 3rd Party Services
 * Comparison of Platform Specific and 3rd Party Services
 
