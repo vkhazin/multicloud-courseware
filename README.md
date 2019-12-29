@@ -62,9 +62,9 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Introduction to Terraform
 * IaaS deployment using Terraform
 
-### Logging and Monitoring
+### Monitoring
 
-* Cloud provider-specific logging and monitoring
+* Cloud provider-specific monitoring
 * The motivation for a 3rd Party Service Provider
 * Selecting a service provider
 * Integrating IaaS with a service provider
@@ -79,7 +79,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Kubernetes as Container Platform
 * Author and deploy a pod
 
-### Kubernetes Logging and Monitoring
+### Kubernetes Monitoring
 
 * Kubernetes native tools
 * Logging and Monitoring Practices
