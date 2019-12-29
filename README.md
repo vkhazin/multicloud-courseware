@@ -1,5 +1,11 @@
 # Multi-Cloud Workloads Courseware
 
+<p align="right">
+    <i>
+        <a href="https://www.linkedin.com/in/vkhazin" target="_blank">by Vlad Khazin</a>
+    </i> 
+</p>
+
 ## Overview
 
 There is plenty of courses and certifications specific to a cloud provider  
