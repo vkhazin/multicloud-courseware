@@ -44,8 +44,10 @@
 ## Monitoring
 
 * [Introduction](/./content/monitoring/intro.md)
+* [What's at Stake](/content/monitoring/whats-at-stake.md)
 * [Cloud-Native Monitoring](/./content/monitoring/cloud-native-monitoring.md)
 * [Lab: Cloud-Native Monitoring](/content/monitoring/lab-cloud-native-monitoring.md)
+* [3rd Party Monitoring](/content/monitoring/3rd-party-monitoring.md)
 
 
 
