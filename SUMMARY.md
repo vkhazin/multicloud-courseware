@@ -50,5 +50,11 @@
 * [3rd Party Monitoring](/content/monitoring/3rd-party-monitoring.md)
 * [Selecting a Provider](/content/monitoring/selecting-provider.md)
 
+# Docker and Kubernetes
+
+* [Introduction](/content/docker-kubernetes/intro.md)
+* [Motivation and Enthusiasm](/content/docker-kubernetes/docker-motivation.md)
+* [Container vs. VM](/content/docker-kubernetes/container-vs-vm.md)
+
 
 
