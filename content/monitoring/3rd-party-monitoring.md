@@ -5,9 +5,7 @@
 * Ease of setup
 * Ready to use integrations
 * Dashboards to combine metrics from many different sources
-* Automated alerts
-
-
+* Automated alerts across on-premises and on-the-cloud workloads
 
 
 
