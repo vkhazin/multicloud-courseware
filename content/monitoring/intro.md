@@ -1,5 +1,6 @@
 # Monitoring Introduction
 
+* Importance of monitoring
 * Cloud-native monitoring
 * Motivation for a 3rd Party Service Provider
 * Comparison of Cloud Specific and 3rd Party Services
