@@ -9,9 +9,9 @@ COPY hello /
 CMD ["/hello"]
 ```
 
-* Where `scratch` is `name:tag` of base image, in this case, most basic image `scratch:latest`
-* 'COPY' command copies executable file 'hello' to the root of file system
-* 'CMD' is the command executed when container is running
+* Where `scratch` is `name:tag` of the base image, in this case, the most basic image `scratch:latest`
+* COPY command copies the executable file `hello` to the root of a file system
+* CMD is the command executed when a container is running
 
 
 
