@@ -60,7 +60,9 @@
 * [Author a Dockerfile](/content/docker-kubernetes/author-dockerfile.md)
 * [Lab: End-Point in a Container](/content/docker-kubernetes/lab-endpoint-container.md)
 * [Kubernetes Overview](/content/docker-kubernetes/k8s-overview.md)
-* [K8s Architecture](/content/docker-kubernetes/k8s-architecture.md)
+* [Kubernetes Cluster](/content/docker-kubernetes/k8s-cluster.md)
+* [Kubernetes Pod](/content/docker-kubernetes/k8s-pod.md)
+* Lab: Kubernetes Deployment
 
 
 
