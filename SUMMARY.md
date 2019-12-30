@@ -59,6 +59,8 @@
 * [Container vs. VM](/content/docker-kubernetes/container-vs-vm.md)
 * [Author a Dockerfile](/content/docker-kubernetes/author-dockerfile.md)
 * [Lab: End-Point in a Container](/content/docker-kubernetes/lab-endpoint-container.md)
+* [Kubernetes Overview](/content/docker-kubernetes/k8s-overview.md)
+* [K8s Architecture](/content/docker-kubernetes/k8s-architecture.md)
 
 
 
