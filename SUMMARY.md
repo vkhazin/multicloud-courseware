@@ -49,6 +49,8 @@
 * [Lab: Cloud-Native Monitoring](/content/monitoring/lab-cloud-native-monitoring.md)
 * [3rd Party Monitoring](/content/monitoring/3rd-party-monitoring.md)
 * [Selecting a Provider](/content/monitoring/selecting-provider.md)
+* [Lab: Datadog Monitoring](/content/monitoring/lab-datadog.md)
+* [Summary](/content/monitoring/summary.md)
 
 # Docker and Kubernetes
 
