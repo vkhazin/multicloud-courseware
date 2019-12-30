@@ -1,6 +1,6 @@
 # Lab: End-Point in a Container
 
-1. Open a web browser to https://console.aws.amazon.com
+1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
 
 2. From the services select Cloud9 and open the environment we used before for terraform setup
 
@@ -23,11 +23,11 @@
 
 11. -p 3001:3001 maps host port 3001 to container port 3003
 
-12. -d start detached to be able to use the terminal
+12. -d starts detached to be able to continue using the terminal
 
 13. --rm delete the container when it is stopped
 
-14. And now you are able to access the endpoint: \`curl 'http://localhost:3001?name=John'\`
+14. And now you are able to access the endpoint: \`curl '[http://localhost:3001?name=John'\`](http://localhost:3001?name=John'`)
 
 15. This is how you create a node.js end-point running in a container
 
