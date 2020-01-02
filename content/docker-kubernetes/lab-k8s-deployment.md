@@ -40,7 +40,7 @@ In the terminal panel navigate to the new folder
 
 Build docker image: `docker build ./ -t node/end-point`
 
-Add a new file under the root of the cloned repository: `deployment.yaml` with the following content:
+Add a new file under the root of the cloned repository: `deployment.yml` with the following content:
 
 ```
 apiVersion: apps/v1
@@ -66,9 +66,34 @@ spec:
         name: nodejs-endpoint
 ```
 
-To deploy the application to Kubernetes cluster: `kubectl apply -f deployment.yml`
+To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
 
 Expected outcome: `deployment.apps/nodejs-endpoint created`
 
+To list cluster assets: `kubectl get all`
 
+Add a new file `service.yml` under the root of the cloned repository with the following content:
+
+```
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "nodejs-endpoint-service"
+  namespace: "default"
+  labels:
+    app: "nodejs-endpoint"
+spec:
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 3000
+  selector:
+    app: "nodejs-endpoint"
+  type: "LoadBalancer"
+  loadBalancerIP: ""
+```
+
+To deploy the loadbalancer to Kubernetes cluster: `kubectl apply --filename service.yml`
+
+To list cluster assets: `kubectl get all`
 
