@@ -38,7 +38,7 @@ You can add the folder to the workspace in the editor explorer
 
 In the terminal panel navigate to the new folder
 
-Build docker image: \```docker build ./ -t node/end-point```
+Build docker image: `docker build ./ -t node/end-point`
 
 Add a new file under the root of the cloned repository: `k8s-pod.yaml` with the following content:
 
