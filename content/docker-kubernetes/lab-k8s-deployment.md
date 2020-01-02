@@ -40,7 +40,7 @@ In the terminal panel navigate to the new folder
 
 Build docker image: `docker build ./ -t node/end-point`
 
-Add a new file under the root of the cloned repository: `k8s-pod.yaml` with the following content:
+Add a new file under the root of the cloned repository: `deployment.yaml` with the following content:
 
 ```
 apiVersion: apps/v1
@@ -66,5 +66,9 @@ spec:
         name: nodejs-endpoint
 ```
 
-To deploy the application to Kubernetes cluster: `kubectl apply -f k8s-pod.yml`
+To deploy the application to Kubernetes cluster: `kubectl apply -f deployment.yml`
+
+Expected outcome: `deployment.apps/nodejs-endpoint created`
+
+
 
