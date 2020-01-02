@@ -1,103 +1,75 @@
 # Lab: Kubernetes Deployment
 
-Log in to Google Cloud Console
-
-As a reminder GCP API's are eventually consistent, we may need to wait here and there
-
-Create a new project `gcp-k8s` where to launch new GKE Cluster
-
-Select the newly created project from the drop-down list and navigate to `Kubernetes Engine`and wait for the API being enabled
-
-Select `Create cluster` once the API has been enabled
-
-Choose the `Your first cluster` and provide a name
-
-For location type select `zonal` and select the desired location
-
-Select `3` for `Number of nodes`
-
-Select the default version of the cluster from the drop-down list
-
-Select `n1-standard-1` for the node size
-
-Select `Create` link and wait for the cluster to provision
-
-When the cluster is provisioned and ready, select `connect` link next to the cluster name
-
-Select `Run in Cloud Shell` and then open the editor to switch to a full browser window
-
-In the terminal panel test our connectivity to the cluster: `kubectl get node`
-
-The result should list 3 notes with a few minutes age since we have created the cluster
-
-To deploy our first application to the cluster we will reuse the node.js end-point
-
-In the terminal window run: git clone `https://github.com/vkhazin/courseware-nodejs-container.git`
-
-You can add the folder to the workspace in the editor explorer
-
-In the terminal panel navigate to the new folder
-
-Build a docker image: `docker build ./ -t node/end-point`
-
-Add a new file under the root of the cloned repository: `deployment.yml` with the following content:
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app: nodejs-endpoint
-  name: nodejs-endpoint
-  namespace: default
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: nodejs-endpoint
-  template:
+1. Log in to Google Cloud Console
+2. As a reminder GCP API's are eventually consistent, we may need to wait here and there
+3. Create a new project `gcp-k8s` where to launch new GKE Cluster
+4. Select the newly created project from the drop-down list and navigate to `Kubernetes Engine`and wait for the API being enabled
+5. Select `Create cluster` once the API has been enabled
+6. Choose the `Your first cluster` and provide a name
+7. For location type select `zonal` and select the desired location
+8. Select `3` for `Number of nodes`
+9. Select the default version of the cluster from the drop-down list
+10. Select `n1-standard-1` for the node size
+11. Select `Create` link and wait for the cluster to provision
+12. When the cluster is provisioned and ready, select `connect` link next to the cluster name
+13. Select `Run in Cloud Shell` and then open the editor to switch to a full browser window
+14. In the terminal panel test our connectivity to the cluster: `kubectl get node`
+15. The result should list 3 notes with a few minutes age since we have created the cluster
+16. To deploy our first application to the cluster we will reuse the node.js end-point
+17. In the terminal window run: `git clone https://github.com/vkhazin/courseware-nodejs-container.git`
+18. You can add the folder to the workspace in the editor explorer
+19. In the terminal panel navigate to the new folder
+20. Build a docker image: `docker build ./ -t node/end-point`
+21. Add a new file under the root of the cloned repository: `deployment.yml` with the following content:
+22. ```
+    apiVersion: apps/v1
+    kind: Deployment
     metadata:
       labels:
         app: nodejs-endpoint
+      name: nodejs-endpoint
+      namespace: default
     spec:
-      containers:
-      - image: node/end-point
-        imagePullPolicy: Always
-        name: nodejs-endpoint
-```
+      replicas: 2
+      selector:
+        matchLabels:
+          app: nodejs-endpoint
+      template:
+        metadata:
+          labels:
+            app: nodejs-endpoint
+        spec:
+          containers:
+          - image: node/end-point
+            imagePullPolicy: Always
+            name: nodejs-endpoint
+    ```
+23. To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
+24. Expected outcome: `deployment.apps/nodejs-endpoint created`
+25. To list cluster assets: `kubectl get all`
+26. Add a new file `service.yml` under the root of the cloned repository with the following content:
+27. ```
+    apiVersion: "v1"
+    kind: "Service"
+    metadata:
+      name: "nodejs-endpoint-service"
+      namespace: "default"
+      labels:
+        app: "nodejs-endpoint"
+    spec:
+      ports:
+      - protocol: "TCP"
+        port: 80
+        targetPort: 3001
+      selector:
+        app: "nodejs-endpoint"
+      type: "LoadBalancer"
+      loadBalancerIP: ""
+    ```
+28. To deploy the load-balancer to Kubernetes cluster: `kubectl apply --filename service.yml`
+29. To list cluster assets: `kubectl get all`to confirm container and service are deployed
+30. Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
+31. Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
 
-To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
 
-Expected outcome: `deployment.apps/nodejs-endpoint created`
-
-To list cluster assets: `kubectl get all`
-
-Add a new file `service.yml` under the root of the cloned repository with the following content:
-
-```
-apiVersion: "v1"
-kind: "Service"
-metadata:
-  name: "nodejs-endpoint-service"
-  namespace: "default"
-  labels:
-    app: "nodejs-endpoint"
-spec:
-  ports:
-  - protocol: "TCP"
-    port: 80
-    targetPort: 3001
-  selector:
-    app: "nodejs-endpoint"
-  type: "LoadBalancer"
-  loadBalancerIP: ""
-```
-
-To deploy the load-balancer to Kubernetes cluster: `kubectl apply --filename service.yml`
-
-To list cluster assets: `kubectl get all`to confirm container and service are deployed
-
-Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
-
-Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
 
