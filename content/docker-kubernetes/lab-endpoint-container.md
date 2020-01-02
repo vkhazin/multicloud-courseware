@@ -13,7 +13,7 @@
 
 6. Expected result: `...Successfully tagged node/end-point:latest`
 
-7. To run the newly create image we need to create a container from it
+7. To run the newly created image we need to create a container from it
 
 8. Images are immutable, containers can mutate over their lifecycle
 
@@ -27,7 +27,7 @@
 
 13. --rm delete the container when it is stopped
 
-14. And now you are able to access the endpoint: \`curl '[http://localhost:3001?name=John'\`](http://localhost:3001?name=John'`)
+14. And now you are able to access the endpoint: \`curl '\[[http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`](http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`)\)
 
 15. This is how you create a node.js end-point running in a container
 
