@@ -95,5 +95,11 @@ spec:
 
 To deploy the loadbalancer to Kubernetes cluster: `kubectl apply --filename service.yml`
 
-To list cluster assets: `kubectl get all`
+To list cluster assets: `kubectl get all`to confirm container and service are deployed
+
+Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
+
+Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
+
+
 
