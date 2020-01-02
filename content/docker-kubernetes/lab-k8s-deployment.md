@@ -86,7 +86,7 @@ spec:
   ports:
   - protocol: "TCP"
     port: 80
-    targetPort: 3000
+    targetPort: 3001
   selector:
     app: "nodejs-endpoint"
   type: "LoadBalancer"
