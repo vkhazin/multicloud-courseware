@@ -16,12 +16,11 @@
 14. In the terminal panel test our connectivity to the cluster: `kubectl get node`
 15. The result should list 3 notes with a few minutes age since we have created the cluster
 16. To deploy our first application to the cluster we will reuse the node.js end-point
-17. In the terminal window run: `git clone https://github.com/vkhazin/courseware-nodejs-container.git`
-18. You can add the folder to the workspace in the editor explorer
+17. The source code of the application: `https://github.com/vkhazin/courseware-nodejs-container.git`
+18. The docker image published to docker hub: [https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container](https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container)
 19. In the terminal panel navigate to the new folder
-20. Build a docker image: `docker build ./ -t node/end-point`
-21. Add a new file under the root of the cloned repository: `deployment.yml` with the following content:
-22. ```
+20. Add a new file under the root of the cloned repository: `deployment.yml` with the following content:
+21. ```
     apiVersion: apps/v1
     kind: Deployment
     metadata:
@@ -40,15 +39,15 @@
             app: nodejs-endpoint
         spec:
           containers:
-          - image: node/end-point
+          - image: vkhazin/courseware-nodejs-container
             imagePullPolicy: Always
             name: nodejs-endpoint
     ```
-23. To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
-24. Expected outcome: `deployment.apps/nodejs-endpoint created`
-25. To list cluster assets: `kubectl get all`
-26. Add a new file `service.yml` under the root of the cloned repository with the following content:
-27. ```
+22. To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
+23. Expected outcome: `deployment.apps/nodejs-endpoint created`
+24. To list cluster assets: `kubectl get all`
+25. Add a new file `service.yml` under the root of the cloned repository with the following content:
+26. ```
     apiVersion: "v1"
     kind: "Service"
     metadata:
@@ -66,10 +65,10 @@
       type: "LoadBalancer"
       loadBalancerIP: ""
     ```
-28. To deploy the load-balancer to Kubernetes cluster: `kubectl apply --filename service.yml`
-29. To list cluster assets: `kubectl get all`to confirm container and service are deployed
-30. Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
-31. Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
+27. To deploy the load-balancer to Kubernetes cluster: `kubectl apply --filename service.yml`
+28. To list cluster assets: `kubectl get all`to confirm container and service are deployed
+29. Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
+30. Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
 
 
 
