@@ -27,13 +27,15 @@
 
 13. --rm delete the container when it is stopped
 
-14. And now you are able to access the endpoint: \`curl '\[[http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`](http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`)\)
+14. And now you are able to access the endpoint: \`curl '\[\[[http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`\)\](http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`%29\)\)
 
 15. This is how you create a node.js end-point running in a container
 
 16. To delete the container: `docker rm node-end-point -f`
 
 17. To delete the image: `docker rmi node/end-point`
+
+18. There are a couple of yml files in the repository we will discuss in the next lab
 
 
 

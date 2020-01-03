@@ -17,8 +17,8 @@
 15. The result should list 3 notes with a few minutes age since we have created the cluster
 16. To deploy our first application to the cluster we will reuse the node.js end-point from the previous lab
 17. The docker image published to docker hub: [https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container](https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container)
-18. In the terminal panel navigate to the new folder
-19. Add a new file under the root of the cloned repository: `deployment.yml` with the following content:
+18. Create a new folder
+19. Add a new file under the root of the new folder: `deployment.yml` with the following content:
 20. ```
     apiVersion: apps/v1
     kind: Deployment
