@@ -27,7 +27,7 @@
 
 13. --rm delete the container when it is stopped
 
-14. And now you are able to access the endpoint: \`curl '\[\[[http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`\]\(http://localhost:3001?name=John'\`\)\](http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`]%28http://localhost:3001?name=John'`%29\)\)
+14. And now you are able to access the endpoint: `curl http://localhost:3001/?name=John`
 
 15. This is how you create a node.js end-point running in a container
 
