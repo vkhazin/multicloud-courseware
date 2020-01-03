@@ -21,7 +21,7 @@
 
 10. --name gives our container a name
 
-11. -p 3001:3001 maps host port 3001 to container port 3003
+11. -p 3001:3001 maps host port 3001 to container port 3001
 
 12. -d starts detached to be able to continue using the terminal
 
