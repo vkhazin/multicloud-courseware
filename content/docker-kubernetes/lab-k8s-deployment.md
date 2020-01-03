@@ -45,7 +45,7 @@
 21. To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
 22. Expected outcome: `deployment.apps/nodejs-endpoint created`
 23. To list cluster assets: `kubectl get all`
-24. Add a new file `service.yml` under the root of the cloned repository with the following content:
+24. Add a new file `service.yml` under the root of the new folder with the following content:
 25. ```
     apiVersion: "v1"
     kind: "Service"
@@ -68,6 +68,7 @@
 27. To list cluster assets: `kubectl get all`to confirm container and service are deployed
 28. Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
 29. Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
+30. Don't forget to add a query string parameter: `?name=John`
 
 
 
