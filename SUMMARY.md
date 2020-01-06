@@ -66,3 +66,11 @@
 * [Lab: Kubernetes Deployment](/content/docker-kubernetes/lab-k8s-deployment.md)
 * [Summary](/content/docker-kubernetes/summary.md)
 
+## Kubernetes Monitoring
+
+* [Introduction](/content/k8s-monitoring/intro.md)
+* [3rd Party Services](/content/k8s-monitoring/3rd-party-services.md)
+* [Lab: DataDog Monitoring](/content/k8s-monitoring/lab-datadog-monitoring.md)
+
+
+
