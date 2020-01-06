@@ -106,9 +106,10 @@
     NAME            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
     datadog-agent   3         3         3       3            3           <none>          74s
     ```
-17. Using browser Navigate to [https://app.datadoghq.com/containers](https://app.datadoghq.com/containers)
-18. You should see Kubernetes cluster containers and node.js end-point on the list, may take a moment to populate
-19. Select the node.js end-point container and you should see the container metrics
+17. For more detailed info: `kubectl describe daemonset.apps/datadog-agent`
+18. Using browser Navigate to [https://app.datadoghq.com/containers](https://app.datadoghq.com/containers)
+19. You should see Kubernetes cluster containers and node.js end-point on the list, may take a moment to populate
+20. Select the node.js end-point container and you should see the container metrics
 
 
 
