@@ -7,14 +7,14 @@
 5. Select `Create cluster` once the API has been enabled
 6. Choose the `Your first cluster` and provide a name
 7. For location type select `zonal` and select the desired location
-8. Select `3` for `Number of nodes`
+8. Select 1 for `Number of nodes`
 9. Select the default version of the cluster from the drop-down list
 10. Select `n1-standard-1` for the node size
-11. Select `Create` link and wait for the cluster to provision
+11. Select `Create` link and wait for the cluster to provision - may take a few minutes
 12. When the cluster is provisioned and ready, select `connect` link next to the cluster name
 13. Select `Run in Cloud Shell` and then open the editor to switch to a full browser window
 14. In the terminal panel test our connectivity to the cluster: `kubectl get node`
-15. The result should list 3 notes with a few minutes age since we have created the cluster
+15. The result should list nodes with a few minutes age since we have created the cluster
 16. To deploy our first application to the cluster we will reuse the node.js end-point from the previous lab
 17. The docker image published to docker hub: [https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container](https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container)
 18. Create a new folder
