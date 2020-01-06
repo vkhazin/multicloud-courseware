@@ -7,19 +7,20 @@
 5. Select `Create cluster` once the API has been enabled
 6. Choose the `Standard cluster` and provide a name
 7. For location type select `zonal` and select the desired location
-8. Select `3` for `Number of nodes`
-9. Select the default version of the cluster from the drop-down list
+8. Select the default version of the cluster from the drop-down list
+9. Select `3` for `Number of nodes`
 10. Select `n1-standard-1` for the node size
 11. Select `Create` link and wait for the cluster to provision - may take a few minutes
 12. When the cluster is provisioned and ready, select `connect` link next to the cluster name
-13. Select `Run in Cloud Shell` and then open the editor to switch to a full browser window
-14. In the terminal panel test our connectivity to the cluster: `kubectl get node`
-15. The result should list nodes with a few minutes age since we have created the cluster
-16. To deploy our first application to the cluster we will reuse the node.js end-point from the previous lab
-17. The docker image published to docker hub: [https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container](https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container)
-18. Create a new folder
-19. Add a new file under the root of the new folder: `deployment.yml` with the following content:
-20. ```
+13. Select `Run in Cloud Shell` 
+14. Select the `Launch Editor` icon to switch to a full browser window with a terminal panel
+15. In the terminal panel test our connectivity to the cluster: `kubectl get node`
+16. The result should list nodes with a few minutes age since we have created the cluster
+17. To deploy our first application to the cluster we will reuse the node.js end-point from the previous lab
+18. The docker image published to docker hub: [https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container](https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container)
+19. Create a new folder
+20. Add a new file under the root of the new folder: `deployment.yml` with the following content:
+21. ```
     apiVersion: apps/v1
     kind: Deployment
     metadata:
@@ -42,11 +43,11 @@
             imagePullPolicy: Always
             name: nodejs-endpoint
     ```
-21. To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
-22. Expected outcome: `deployment.apps/nodejs-endpoint created`
-23. To list cluster assets: `kubectl get all`
-24. Add a new file `service.yml` under the root of the new folder with the following content:
-25. ```
+22. To deploy the application to Kubernetes cluster: `kubectl apply --filename deployment.yml`
+23. Expected outcome: `deployment.apps/nodejs-endpoint created`
+24. To list cluster assets: `kubectl get all`
+25. Add a new file `service.yml` under the root of the new folder with the following content:
+26. ```
     apiVersion: "v1"
     kind: "Service"
     metadata:
@@ -64,11 +65,12 @@
       type: "LoadBalancer"
       loadBalancerIP: ""
     ```
-26. To deploy the load-balancer to Kubernetes cluster: `kubectl apply --filename service.yml`
-27. To list cluster assets: `kubectl get all`to confirm container and service are deployed
-28. Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
-29. Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
-30. Don't forget to add a query string parameter: `?name=John`
+27. To deploy the load-balancer to Kubernetes cluster: `kubectl apply --filename service.yml`
+28. To list cluster assets: `kubectl get all`to confirm container and service are deployed
+29. Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
+30. Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
+31. Don't forget to add a query string parameter: `?name=John`
+32. Alternatively, we can deploy the container and create a service using the Google Cloud Console
 
 
 
