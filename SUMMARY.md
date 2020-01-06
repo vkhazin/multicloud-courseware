@@ -69,6 +69,7 @@
 ## Kubernetes Monitoring
 
 * [Introduction](/content/k8s-monitoring/intro.md)
+* [Native Tools](/content/k8s-monitoring/native-tools.md)
 * [3rd Party Services](/content/k8s-monitoring/3rd-party-services.md)
 * [Lab: DataDog Monitoring](/content/k8s-monitoring/lab-datadog-monitoring.md)
 
