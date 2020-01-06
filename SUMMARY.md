@@ -2,6 +2,7 @@
 
 ## Course Overview
 
+* [Introduction](README.md)
 * [Introduction](readme.md)
 * [Getting Started](./content/course-overview/getting-started.md)
 * [Objectives](./content/course-overview/objectives.md)
@@ -52,7 +53,7 @@
 * [Lab: Datadog Monitoring](/content/monitoring/lab-datadog.md)
 * [Summary](/content/monitoring/summary.md)
 
-# Docker and Kubernetes
+## Docker and Kubernetes
 
 * [Introduction](/content/docker-kubernetes/intro.md)
 * [Motivation and Enthusiasm](/content/docker-kubernetes/docker-motivation.md)
@@ -64,6 +65,4 @@
 * [Kubernetes Pod](/content/docker-kubernetes/k8s-pod.md)
 * [Lab: Kubernetes Deployment](/content/docker-kubernetes/lab-k8s-deployment.md)
 * [Summary](/content/docker-kubernetes/summary.md)
-
-
 

@@ -5,9 +5,9 @@
 3. Create a new project `gcp-k8s` where to launch new GKE Cluster
 4. Select the newly created project from the drop-down list and navigate to `Kubernetes Engine`and wait for the API being enabled
 5. Select `Create cluster` once the API has been enabled
-6. Choose the `Your first cluster` and provide a name
+6. Choose the `Standard cluster` and provide a name
 7. For location type select `zonal` and select the desired location
-8. Select 1 for `Number of nodes`
+8. Select `3` for `Number of nodes`
 9. Select the default version of the cluster from the drop-down list
 10. Select `n1-standard-1` for the node size
 11. Select `Create` link and wait for the cluster to provision - may take a few minutes
