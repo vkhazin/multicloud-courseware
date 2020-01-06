@@ -5,6 +5,7 @@
 * Consolidated monitoring across clusters, regions, and providers
 * Helps to bring all monitoring data under one roof
 * Possibly, more appealing GUI
+* Datadog is one of the services with a free trial, don't see it as a single player
 
 
 
