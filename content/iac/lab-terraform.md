@@ -307,9 +307,10 @@
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
 28. Open [Azure Portal](https://portal.azure.com) and explore the resources created
-29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-30. Expected outcome:
-31. ```
+29. You can log in into the VM using ssh shell: `chmod 400 ./ssh-private-key.pem && ssh -i ./ssh-private-key.pem ubuntu@{public-ip}`
+30. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+31. Expected outcome:
+32. ```
     ...
     Destroy complete! Resources: X destroyed.
     ```
