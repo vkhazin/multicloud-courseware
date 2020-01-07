@@ -50,7 +50,7 @@
 * [3rd Party Monitoring](/content/monitoring/3rd-party-monitoring.md)
 * [Selecting a Provider](/content/monitoring/selecting-provider.md)
 * [Lab: Datadog Monitoring](/content/monitoring/lab-datadog.md)
-* [Native vs 3rd Party Monitoring](/content/monitoring/native-vs-3rd-party.md)
+* [Native vs. 3rd Party Monitoring](/content/monitoring/native-vs-3rd-party.md)
 * [Summary](/content/monitoring/summary.md)
 
 ## Docker and Kubernetes
@@ -72,6 +72,7 @@
 * [Native Tools](/content/k8s-monitoring/native-tools.md)
 * [3rd Party Services](/content/k8s-monitoring/3rd-party-services.md)
 * [Lab: DataDog Monitoring](/content/k8s-monitoring/lab-datadog-monitoring.md)
+* [Native vs. 3rd Party Monitoring](/content/k8s-monitoring/native-vs-3rd-party.md)
 * [Summary](/content/k8s-monitoring/summary.md)
 
 
