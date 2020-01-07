@@ -339,6 +339,7 @@
 13. ```
     variable "project_id" {
       default = "gcp-terraform"
+      gcp_region = "us-central"
     }
     ```
 14. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
