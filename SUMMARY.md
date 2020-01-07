@@ -70,10 +70,16 @@
 
 * [Introduction](/content/k8s-monitoring/intro.md)
 * [Native Tools](/content/k8s-monitoring/native-tools.md)
+* [Lab: K8s Native Monitoring](/content/k8s-monitoring/lab-native-tools.md)
 * [3rd Party Services](/content/k8s-monitoring/3rd-party-services.md)
 * [Lab: DataDog Monitoring](/content/k8s-monitoring/lab-datadog-monitoring.md)
 * [Native vs. 3rd Party Monitoring](/content/k8s-monitoring/native-vs-3rd-party.md)
 * [Summary](/content/k8s-monitoring/summary.md)
+
+# Multi-Cloud PaaS
+
+* [Introduction](/content/multi-cloud-paas/intro.md)
+* [Overview](/content/multi-cloud-paas/overview.md)
 
 
 
