@@ -79,7 +79,8 @@
 # Multi-Cloud PaaS
 
 * [Introduction](/content/multi-cloud-paas/intro.md)
-* [Overview](/content/multi-cloud-paas/overview.md)
+* [PaaS Overview](/content/multi-cloud-paas/pass-overview.md)
+* [Lab: Pcf Setup](/content/multi-cloud-paas/lab-pcf-setup.md)
 
 
 
