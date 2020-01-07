@@ -144,5 +144,13 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Microsoft Azure Arc
 * Create repos for terraform setup
 
+### TODO:
+
+* Aws Terraform setup - key-pair is missing
+
+
+
+
+
 
 
