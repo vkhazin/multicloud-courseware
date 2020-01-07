@@ -3,7 +3,6 @@
 ## Course Overview
 
 * [Introduction](README.md)
-* [Introduction](readme.md)
 * [Getting Started](./content/course-overview/getting-started.md)
 * [Objectives](./content/course-overview/objectives.md)
 * [Audience](./content/course-overview/audience.md)
