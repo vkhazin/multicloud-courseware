@@ -32,7 +32,7 @@
 
 * [Introduction](/./content/iac/intro.md)
 * [Manual Infrastructure](/./content/iac/manual-infra.md)
-* [Cloud Infrastructure](/./content/iac/intro.md)
+* [Cloud Infrastructure](/content/iac/cloud-infra.md)
 * [Immutable Infrastructure](/./content/iac/immutable-infra.md)
 * [Tools](/./content/iac/tools.md)
 * [Terraform Introduction](/./content/iac/terraform-intro.md)

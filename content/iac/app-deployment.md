@@ -1,6 +1,7 @@
 # Application Deployment
 
 * VM image can be prepared outside of Terraform templates to contain the application
+* Terraform can execute local or remote scripts
 * Terraform supports deployment Platform-as-a-Service components:
   * Elastic Beanstalk on Aws
   * Service App on Azure
