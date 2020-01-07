@@ -50,6 +50,7 @@
 * [3rd Party Monitoring](/content/monitoring/3rd-party-monitoring.md)
 * [Selecting a Provider](/content/monitoring/selecting-provider.md)
 * [Lab: Datadog Monitoring](/content/monitoring/lab-datadog.md)
+* [Native vs 3rd Party Monitoring](/content/monitoring/native-vs-3rd-party.md)
 * [Summary](/content/monitoring/summary.md)
 
 ## Docker and Kubernetes
