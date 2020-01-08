@@ -80,6 +80,7 @@
 
 * [Introduction](/content/multi-cloud-paas/intro.md)
 * [PaaS Overview](/content/multi-cloud-paas/pass-overview.md)
+* [PaaS vs. IaaS vs. KaaS](/content/multi-cloud-paas/paas-iaas-kaas.md)
 * [Lab: Pcf Setup](/content/multi-cloud-paas/lab-pcf-setup.md)
 
 
