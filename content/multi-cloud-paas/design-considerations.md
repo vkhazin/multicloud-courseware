@@ -5,7 +5,8 @@
 * When an application crashes it can be reprovisioned or restarted
 * When application scales out/in new instances are deployed and destroyed
 * State is better to be externalized whether in-memory or persistent
-* Configuration and secrets should be embedded into the application code
+* Configuration and secrets should not be embedded in the application code
+* It is rather difficult to debug a PaaS application in production, robust logging is required
 
 
 
