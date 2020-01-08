@@ -84,6 +84,7 @@
 * [Lab: Pcf Setup](/content/multi-cloud-paas/lab-pcf-setup.md)
 * [Design Considerations](/content/multi-cloud-paas/design-considerations.md)
 * [Deployment Automation](/content/multi-cloud-paas/deployment-automation.md)
+* [Summary](/content/multi-cloud-paas/summary.md)
 
 
 
