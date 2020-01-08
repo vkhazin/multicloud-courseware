@@ -82,6 +82,8 @@
 * [PaaS Overview](/content/multi-cloud-paas/pass-overview.md)
 * [PaaS vs. IaaS vs. KaaS](/content/multi-cloud-paas/paas-iaas-kaas.md)
 * [Lab: Pcf Setup](/content/multi-cloud-paas/lab-pcf-setup.md)
+* [Design Considerations](/content/multi-cloud-paas/design-considerations.md)
+* Deployment Automation
 
 
 
