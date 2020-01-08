@@ -19,7 +19,15 @@
 6. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
 7. ```
    variable "aws_region" {
-     default = "us-east-1"
+       default = "us-east-1"
+   }
+
+   variable "aws_availability_zone" {
+     default = "us-east-1a"
+   }
+
+   variable "key_name" {
+     default = "courseware-terraform"
    }
    ```
 8. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./aws-terraform/provider.tf`:
@@ -39,8 +47,9 @@
     }
 
     resource "aws_subnet" "public-subnet" {
-      vpc_id     = aws_vpc.vpc.id
-      cidr_block = "10.0.0.0/24"
+      vpc_id              = aws_vpc.vpc.id
+      cidr_block          = "10.0.0.0/24"
+      availability_zone   = var.aws_availability_zone
       tags = {
         Name = "Dev Public Subnet"
       }
@@ -75,30 +84,36 @@
 12. Create a new file `./aws-terraform/security.tf`:
 13. ```
     resource "tls_private_key" "ssh-key" {
-      algorithm = "RSA"
-      rsa_bits  = 4096
+        algorithm = "RSA"
+        rsa_bits = 4096
+    }
+
+    resource "local_file" "foo" {
+        content             = tls_private_key.ssh-key.private_key_pem
+        filename            = "./${var.key_name}.pem"
+        file_permission     = "400"
     }
 
     resource "aws_key_pair" "ssh-key-pair" {
-      key_name   = "tf-ssh-key"
-      public_key = tls_private_key.ssh-key.public_key_openssh
+        key_name = var.key_name
+        public_key = tls_private_key.ssh-key.public_key_openssh
     }
 
     resource "aws_security_group" "sg" {
-      name        = "Dev Security Group"
-      description = "Allow SSH inbound traffic"
-      vpc_id      = aws_vpc.vpc.id
+        name = "Dev Security Group"
+        description = "Allow SSH inbound traffic"
+        vpc_id = aws_vpc.vpc.id
     }
 
     resource "aws_security_group_rule" "ssh_inbound_access" {
-      from_port         = 22
-      protocol          = "tcp"
-      security_group_id = aws_security_group.sg.id
-      to_port           = 22
-      type              = "ingress"
-      cidr_blocks       = [
-        "0.0.0.0/0"
-      ]
+        from_port = 22
+        protocol = "tcp"
+        security_group_id = aws_security_group.sg.id
+        to_port = 22
+        type = "ingress"
+        cidr_blocks = [
+            "0.0.0.0/0"
+        ]
     }
     ```
 14. Create a new file: `ubuntu-vm.tf` with the following content:
