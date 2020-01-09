@@ -1,11 +1,6 @@
-# Pivotal PaaS
+![](/media/pcf-architecture.png)
 
-* Application development and deployment platform
-* Runs on-prem and on public clouds
-* Company develops the Spring framework and has its own OpenJDK distribution
-* Multiple run-times and frameworks are supported in addition to Java
-* Depends on open-source tool cli [BOSH](https://bosh.io/docs/)
-* Requires considerable footprint infrastructure to run
+* Requires a considerable footprint infrastructure to run: [over 30 VMS on AWS](https://docs.pivotal.io/platform/2-8/customizing/aws.html)
 
 
 
