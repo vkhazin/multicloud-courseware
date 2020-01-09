@@ -76,7 +76,7 @@
 * [Native vs. 3rd Party Monitoring](/content/k8s-monitoring/native-vs-3rd-party.md)
 * [Summary](/content/k8s-monitoring/summary.md)
 
-# Multi-Cloud PaaS
+## Multi-Cloud PaaS
 
 * [Introduction](/content/multi-cloud-paas/intro.md)
 * [PaaS Overview](/content/multi-cloud-paas/pass-overview.md)
@@ -85,6 +85,11 @@
 * [Design Considerations](/content/multi-cloud-paas/design-considerations.md)
 * [Deployment Automation](/content/multi-cloud-paas/deployment-automation.md)
 * [Summary](/content/multi-cloud-paas/summary.md)
+
+## PaaS Monitoring
+
+* [Introduction](/content/pass-monitoring/intro.md)
+* [Summary](/content/pass-monitoring/summary.md)
 
 
 
