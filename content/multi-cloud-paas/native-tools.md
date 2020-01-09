@@ -7,7 +7,8 @@
 * Aws Elastic Beanstalk
 * Azure App Service
 * GCP App Engine
-* Almost the same code can run on all of them
+* The same code can run on all of them
+* Code packaging may differ
 
 
 
