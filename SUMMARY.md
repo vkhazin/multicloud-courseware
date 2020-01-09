@@ -98,5 +98,11 @@
 * [Lab: DataDog Monitoring](/content/pass-monitoring/lab-datadog-monitoring.md)
 * [Summary](/content/pass-monitoring/summary.md)
 
+# Serverless
+
+* [Introduction](/content/serverless/intro.md)
+* [Motivation](/content/serverless/motivation.md)
+* [Summary](/content/serverless/summary.md)
+
 
 
