@@ -3,7 +3,7 @@
 * IaaS: cloud provider is responsible for network, storage, servers and network
 * KaaS: cloud provider is also responsible for operating system and middleware
 * PaaS: cloud provider is also responsible for runtime
-* There is also FaaS - function as a service, we will cover it later
+* There is also FaaS - function as a service, we will cover later...
 
 
 
