@@ -1,6 +1,6 @@
 # Lab: Datadog Monitoring
 
-In this lab, we will enroll previously [terraform provisioned VM's](/../iac/lab-terraform.md) into datadog monitoring
+In this lab, we will enroll previously [terraform provisioned VM's](/../iac/lab-terraform.md) into Datadog monitoring
 
 First, we will need an API key from the Datadog: [https://app.datadoghq.com/account/settings\#api](https://app.datadoghq.com/account/settings#api)
 
