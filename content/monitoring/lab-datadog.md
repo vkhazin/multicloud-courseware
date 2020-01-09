@@ -1,20 +1,36 @@
 # Lab: Datadog Monitoring
 
-In this lab we will enroll previously [terraform provisioned VM's](/../iac/lab-terraform.md) into datadog monitoring
+In this lab, we will enroll previously [terraform provisioned VM's](/../iac/lab-terraform.md) into datadog monitoring
 
-First we will need an API key from the Datadog: [https://app.datadoghq.com/account/settings\#api](https://app.datadoghq.com/account/settings#api)
+First, we will need an API key from the Datadog: [https://app.datadoghq.com/account/settings\#api](https://app.datadoghq.com/account/settings#api)
 
 Take a note of the key we will need it in the following steps
 
 ## AWS
 
-Login into the VM provisioned using ssh
+Relaunch Cloud9 environment
 
-Replace the key value in the following command
+Reprovision the Ubuntu VM using terraform or re-use previously provisioned VM
+
+Login into the VM provisioned using ssh: `ssh -i ./courseware-terraform.pem ubuntu@{public-ip}`
+
+```
+public_ip=$(./bin/terraform output ubuntu_public_ip)
+ssh -i ./courseware-terraform.pem ubuntu@${public_ip}
+```
+
+Execute inside the VM:
+
+```
+DD_AGENT_MAJOR_VERSION=7 \
+DD_API_KEY={Your DataDog API KEY} \
+bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+
+```
 
 # Azure
 
-In the Azure portal, navigate to the `VM` -&gt; `Extensions` -&gt; `Add` 
+In the Azure portal, navigate to the `VM` -&gt; `Extensions` -&gt; `Add`
 
 Select `Datadog Agent`
 
@@ -53,8 +69,4 @@ Upload the service account key and complete the registration
 It will take a few minutes before data appears on the DataDog -&gt; Metrics -&gt; gcp\*
 
 You can plot CPU, Memory, and Disk metrics as you would expect from any infrastructure monitoring solution
-
-
-
-
 

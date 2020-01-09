@@ -29,6 +29,10 @@
    variable "key_name" {
      default = "courseware-terraform"
    }
+
+   output "ubuntu_public_ip" {
+     value = aws_instance.ubuntu-vm.public_ip
+   }
    ```
 8. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./aws-terraform/provider.tf`:
 9. ```
