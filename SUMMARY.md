@@ -89,6 +89,8 @@
 ## PaaS Monitoring
 
 * [Introduction](/content/pass-monitoring/intro.md)
+* [Native Tools](/content/pass-monitoring/native-tools.md)
+* [3rd Party Services](/content/pass-monitoring/3rd-party-services.md)
 * [Summary](/content/pass-monitoring/summary.md)
 
 
