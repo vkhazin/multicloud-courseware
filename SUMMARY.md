@@ -83,8 +83,8 @@
 * [PaaS vs. IaaS vs. KaaS](/content/multi-cloud-paas/paas-iaas-kaas.md)
 * [Native Tools](/content/multi-cloud-paas/native-tools.md)
 * [Lab: Native Tools](/content/multi-cloud-paas/lab-native-tools.md)
-* [Pcf Overview](/content/multi-cloud-paas/pcf-overview.md)
-* [Lab: Pc](/content/multi-cloud-paas/lab-pcf-setup.md)f
+* [Pcf PaaS](/content/multi-cloud-paas/pcf-paas.md)
+* [Lab: Pcf Paas](/content/multi-cloud-paas/lab-pcf-paas.md)
 * [Design Considerations](/content/multi-cloud-paas/design-considerations.md)
 * [Deployment Automation](/content/multi-cloud-paas/deployment-automation.md)
 * [Summary](/content/multi-cloud-paas/summary.md)
