@@ -349,7 +349,7 @@
 
 1. Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)and authenticate
 2. GCP API's are eventually consistent we may need to wait here and there before we continue
-3. Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with name: `gcp-terraform`
+3. Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with the name: `gcp-terraform`
 4. Navigate to the project home and copy `Project ID`, different from the project name
 5. Wait for the creation process to complete...
 6. Navigate to `Compute Engine` and wait for the API getting enabled...

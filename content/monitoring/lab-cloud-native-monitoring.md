@@ -3,7 +3,7 @@
 ## Aws
 
 1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
-2. From the services select `Cloud9` and launch the environment previously used for terraform
+2. From the services select `Cloud9` and launch the environment previously used for Terraform
 3. Apply the terraform templates: cd ./aws-terraform &&`./bin/terraform apply --auto-approve`
 4. Expected outcome:
 5. ```
@@ -23,7 +23,7 @@
 2. Select `bash` shell
 3. Select `Open editor`
 4. Authenticate to az cli: `az login` and follow the instructions
-5. Apply the terraform templates: cd ./azure-terraform &&`./bin/terraform apply --auto-approve`
+5. Apply the terraform templates: `cd ./azure-terraform && ./bin/terraform apply --auto-approve`
 6. Expected outcome:
 7. ```
    ...
@@ -39,6 +39,49 @@
 15. Note the common mistake: not saving the changes
 16. And there is a delay in collecting the logs, rebooting the VM may help
 17. Explorer `Connected Sources`, there is a way to send logs from any Linux host by installing an agent
+
+# GCP
+
+Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)and authenticate
+
+Select project: `gcp-terraform`
+
+Select `Activate Cloud Shell`
+
+Select `Launch Editor`
+
+Apply the terraform templates: `cd ./gcp-terraform && ./bin/terraform apply --auto-approve`Expected outcome:
+
+```
+...
+Apply complete! Resources: X added, 0 changed, 0 destroyed.
+```
+
+Verify the VM is running using web console, navigate to `Compute Engine` -&gt; `Vm Instances`
+
+Select the VM and then select `Stackdriver Logging`
+
+Review the logs retrieved from the running VM
+
+Select `Monitoring` tab to access standard operating system metrics
+
+Locate CPU, Memory, and Disk utilization
+
+There is also an option to collect more detailed metrics and logs by installing [Stackdriver agent](https://cloud.google.com/monitoring/agent/install-agent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
