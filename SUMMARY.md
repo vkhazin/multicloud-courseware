@@ -98,7 +98,7 @@
 * [Lab: DataDog Monitoring](/content/pass-monitoring/lab-datadog-monitoring.md)
 * [Summary](/content/pass-monitoring/summary.md)
 
-# Serverless
+## Serverless
 
 * [Introduction](/content/serverless/intro.md)
 * [Architecture](/content/serverless/architecture.md)
