@@ -107,5 +107,13 @@
 * [Lab: Serverless End-Point](/content/serverless/lab-serverless.md)
 * [Summary](/content/serverless/summary.md)
 
+## Serverless Monitoring
+
+* [Introduction](/content/serverless-monitoring/intro.md)
+
+### DBaaS {#dbaas}
+
+
+
 
 
