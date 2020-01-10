@@ -119,6 +119,11 @@
 ### DBaaS {#dbaas}
 
 * [Introduction](/content/dbaas/intro.md)
+* [Advantages & Liabilities](/content/dbaas/pros-cons.md)
+* [High Availability](/content/dbaas/high-availability.md)
+* [Disaster Recovery](/content/dbaas/disaster-recovery.md)
+* [Inter-cloud Practices](/content/dbaas/intercloud-practices.md)
+* [Summary](/content/dbaas/summary.md)
 
 ## Security & Compliance
 
