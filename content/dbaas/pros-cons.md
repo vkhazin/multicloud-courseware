@@ -11,7 +11,8 @@
 * The dark-side of "outsourcing"
   * What to do when a cloud provider shows an outage for DBaaS on their status page?
   * How can we upgrade to the latest version or launch a historical version of the database?
-  * We have been using Azure Cosmos DB, how can we embrace Aws and GCP? 
+  * We have been using Azure Cosmos DB, how can we embrace Aws and GCP?
+  * Is there a break-even point for the cost of DBaaS? 
 
 
 
