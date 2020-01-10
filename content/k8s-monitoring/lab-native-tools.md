@@ -1,4 +1,4 @@
-# Lab: Native K8s Tools
+# Lab: Native K8s Monitoring
 
 1. Navigate to [https://console.cloud.google.com/kubernetes/](https://console.cloud.google.com/kubernetes/workload)
 2. Select the nodejs-endpoint workload we have created in the previous lab
