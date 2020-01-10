@@ -103,6 +103,8 @@
 * [Introduction](/content/serverless/intro.md)
 * [Architecture](/content/serverless/architecture.md)
 * [Motivation](/content/serverless/motivation.md)
+* [Interoperability](/content/serverless/interoperability.md)
+* [Lab: Serverless End-Point](/content/serverless/lab-serverless.md)
 * [Summary](/content/serverless/summary.md)
 
 
