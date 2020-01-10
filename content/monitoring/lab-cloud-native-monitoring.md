@@ -1,4 +1,4 @@
-# Lab: Cloud-Native Monitoring
+# Lab: Cloud-Native IaaS Monitoring
 
 ## Aws
 
@@ -68,20 +68,4 @@ Select `Monitoring` tab to access standard operating system metrics
 Locate CPU, Memory, and Disk utilization
 
 There is also an option to collect more detailed metrics and logs by installing [Stackdriver agent](https://cloud.google.com/monitoring/agent/install-agent)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
