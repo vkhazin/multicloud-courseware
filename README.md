@@ -99,7 +99,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * PaaS Design Considerations
 * Deployment automation
 
-### PaaS Logging and Monitoring
+### PaaS Monitoring
 
 * Platform native tools
 * Monitoring Practices
@@ -115,7 +115,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Cloud specific platforms
 * Inter-cloud approaches
 
-### Serverless Logging and Monitoring
+### Serverless Monitoring
 
 * Platform native tools
 * Logging and Monitoring Practices
