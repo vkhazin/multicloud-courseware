@@ -101,6 +101,7 @@
 # Serverless
 
 * [Introduction](/content/serverless/intro.md)
+* [Architecture](/content/serverless/architecture.md)
 * [Motivation](/content/serverless/motivation.md)
 * [Summary](/content/serverless/summary.md)
 
