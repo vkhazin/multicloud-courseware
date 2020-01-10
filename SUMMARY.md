@@ -110,6 +110,11 @@
 ## Serverless Monitoring
 
 * [Introduction](/content/serverless-monitoring/intro.md)
+* [Native Tools](/content/serverless-monitoring/native-tools.md)
+* [Lab: Native Tools](/content/serverless-monitoring/lab-native-tools.md)
+* [3rd Party Services](/content/serverless-monitoring/3rd-party-services.md)
+* [Lab: DataDog Monitoring](/content/serverless-monitoring/lab-datadog-monitoring.md)
+* [Summary](/content/serverless-monitoring/summary.md)
 
 ### DBaaS {#dbaas}
 
