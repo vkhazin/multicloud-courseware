@@ -1,6 +1,4 @@
-# Lab: Native Tools
-
-
+# Lab: Native Serverless Monitoring
 
 
 
