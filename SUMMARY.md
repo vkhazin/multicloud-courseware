@@ -135,5 +135,9 @@
 * [Logs & Auditing](/content/security-compliance/logs-auditing.md)
 * [Summary](/content/security-compliance/summary.md)
 
+## Course Summary
+
+* [Summary](/content/course-intro/summary.md)
+
 
 
