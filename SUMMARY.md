@@ -128,8 +128,9 @@
 ## Security & Compliance
 
 * [Introduction](/content/security-compliance/intro.md)
-* Common Concerns
+* [Common Concerns](/content/security-compliance/common-concerns.md)
 * [Multi-Cloud Practices](/content/security-compliance/multicloud-practices.md)
+* [Cloud Provider Compliance](/content/security-compliance/provider-compliance.md)
 
 
 
