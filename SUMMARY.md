@@ -131,6 +131,9 @@
 * [Common Concerns](/content/security-compliance/common-concerns.md)
 * [Multi-Cloud Practices](/content/security-compliance/multicloud-practices.md)
 * [Cloud Provider Compliance](/content/security-compliance/provider-compliance.md)
+* [Inter-Cloud Authentication](/content/security-compliance/intercloud-authentication.md)
+* [Logs & Auditing](/content/security-compliance/logs-auditing.md)
+* [Summary](/content/security-compliance/summary.md)
 
 
 
