@@ -5,7 +5,7 @@
 * Recent hands-on experience with terminal/command line
 * Database and data-modelling awareness
 * The notion of security and compliance concerns
-* Access to AWS, GCP, Azure account, tree trial is susfficient
+* Access to AWS, GCP, Azure account, tree trial is sufficient
 * Willingness to register a free trial account on JumpCloud, DataDog and Pivotal Web Services
 
 
