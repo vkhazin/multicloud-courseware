@@ -4,7 +4,5 @@ node_js:
   
 script:
   - npm install
-  - npm install surge -g
-  - node_modules/.bin/gitbook install
-  - node_modules/.bin/gitbook build
+  - npm install gitbook-cli surge -g
   - surge --domain http://multicourse-courseware.surge.sh/ --project ./_book
