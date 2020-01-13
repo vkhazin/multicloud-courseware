@@ -18,7 +18,7 @@
     - AppServiceAppLogs
     - AppServiceFileAuditLogs
     - AppServiceAuditLogs
-    - AllMetrics
+    - AllMetrics  
 4.5 Go to Log Streem section and enble logs to monitor ``` ex: Applocation Logs, Web Logs ```  
 5. AAI is not free of cost and not enabled be default on resources such as App Service  
 6. To Enable AAI Go to the resource, ``` ex: App Service ``` and Overview -> Application Insights Or Go to the Settings under App Service and enable Application Insights  
