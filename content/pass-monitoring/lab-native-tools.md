@@ -10,7 +10,7 @@
     - Average Response Time  
 3. Microsoft also provide a monitoring tool named as Azure Application Insights - AAI  
 4. Open the PaaS resource ``` ex: App Service ``` and go to the Monitoring Section  
-4.1. Alerts section allows us to create new Alerts ``` ex: Storage Limitation, CPU Utilization, etc.``` 
+4.1. Alerts section allows us to create new Alerts ``` ex: Storage Limitation, CPU Utilization, etc.```  
 4.2. Go to Metrics section under Monitoring section and check data based upon multiple ready-to-use metrics  
 4.3. Add Diagnostic Settings to capture following information  
 4.4. - AppServiceHTTPLogs
