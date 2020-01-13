@@ -10,6 +10,7 @@
 6. You can navigate to the [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) console to see your dashboard and get an overview of all of your resources as well as your alarms 
 7. Allows us to set alarms based on resource performace, error logs, etc. 
 8. We can also publish our own metrics directly to Amazon CloudWatch   
+9. CloudWatch [Pricing](https://aws.amazon.com/cloudwatch/pricing/)
 
 ## Azure
 
@@ -34,3 +35,11 @@
 10. AAI is not free of cost and not enabled be default on resources such as App Service  
 11. To Enable AAI Go to the resource, ``` ex: App Service ``` and Overview -> Application Insights Or Go to the Settings under App Service and enable Application Insights  
 12. Azure Application Insghts [Pricing](https://azure.microsoft.com/en-us/pricing/details/monitor/)
+
+## GCP
+
+1. For Basic Metric: At Project Page, go to Instances to check logs regarding CPU Performance, Memory usage, and Network Traffic at a higher level such as Black-Box Monitoring
+2. There is no such extensive native monitoring in GCP though it provides stackdriver integration which gives the feel for native monitoring not particularly for Google App Engine
+3. Here is [Quick Guide](https://cloud.google.com/monitoring/docs/how-to) to setup monitoring for some GCP services such as GCE.
+4. StackDriver [Pricing](https://cloud.google.com/stackdriver/pricing)
+5. There are other tools available to get more enhanced view of logs, events such as [DataDog](https://docs.datadoghq.com/integrations/google_cloud_platform/), [DynaTrace](https://www.dynatrace.com/technologies/google-cloud-platform-monitoring/), etc.
