@@ -15,13 +15,13 @@
   4.1. Alerts section allows us to create new Alerts ``` ex: Storage Limitation, CPU Utilization, etc.``` 
   4.2. Go to Metrics section under Monitoring section and check data based upon multiple ready-to-use metrics
   4.3. Add Diagnostic Settings to capture following information 
-  4.4.  ```
-        # AppServiceHTTPLogs
-        # AppServiceConsoleLogs
-        # AppServiceAppLogs
-        # AppServiceFileAuditLogs
-        # AppServiceAuditLogs
-        # AllMetrics
+  4.4.  ```  
+        # AppServiceHTTPLogs  
+        # AppServiceConsoleLogs  
+        # AppServiceAppLogs  
+        # AppServiceFileAuditLogs  
+        # AppServiceAuditLogs  
+        # AllMetrics  
         ```
   4.5 Go to Log Streem section and enble logs to monitor ``` ex: Applocation Logs, Web Logs ```
 5. AAI is not free of cost and not enabled be default on resources such as App Service
