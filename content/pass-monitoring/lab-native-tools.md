@@ -17,11 +17,6 @@
 4.3. Add Diagnostic Settings to capture following information
 4.4. ```
      # AppServiceHTTPLogs
-     # AppServiceConsoleLogs
-     # AppServiceAppLogs
-     # AppServiceFileAuditLogs
-     # AppServiceAuditLogs
-     # AllMetrics
      ```
 4.5 Go to Log Streem section and enble logs to monitor ``` ex: Applocation Logs, Web Logs ```
 5. AAI is not free of cost and not enabled be default on resources such as App Service
