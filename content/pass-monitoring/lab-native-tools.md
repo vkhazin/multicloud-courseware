@@ -13,7 +13,7 @@
 4.1. Alerts section allows us to create new Alerts ``` ex: Storage Limitation, CPU Utilization, etc.```  
 4.2. Go to Metrics section under Monitoring section and check data based upon multiple ready-to-use metrics  
 4.3. Add Diagnostic Settings to capture following information  
-4.4. - AppServiceHTTPLogs
+4.4.  - AppServiceHTTPLogs
     - AppServiceConsoleLogs
     - AppServiceAppLogs
     - AppServiceFileAuditLogs
