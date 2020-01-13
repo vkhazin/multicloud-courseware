@@ -40,5 +40,5 @@
     az webapp create  --name mudassir-courseware-nodejs \
                       --plan $plan \
                       --resource-group $resourceGroup \
-                      --deployment-container-image-name dockerHubUserName/<docker imag name>:latest
+                      --deployment-container-image-name $dockerHubUserName/<docker imag name>:latest
     ```
