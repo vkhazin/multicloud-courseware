@@ -56,6 +56,7 @@
 1.  Open [Azure Portal](porta.azure.com) and Open Azure Cli to run the script
 2.  This script will create all the requires resources to deploy the docker image on 
 3.  ```
+    # Variables
     resourceGroup=courseware-nodejs-app
     location="East US"
     plan=App-Service-Plan
