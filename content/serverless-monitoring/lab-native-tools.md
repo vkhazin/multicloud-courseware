@@ -3,10 +3,7 @@
 ## Azure
 
 1. Azure Functions uses the Application Insights native tool of Azure to provide the Monitoring of the functions
-2. For a function app to send data to Application Insights, it requires instrumentation key of an Application Insights resource. The key must be in an app setting named as:
-```
-APPINSIGHTS_INSTRUMENTATIONKEY
-```
+2. For a function app to send data to Application Insights, it requires instrumentation key of an Application Insights resource. The key must be in an app setting named as: APPINSIGHTS_INSTRUMENTATIONKEY
 3. Application Insights integration is enabled by default when a new function app is created with Instrument Key generated under Application Settings
 4. When Function App is created via CLI, Visual Studio, or VS Code, it requires manually setting up Application Insights
 5. To manually integrate application insight, go to the Azure Portal and fucntion to enable insights. It will show warning that insghits are not configured and link to configure it
