@@ -18,6 +18,39 @@
     docker push <username>/<docker Image Name>:latest
     ```
 
+## AWS
+
+### Pre-requesites
+
+1. Setup an IAM user to be used with AWS EB CLI
+2. Setup EB CLI
+3.  ```
+    # Required permissions: "AWSElasticBeanstalkFullAccess" policy
+    # Download and install Python 3.6+
+    
+    # Install EB CLI
+    pip install awsebcli --upgrade --user
+
+    # Clone GitHub repo
+    git clone https://github.com/vkhazin/courseware-nodejs-container & cd courseware-nodejs-container
+
+    # Setup new Elastic Beanstalk application
+    # Using courseware-nodejs-app as application name
+    eb init courseware-nodejs-app --platform Docker
+
+    # Setup AWS resources necessary to run the application
+    # Using courseware-nodejs-app-dev as environment name
+    eb create courseware-nodejs-app-dev --elb-type application --region <region>
+    ```
+4. For service role: Press enter so that CLI creates one for you
+    ```
+    # Please wait until the following message is shown.
+    # INFO: Successfully Launched Environment
+
+    # Test your application
+    eb open
+    ```
+
 ## Azure
 
 1.  Open [Azure Portal](porta.azure.com) and Open Azure Cli to run the script
