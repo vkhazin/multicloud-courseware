@@ -20,7 +20,7 @@
     - Data Out
     - Request
     - Average Response Time  
-3. Azure Application Insights - AAI - Paid Monitoring tool  
+3. [Azure Application Insights](https://azure.microsoft.com/en-us/services/monitor/) - AAI - Paid Monitoring tool  
 4. Open the PaaS resource ``` ex: App Service ``` and go to the Monitoring Section  
 5. Alerts section allows us to create new Alerts ``` ex: Storage Limitation, CPU Utilization, etc.```  
 6. Go to Metrics section under Monitoring section and check data based upon multiple ready-to-use metrics  
