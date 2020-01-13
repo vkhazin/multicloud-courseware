@@ -15,16 +15,19 @@
     docker build -t <username>/courseware-nodejs-example .
 
     # Publish docker image to Docker Hub
-    docker push <username>/courseware-nodejs-example:latest
+    docker push <username>/<docker Image Name>:latest
     ```
 
 ## Azure
 
-1.  ```
+1.  Open [Azure Portal](porta.azure.com) and Open Azure Cli to run the script
+2.  This script will create all the requires resources to deploy the docker image on 
+3.  ```
     resourceGroup=courseware-nodejs-app
     location="East US"
     plan=App-Service-Plan
-
+    dockerHubUserName="CloudClient"
+    
     # Create resource group
     az group create --name $resourceGroup --location $location
 
@@ -37,5 +40,5 @@
     az webapp create  --name mudassir-courseware-nodejs \
                       --plan $plan \
                       --resource-group $resourceGroup \
-                      --deployment-container-image-name adeelnayyersheikh/courseware-nodejs-container:latest
+                      --deployment-container-image-name dockerHubUserName/<docker imag name>:latest
     ```
