@@ -2,7 +2,7 @@
 
 ## GCP
 
-1. Open GCP Console
+1. Open [GCP Console](https://console.cloud.google.com/)
 2. Run this script to Deploy the Node Js API
 3.  ```
     # Clone the Repository
