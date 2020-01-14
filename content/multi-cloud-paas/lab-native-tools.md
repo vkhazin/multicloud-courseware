@@ -76,3 +76,38 @@
                       --resource-group $resourceGroup \
                       --deployment-container-image-name $dockerHubUserName/<docker imag name>:latest
     ```
+    
+## GCP
+
+1. Open [GCP Console](https://console.cloud.google.com/)
+2. Run this sc
+3.  ```
+    # Clone the Repository
+    git clone https://github.com/vkhazin/courseware-nodejs-container.git
+    
+    # Change Directory to where we have server.js file
+    cd courseware-nodejs-container/api
+    ```
+10. Modify server.js and change the module export syntax
+11. ```
+    # Before Modification
+    module.exports = app
+    
+    # After Modification
+    module.exports = {
+        app
+    };
+    ```
+9. Now, Deploy the API with this one command
+    ```
+    gcloud functions deploy <Function Name> --runtime nodejs8 --trigger-http --entry-point app
+    ```
+4. It will output with wait message like this
+5. `Deploying function (may take a while - up to 2 minutes)`
+6. Now, Navigate to the Cloud Functions and you must find your deployed app with green tick mark
+7. To test the API with Cloud Function navigate to this url
+8.  ```
+    https://<region-name>-<projectId>.cloudfunctions.net/<functionAppName>
+    
+    # ex: https://us-central1-node-js-cloud-function.cloudfunctions.net/nodejsFuncs
+    ```
