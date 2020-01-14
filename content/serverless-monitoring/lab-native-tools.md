@@ -1,5 +1,13 @@
 # Lab: Native Serverless Monitoring
 
+## AWS
+
+1. AWS Lambda monitors functions and sends metrics data to Amazon CloudWatch
+2. To access metrics using the CloudWatch console
+3. Open the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/)
+4. In the navigation pane, choose **Metrics**
+5. In the **CloudWatch Metrics by Category** pane, choose **Lambda Metrics**
+
 ## Azure
 
 1. Azure Functions uses the Application Insights native tool of Azure to provide the Monitoring of the functions
