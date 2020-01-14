@@ -88,8 +88,8 @@
     # Change Directory to where we have server.js file
     cd courseware-nodejs-container/api
     ```
-10. Modify server.js and change the module export syntax
-11. ```
+4. Modify server.js and change the module export syntax
+5. ```
     # Before Modification
     module.exports = app
     
@@ -98,16 +98,17 @@
         app
     };
     ```
-9. Now, Deploy the API with this one command
+6. Create a new file in the root directory where DockerFile is placed and name it `app.yaml` with following code:
+7. ```
+    runtime: custom
+    env: flex
     ```
-    gcloud functions deploy <Function Name> --runtime nodejs8 --trigger-http --entry-point app
-    ```
-4. It will output with wait message like this
-5. `Deploying function (may take a while - up to 2 minutes)`
-6. Now, Navigate to the Cloud Functions and you must find your deployed app with green tick mark
-7. To test the API with Cloud Function navigate to this url
-8.  ```
-    https://<region-name>-<projectId>.cloudfunctions.net/<functionAppName>
-    
-    # ex: https://us-central1-node-js-cloud-function.cloudfunctions.net/nodejsFuncs
+8. Now just deploy this container to App Engine
+9. `gcloud app deploy`
+10. This will start the deployment. Once it completes with a success message, to test it run this command
+11. `gcloud app browse`
+12. This will responf with url for the deployed API you can copy/paste in browser to access the endpoint
+13. ```
+    Did not detect your browser. Go to this link to view your app:
+    https://nodejsocontainer.appspot.com
     ```
