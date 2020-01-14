@@ -59,10 +59,10 @@
     }
     ```
 9. **Note**:  
-    * Logs emitted using console.log() have the INFO log level.
-    * Logs emitted using console.error() have the ERROR log level.
-    * Logs written directly to stdout or stderr do not have an associated log level.
-    * Internal system messages have the DEBUG log level.
+    * Logs emitted using `console.log()` have the `INFO` log level.
+    * Logs emitted using `console.error()` have the `ERROR` log level.
+    * Logs written directly to `stdout` or `stderr` do not have an associated log level.
+    * Internal system messages have the `DEBUG` log level.
 10. **Viewing Logs**:
 11. Using the command-line tool
 12. Logs for Cloud Functions are viewable in the Stackdriver Logging UI, and via the gcloud command-line tool
