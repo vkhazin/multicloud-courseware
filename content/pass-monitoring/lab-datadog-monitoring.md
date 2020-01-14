@@ -120,7 +120,21 @@
 23. Select the Role Delegation tab
 24. Enter your AWS Account ID without dashes, `e.g. 123456789012`. Your Account ID can be found in the ARN of the role created during the `[installation of the AWS integration](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#installation)`
 25. Choose the services you want to collect metrics for and Click `Install Integration`
-26. Once done, go into your [Datadog Log section](https://app.datadoghq.com/logs) to start exploring your logs!
+26. To receive Elastic Beanstalk metrics, you must enable the Enhanced Health Reporting feature for your environment
+27. Open the [Elastic Beanstalk console](https://console.aws.amazon.com/elasticbeanstalk)
+28. Navigate to the **[management page](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-console.html)** for your environment
+29. Choose **Configuration**
+30. In the **Monitoring** configuration category, choose **Modify**
+31. Under **Health reporting**, for **System**, choose **Enhanced**
+32. Choose **Apply**
+33. Also Configure your environment to publish **enhanced health metrics to CloudWatch**. **Note**: These settings increase your CloudWatch custom metric charges
+34. Open the [Elastic Beanstalk console](https://console.aws.amazon.com/elasticbeanstalk)
+35. Navigate to the [management page](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-console.html) for your environment
+36. Choose **Configuration**
+37. In the **Monitoring** configuration category, choose **Modify**
+38. Under **Health reporting**, select the instance and environment metrics to publish to CloudWatch. To select multiple metrics, press the **Ctrl** key while choosing
+40. Choose **Apply**
+41. Once done, go into your [Datadog Log section](https://app.datadoghq.com/logs) to start exploring your logs!
 
 ## Azure
 
