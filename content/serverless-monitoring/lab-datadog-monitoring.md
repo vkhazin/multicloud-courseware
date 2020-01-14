@@ -17,7 +17,7 @@
 13. Click `Create policy`. You can now close this window
 14. Back in the “Create role” window, refresh the list of policies and select the policy you just created
 15. Click `Next: Review`
-16. Set up **[DATADOG AWS IAM POLICY](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=allpermissions#datadog-aws-iam-policy)**
+16. Set up **DATADOG AWS IAM POLICY**
 17. Core Permissions: 
 18. ```
     {
