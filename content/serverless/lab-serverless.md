@@ -131,7 +131,7 @@
 8. `Deploying function (may take a while - up to 2 minutes)`
 9. Now, Navigate to the Cloud Functions and you must find your deployed app with green tick mark
 10. To test the API with Cloud Function navigate to this url
-11.  ```
+11. ```
     https://<region-name>-<projectId>.cloudfunctions.net/<functionAppName>
     
     # ex: https://us-central1-node-js-cloud-function.cloudfunctions.net/nodejsFuncs
