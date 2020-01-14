@@ -135,7 +135,9 @@
 38. Under **Health reporting**, select the instance and environment metrics to publish to CloudWatch. To select multiple metrics, press the **Ctrl** key while choosing
 40. Choose **Apply**
 41. Once done, go into your [Datadog Log section](https://app.datadoghq.com/logs) to start exploring your logs!
-
+42. **Note** If you use Docker containers in your Elastic Beanstalk environment, use the containerized Datadog Agent to monitor Docker usage
+43. Follow the steps below to configure your environment to integrate the [Datadog Agent container](https://docs.datadoghq.com/integrations/amazon_elasticbeanstalk/#datadog-container-agent-configuration)
+	
 ## Azure
 
 1. DataDog provides Azure Integration, which includes a wide area of supported azure services including, PaaS, IaaS, etc.
