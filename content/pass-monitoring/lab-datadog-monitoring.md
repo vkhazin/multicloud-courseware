@@ -1,5 +1,79 @@
 # Lab: DataDog PaaS Monitoring
 
+## AWS
+
+1. The Serverless dashboard requires no installation of its own, but it relies on three data sources that require their own installation:
+2. Set up Amazon Web Services integration which is required, follor the steps:
+3. Setting up the Datadog integration with Amazon Web Services requires configuring role delegation using AWS IAM
+4. Create a new role in the [AWS IAM Console](https://console.aws.amazon.com/iam/home#/roles)
+5. Select `Another AWS account` for the Role Type
+6. For Account ID, enter <Your Data Dog Account Id> (Datadog’s account ID). This means that you are granting Datadog read only access to your AWS data
+7. Check off `Require external ID` and enter the one generated in the [Datadog app](https://app.datadoghq.com/account/settings#integrations/amazon_web_services). Make sure you leave **Require MFA** disabled. For more information about the External ID, refer to this document in the IAM User Guide
+8. Click `Next: Permissions`
+9. If you’ve already created the policy, search for it on this page and select it, then skip to step 12. Otherwise, click `Create Policy`, which opens in a new window
+10. Select the `JSON` tab. To take advantage of every AWS integration offered by Datadog, use [policy snippet](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=allpermissions#datadog-aws-iam-policy) below in the textbox. As other components are added to an integration, these permissions may change
+11. Click `Review policy`
+12. Name the policy `DatadogAWSIntegrationPolicy` or one of your own choosing, and provide an apt description
+13. Click `Create policy`. You can now close this window
+14. Back in the “Create role” window, refresh the list of policies and select the policy you just created
+15. Click `Next: Review`
+16. Set up **DATADOG AWS IAM POLICY**
+17. Core Permissions: 
+18. ```
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Action": [
+            "cloudwatch:Get*",
+            "cloudwatch:List*",
+            "ec2:Describe*",
+            "support:*",
+            "tag:GetResources",
+            "tag:GetTagKeys",
+            "tag:GetTagValues"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ]
+    }
+    ```
+19. All Perimissions configurtaion:
+20. ```
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Action": [
+            "apigateway:GET",
+            "autoscaling:Describe*",
+            "budgets:ViewBudget",
+            "cloudfront:GetDistributionConfig",
+            "cloudfront:ListDistributions",
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:GetTrailStatus",
+            "cloudwatch:Describe*",
+            "cloudwatch:Get*",
+            "cloudwatch:List*",
+            "codedeploy:List*",
+            "codedeploy:BatchGet*",
+            "directconnect:Describe*",
+            "dynamodb:List*",
+            "dynamodb:Describe*",
+            "ec2:Describe*",
+            "ecs:Describe*",
+            "ecs:List*",
+            "elasticache:Describe*",
+            "elasticache:List*",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeTags",
+            "elasticloadbalancing:Describe*",
+            "elasticmapreduce:List*",
+            "elasticmapreduce:Describe*",
+            "es:ListTags",
+            "es:ListDomainNames",
+            "es:DescribeElasticsearchDomains",
             "health:DescribeEvents",
             "health:DescribeEventDetails",
             "health:DescribeAffectedEntities",
