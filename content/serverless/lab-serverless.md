@@ -99,6 +99,9 @@
       None
     ```
 
+## Azure 
+
+
 ## GCP
 
 1. Open [GCP Console](https://console.cloud.google.com/)
