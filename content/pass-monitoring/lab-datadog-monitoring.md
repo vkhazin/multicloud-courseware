@@ -1,5 +1,52 @@
 # Lab: DataDog PaaS Monitoring
 
+            "health:DescribeEvents",
+            "health:DescribeEventDetails",
+            "health:DescribeAffectedEntities",
+            "kinesis:List*",
+            "kinesis:Describe*",
+            "lambda:AddPermission",
+            "lambda:GetPolicy",
+            "lambda:List*",
+            "lambda:RemovePermission",
+            "logs:TestMetricFilter",
+            "logs:PutSubscriptionFilter",
+            "logs:DeleteSubscriptionFilter",
+            "logs:DescribeSubscriptionFilters",
+            "rds:Describe*",
+            "rds:List*",
+            "redshift:DescribeClusters",
+            "redshift:DescribeLoggingStatus",
+            "route53:List*",
+            "s3:GetBucketLogging",
+            "s3:GetBucketLocation",
+            "s3:GetBucketNotification",
+            "s3:GetBucketTagging",
+            "s3:ListAllMyBuckets",
+            "s3:PutBucketNotification",
+            "ses:Get*",
+            "sns:List*",
+            "sns:Publish",
+            "sqs:ListQueues",
+            "support:*",
+            "tag:GetResources",
+            "tag:GetTagKeys",
+            "tag:GetTagValues",
+            "xray:BatchGetTraces",
+            "xray:GetTraceSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ]
+    }
+    ```
+21. Set up **Role Delegation**
+22. Open the [AWS integration tile](https://app.datadoghq.com/account/settings#integrations/amazon_web_services)
+23. Select the Role Delegation tab
+24. Enter your AWS Account ID without dashes, `e.g. 123456789012`. Your Account ID can be found in the ARN of the role created during the `[installation of the AWS integration](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#installation)`
+25. Choose the services you want to collect metrics for and Click `Install Integration`
+26. Once done, go into your [Datadog Log section](https://app.datadoghq.com/logs) to start exploring your logs!
 
 ## Azure
 
