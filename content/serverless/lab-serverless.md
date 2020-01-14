@@ -3,7 +3,7 @@
 ## AWS
 
 1. We will use serverless npm pkg to deploy the nodejs app to Azure Lambda
-2. Download the repo from github and open the `cmd` in `/api` folder 
+2. Download the repo from [github](https://github.com/vkhazin/courseware-nodejs-container) and open the `cmd` in `/api` folder 
 3. Modify server.js file to make it compatible for deployment
 4. Server.js Before
 5.  ```
