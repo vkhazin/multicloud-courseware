@@ -120,7 +120,7 @@
 23. Select the Role Delegation tab
 24. Enter your AWS Account ID without dashes, `e.g. 123456789012`. Your Account ID can be found in the ARN of the role created during the `[installation of the AWS integration](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#installation)`
 25. Choose the services you want to collect metrics for and Click `Install Integration`
-26. To receive Elastic Beanstalk metrics, you must enable the Enhanced Health Reporting feature for your environment
+26. To receive **Elastic Beanstalk metrics**, you must enable the Enhanced Health Reporting feature for your environment
 27. Open the [Elastic Beanstalk console](https://console.aws.amazon.com/elasticbeanstalk)
 28. Navigate to the **[management page](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-console.html)** for your environment
 29. Choose **Configuration**
