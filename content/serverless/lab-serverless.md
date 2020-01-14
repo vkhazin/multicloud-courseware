@@ -109,7 +109,18 @@
     
     # Change Directory to where we have server.js file
     cd courseware-nodejs-container/api
+    ```
+10. Modify server.js and change the module export syntax
+11. ```
+    # Before Modification
+    module.exports = app
     
+    # After Modification
+    module.exports = {
+        app
+    };
+    ```
+9.  ```
     # Now, Deploy the API with this one command.
     gcloud functions deploy <Function Name> --runtime nodejs8 --trigger-http --entry-point app
     ```
