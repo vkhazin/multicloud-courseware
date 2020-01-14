@@ -42,6 +42,7 @@
 16. ```
     # For DataDog US Site
     Select the Push method and enter the following: https://gcp-intake.logs.datadoghq.com/v1/input/<DATADOG_API_KEY>/
+    
     # For DataDog EU Site
     Select the Push method and enter the following: https://gcp-intake.logs.datadoghq.eu/v1/input/<DATADOG_API_KEY>/
     ```
