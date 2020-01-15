@@ -7,8 +7,9 @@
 1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
 2. From the services select `Cloud9`, please note you may need to select a region where Cloud9 is available
 3. Create a new environment with any name, micro or small instance type and Amazon Linux for the platform
-4. To install terraform run using terminal panel:
-5. ```
+4. Wait until the environment is created and loads the editor in browser
+5. To install terraform run using terminal panel:
+6. ```
    mkdir ./aws-terraform && 
    cd ./aws-terraform/ && 
    mkdir ./bin && 
@@ -16,8 +17,8 @@
    unzip -o terraform.zip -d ./bin &&
    rm -f terraform.zip
    ```
-6. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
-7. ```
+7. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
+8. ```
    variable "aws_region" {
        default = "us-east-1"
    }
@@ -34,14 +35,14 @@
      value = aws_instance.ubuntu-vm.public_ip
    }
    ```
-8. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./aws-terraform/provider.tf`:
-9. ```
-   provider "aws" {
-     region     = var.aws_region
-   }
-   ```
-10. Create a new file `./aws-terraform/network.tf`:
-11. ```
+9. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./aws-terraform/provider.tf`:
+10. ```
+    provider "aws" {
+      region     = var.aws_region
+    }
+    ```
+11. Create a new file `./aws-terraform/network.tf`:
+12. ```
     resource "aws_vpc" "vpc" {
       cidr_block           = "10.0.0.0/16"
       enable_dns_hostnames = true
@@ -85,8 +86,8 @@
       ]
     }
     ```
-12. Create a new file `./aws-terraform/security.tf`:
-13. ```
+13. Create a new file `./aws-terraform/security.tf`:
+14. ```
     resource "tls_private_key" "ssh-key" {
         algorithm = "RSA"
         rsa_bits = 4096
@@ -131,8 +132,8 @@
         ]    
     }
     ```
-14. Create a new file: `ubuntu-vm.tf` with the following content:
-15. ```
+15. Create a new file: `ubuntu-vm.tf` with the following content:
+16. ```
     data "aws_ami" "instance_ami" {
       most_recent = true
       owners      = [
@@ -166,18 +167,18 @@
       key_name                    = aws_key_pair.ssh-key-pair.key_name
     }
     ```
-16. Validate the templates: `./bin/terraform init && ./bin/terraform validate`
-17. Address any issues reported
-18. Apply the changes: `./bin/terraform apply --auto-approve`
-19. Expected output:
-20. ```
+17. Validate the templates: `./bin/terraform init && ./bin/terraform validate`
+18. Address any issues reported
+19. Apply the changes: `./bin/terraform apply --auto-approve`
+20. Expected output:
+21. ```
     ...
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
-21. Open [Aws Console](https://console.aws.amazon.com) and explore the resources created
-22. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-23. Expected output:
-24. ```
+22. Open [Aws Console](https://console.aws.amazon.com) and explore the resources created
+23. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+24. Expected output:
+25. ```
     ...
     Destroy complete! Resources: X destroyed.
     ```
@@ -185,42 +186,44 @@
 ## Azure
 
 1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
-2. Select `bash` shell
-3. Select `Open editor`
-4. Authenticate to az cli: `az login` and follow the instructions
-5. In the terminal type `az account list` to confirm a proper authentication
-6. Create a new folder `azure-terraform` to place the files
-7. Select the `refresh` icon in case folder structure does not reflect the new folder/file
-8. To install terraform run using the terminal panel:
-9. ```
-   cd ./azure-terraform/ &&
-   mkdir ./bin &&
-   wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip &&
-   unzip -o terraform.zip -d ./bin &&
-   rm -f terraform.zip
-   ```
-10. Using the terminal create a new file: `touch ./azure-terraform/provider.tf`
-11. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file:
-12. ```
+2. May need to create a new storage account if that's your first time here, give it a moment or two
+3. After the shell has been loaded
+4. Select `bash` shell
+5. Select `Open editor`
+6. Authenticate to az cli: `az login` and follow the instructions
+7. In the terminal type `az account list` to confirm a proper authentication
+8. Create a new folder `mkdir azure-terraform` to place the files
+9. Select the `refresh` icon in case folder structure does not reflect the new folder/file
+10. To install terraform run using the terminal panel:
+11. ```
+    cd ./azure-terraform/ &&
+    mkdir ./bin &&
+    wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip &&
+    unzip -o terraform.zip -d ./bin &&
+    rm -f terraform.zip
+    ```
+12. Using the terminal create a new file: `touch ./azure-terraform/provider.tf`
+13. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file:
+14. ```
     provider "azurerm" {
       version = ">= 1.3.3"
     }
     ```
-13. Create a new file: `variables.tf` with the following content:
-14. ```
+15. Create a new file: `variables.tf` with the following content:
+16. ```
     variable "azure_region" {      
       default = "Central US"      
     }
     ```
-15. Create a new file: `resource-group.tf` with the following content:
-16. ```
+17. Create a new file: `resource-group.tf` with the following content:
+18. ```
     resource "azurerm_resource_group" "resource-group" {  
       name     = "rg-tf-resource-group"  
       location = var.azure_region  
     }
     ```
-17. Create a new file: `vnet.tf` with the following content:
-18. ```
+19. Create a new file: `vnet.tf` with the following content:
+20. ```
     resource "azurerm_virtual_network" "vnet" {
        address_space = ["10.0.0.0/16"]
        location = var.azure_region
@@ -235,8 +238,8 @@
         virtual_network_name = azurerm_virtual_network.vnet.name
      }
     ```
-19. Create a new file: `security.tf` with the following content:
-20. ```
+21. Create a new file: `security.tf` with the following content:
+22. ```
     resource "azurerm_network_security_group" "sg-public" {
        location = var.azure_region
        name = "sg-public"
@@ -274,8 +277,8 @@
       content = tls_private_key.key.private_key_pem
     }
     ```
-21. Create a new file: `ubuntu-vm.tf` with the following content:
-22. ```
+23. Create a new file: `ubuntu-vm.tf` with the following content:
+24. ```
     resource "azurerm_public_ip" "public_ip" {
       location = var.azure_region
       name = "ubuntu-ip"
@@ -328,19 +331,19 @@
       }
     }
     ```
-23. Validate the templates: `./bin/terraform init && ./bin/terraform validate`
-24. Address any issues reported
-25. Apply the changes: `./bin/terraform apply --auto-approve`
-26. Expected outcome:
-27. ```
+25. Validate the templates: `./bin/terraform init && ./bin/terraform validate`
+26. Address any issues reported
+27. Apply the changes: `./bin/terraform apply --auto-approve`
+28. Expected outcome:
+29. ```
     ...
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
-28. Open [Azure Portal](https://portal.azure.com) and explore the resources created
-29. You can log in into the VM using ssh shell: `chmod 400 ./ssh-private-key.pem && ssh -i ./ssh-private-key.pem ubuntu@{public-ip}`
-30. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-31. Expected outcome:
-32. ```
+30. Open [Azure Portal](https://portal.azure.com) and explore the resources created
+31. You can log in into the VM using ssh shell: `chmod 400 ./ssh-private-key.pem && ssh -i ./ssh-private-key.pem ubuntu@{public-ip}`
+32. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+33. Expected outcome:
+34. ```
     ...
     Destroy complete! Resources: X destroyed.
     ```
