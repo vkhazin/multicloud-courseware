@@ -1,4 +1,114 @@
 # Lab: DataDog PaaS Monitoring
 
+## AWS
+
+1. To configure the integration between Aws and DataDog we will need to grant read-only access to Datadog app account
+2. Navigate to IAM from [https://console.aws.amazon.com](https://console.aws.amazon.com)
+3. Proceed to `Roles` and select `Create role`
+4. Select `Another AWS account` for the Role Type
+5. For the account Id enter `464622532012`
+6. Enable `Require external ID` open [DataDog AWS Integration](https://app.datadoghq.com/account/settings#integrations/amazon_web_services) to copy `AWS External ID`and paste it into the `External ID` field in Aws Console
+7. Make sure you leave `Require MFA` disabled
+8. Select `Nex: Permissions`
+9. Select `Create Policy` \(it will open a new browser tab/window\) -&gt; `JSON tab` -&gt; paste the [policy snippet from DataDog](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=allpermissions#datadog-aws-iam-policy):
+10. ```
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Action": [
+            "apigateway:GET",
+            "autoscaling:Describe*",
+            "budgets:ViewBudget",
+            "cloudfront:GetDistributionConfig",
+            "cloudfront:ListDistributions",
+            "cloudtrail:DescribeTrails",
+            "cloudtrail:GetTrailStatus",
+            "cloudwatch:Describe*",
+            "cloudwatch:Get*",
+            "cloudwatch:List*",
+            "codedeploy:List*",
+            "codedeploy:BatchGet*",
+            "directconnect:Describe*",
+            "dynamodb:List*",
+            "dynamodb:Describe*",
+            "ec2:Describe*",
+            "ecs:Describe*",
+            "ecs:List*",
+            "elasticache:Describe*",
+            "elasticache:List*",
+            "elasticfilesystem:DescribeFileSystems",
+            "elasticfilesystem:DescribeTags",
+            "elasticloadbalancing:Describe*",
+            "elasticmapreduce:List*",
+            "elasticmapreduce:Describe*",
+            "es:ListTags",
+            "es:ListDomainNames",
+            "es:DescribeElasticsearchDomains",
+            "health:DescribeEvents",
+            "health:DescribeEventDetails",
+            "health:DescribeAffectedEntities",
+            "kinesis:List*",
+            "kinesis:Describe*",
+            "lambda:AddPermission",
+            "lambda:GetPolicy",
+            "lambda:List*",
+            "lambda:RemovePermission",
+            "logs:TestMetricFilter",
+            "logs:PutSubscriptionFilter",
+            "logs:DeleteSubscriptionFilter",
+            "logs:DescribeSubscriptionFilters",
+            "rds:Describe*",
+            "rds:List*",
+            "redshift:DescribeClusters",
+            "redshift:DescribeLoggingStatus",
+            "route53:List*",
+            "s3:GetBucketLogging",
+            "s3:GetBucketLocation",
+            "s3:GetBucketNotification",
+            "s3:GetBucketTagging",
+            "s3:ListAllMyBuckets",
+            "s3:PutBucketNotification",
+            "ses:Get*",
+            "sns:List*",
+            "sns:Publish",
+            "sqs:ListQueues",
+            "support:*",
+            "tag:GetResources",
+            "tag:GetTagKeys",
+            "tag:GetTagValues",
+            "xray:BatchGetTraces",
+            "xray:GetTraceSummaries"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ]
+    } 
+    ```
+11. Select `Review Policy`
+12. Provide a name for the policy: `DatadogAWSIntegrationPolicy`  and select `Create Policy`
+13. Back to the previous browser tab/window and refresh the window
+14. Search and select the newly created policy
+15. Proceed to the next steps to enter the role name: `DatadogAWSIntegrationRole`
+16. Complete the setup on [Datadog console](https://app.datadoghq.com/account/settings#integrations/amazon_web_services) AWS Integration Tile
+17. Enter your `AWS Account ID` without dashes, e.g. `123456789012` and `Aws Role name` e.g. `DatadogAWSIntegrationRole`
+18. Your Account ID can be found in the ARN of the role created during the setup of the role e.g.: `arn:aws:iam::123456789012:role/DatadogAWSIntegrationRole` where the numbers are the account number and `DatadogAWSIntegrationRole` is the role name
+19. Select `Install Integration`and give it a moment to finish until you see `AWS Integration successfully updated.` message
+20. To receive `Elastic Beanstalk` metrics, we must enable the Enhanced Health Reporting feature for your environment
+21. Open the Aws Elastic Beanstalk console
+22. Navigate to the management page for your application and environment
+23. Select `Configuration`
+24. Scroll to, **don't search for**, `Monitoring` configuration category and choose Modify
+25. Under `Health reporting`, for System, choose `Enhanced`
+26. Select all or some `CloudWatch Custom metrics`
+27. Enable `Log Streaming` 
+28. Select `Apply`
+29. Once configuration changes have been applied, you can go to Datadog `Metrics Explorer` to search for `elasticbeanstalk` metrics
+
+## Azure
+
+
+
 
 
