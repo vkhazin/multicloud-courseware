@@ -189,7 +189,7 @@
 2. May need to create a new storage account if that's your first time here, give it a moment or two
 3. After the shell has been loaded
 4. Select `bash` shell
-5. Select `Open editor`
+5. Select `Open editor`icon from the tool bar
 6. Authenticate to az cli: `az login` and follow the instructions
 7. In the terminal type `az account list` to confirm a proper authentication
 8. Create a new folder `mkdir azure-terraform` to place the files

@@ -29,7 +29,10 @@
 
 ## Azure
 
-
-
+1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+2. After the shell has been loaded
+3. Select `bash` shell
+4. Select `Open editor` icon from the tool bar
+5. 6. 
 
 
