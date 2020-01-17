@@ -82,7 +82,7 @@
 * [PaaS Overview](/content/multi-cloud-paas/pass-overview.md)
 * [PaaS vs. IaaS vs. KaaS](/content/multi-cloud-paas/paas-iaas-kaas.md)
 * [Native Tools](/content/multi-cloud-paas/native-tools.md)
-* [Lab: Native Tools](/content/multi-cloud-paas/lab-native-tools.md)
+* [Lab: Native Paas Tools](/content/multi-cloud-paas/lab-native-pass-tools.md)
 * [Pcf PaaS](/content/multi-cloud-paas/pcf-paas.md)
 * [Lab: Pcf Paas](/content/multi-cloud-paas/lab-pcf-paas.md)
 * [Design Considerations](/content/multi-cloud-paas/design-considerations.md)
@@ -116,7 +116,7 @@
 * [Lab: DataDog Monitoring](/content/serverless-monitoring/lab-datadog-monitoring.md)
 * [Summary](/content/serverless-monitoring/summary.md)
 
-### DBaaS {#dbaas}
+## DBaaS
 
 * [Introduction](/content/dbaas/intro.md)
 * [Advantages & Liabilities](/content/dbaas/pros-cons.md)
