@@ -25,6 +25,9 @@
 21. While you wait you can explore options under `Learn More` to reflect on the options available in addition to running node.js code on AWS PaaS Elastic Beanstalk
 22. Eventually, you are odd to see a page with `Ok` health status and a URL to select for the provisioned environment
 23. Don't forget our end-point expect a parameter: `/?name=John`
+24. Do not delete the application as we will need it in the next lab
+
+## Azure
 
 
 
