@@ -29,50 +29,49 @@
 
 ## Azure
 
-Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+2. After the shell has been loaded
+3. Select `bash` shell
+4. Select `Open editor` icon from the toolbar
+5. Clone the repository with node.js end-point: `git clone https://github.com/vkhazin/courseware-nodejs-container`
+6. Proceed to the App Service on Azure Portal and select `Create app service`
+7. Select a subscription and a resource group
+8. Type in Name e.g. `courseware-nodejs`
+9. Select code and run-time `Node 10 LTS` and `Linux`
+10. Select `Free F1` for sku and size
+11. Select `Review + create` and then `Create`
+12. After the deployment is complete, select `Go to resource`
+13. Using Azure Shell change directory: `cd ./courseware-nodejs-container/api`
+14. Install npm packages: `npm install`
+15. Create a zip file: `zip -r courseware-nodejs.zip .`
+16. In the terminal panel run the deploy command:
+17. ```
+    az webapp deployment source config-zip \
+      --resource-group <resource-group-name> \
+      --name courseware-nodejs \
+      --src ./courseware-nodejs.zip
+    ```
+18. After the deployment is complete access the URL of the deployment
+19. Don't forget the end-point requires a parameter e.g. `/?name=John`
 
-After the shell has been loaded
+## GCP
 
-Select `bash` shell
-
-Select `Open editor` icon from the toolbar
-
-Clone the repository with node.js end-point: `git clone https://github.com/vkhazin/courseware-nodejs-container`
-
-Proceed to the App Service on Azure Portal and select `Create app service`
-
-Select a subscription and a resource group
-
-Type in Name e.g. `courseware-nodejs`
-
-Select code and run-time `Node 10 LTS` and `Linux`
-
-Select `Free F1` for sku and size
-
-Select `Review + create` and then `Create`
-
-After the deployment is complete, select `Go to resource`
-
-Using Azure Shell change directory: `cd ./courseware-nodejs-container/api`
-
-Install npm packages: `npm install`
-
-Create a zip file: `zip -r courseware-nodejs.zip .`
-
-In the terminal panel run the deploy command:
-
-```
-az webapp deployment source config-zip \
-  --resource-group <resource-group-name> \
-  --name courseware-nodejs \
-  --src ./courseware-nodejs.zip
-```
-
-After the deployment is complete access the URL of the deployment
-
-Don't forget the end-point requires a parameter e.g. `/?name=John`
-
-
+1. Navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/)
+2. Select `Activate Cloud Shell` icon and select editor icon to open a new browser tab/window
+3. We should have a folder `/courseware-nodejs-container` folder
+4. If it is not there, clone the repo: `git clone https://github.com/vkhazin/courseware-nodejs-container`
+5. Change directory: `cd ./courseware-nodejs-container/api`
+6. Install npm packages: `npm install`
+7. Google App Engine requires a manifest
+8. Create a new file under the `api` folder: `app.yaml` with the following content:
+   ```
+   runtime: nodejs10
+   ```
+9. And deploy the application: `gcloud app deploy`
+10. Select the desired deployment region and confirm the deployment
+11. After the deployment is complete, type `gcloud app browse`
+12. It will list a URL of app engine, navigate to the URL
+13. Don't forget the end-point requires a parameter e.g. `/?name=John`
 
 
 
