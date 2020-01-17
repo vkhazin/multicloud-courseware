@@ -33,6 +33,8 @@
 2. After the shell has been loaded
 3. Select `bash` shell
 4. Select `Open editor` icon from the tool bar
-5. 6. 
+5. Clone the repository with node.js end-point: \``git clone https://github.com/vkhazin/courseware-nodejs-container`
+
+6. 
 
 
