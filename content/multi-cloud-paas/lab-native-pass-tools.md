@@ -29,12 +29,50 @@
 
 ## Azure
 
-1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
-2. After the shell has been loaded
-3. Select `bash` shell
-4. Select `Open editor` icon from the tool bar
-5. Clone the repository with node.js end-point: \``git clone https://github.com/vkhazin/courseware-nodejs-container`
+Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
 
-6. 
+After the shell has been loaded
+
+Select `bash` shell
+
+Select `Open editor` icon from the toolbar
+
+Clone the repository with node.js end-point: `git clone https://github.com/vkhazin/courseware-nodejs-container`
+
+Proceed to the App Service on Azure Portal and select `Create app service`
+
+Select a subscription and a resource group
+
+Type in Name e.g. `courseware-nodejs`
+
+Select code and run-time `Node 10 LTS` and `Linux`
+
+Select `Free F1` for sku and size
+
+Select `Review + create` and then `Create`
+
+After the deployment is complete, select `Go to resource`
+
+Using Azure Shell change directory: `cd ./courseware-nodejs-container/api`
+
+Install npm packages: `npm install`
+
+Create a zip file: `zip -r courseware-nodejs.zip .`
+
+In the terminal panel run the deploy command:
+
+```
+az webapp deployment source config-zip \
+  --resource-group <resource-group-name> \
+  --name courseware-nodejs \
+  --src ./courseware-nodejs.zip
+```
+
+After the deployment is complete access the URL of the deployment
+
+Don't forget the end-point requires a parameter e.g. `/?name=John`
+
+
+
 
 
