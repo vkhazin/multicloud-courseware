@@ -93,7 +93,7 @@
 
 * [Introduction](/content/pass-monitoring/intro.md)
 * [Native Tools](/content/pass-monitoring/native-tools.md)
-* [Lab: Native Tools](/content/pass-monitoring/lab-native-tools.md)
+* [Lab: Native Monitoring Tools](/content/pass-monitoring/lab-native-tools.md)
 * [3rd Party Services](/content/pass-monitoring/3rd-party-services.md)
 * [Lab: DataDog Monitoring](/content/pass-monitoring/lab-datadog-monitoring.md)
 * [Summary](/content/pass-monitoring/summary.md)
@@ -138,4 +138,6 @@
 ## Course Summary
 
 * [Summary](/content/course-intro/summary.md)
+
+
 
