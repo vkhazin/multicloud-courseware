@@ -9,7 +9,7 @@
 5. Monitoring will share familiar utilization metrics
 6. Alarms allow automation on metrics, such as too many 500 error codes - send a notification
 7. And Logs allow us to download the logs and find `Server is running` log item our node.js container is writing when started
-8. CloudWatch allows us to add Elastic Beanstalk metrics to a dashboard as well
+8. CloudWatch service on Aws allows us to add Elastic Beanstalk metrics to a dashboard as well
 
 ## Azure
 
@@ -19,7 +19,7 @@
 4. Activity log should provide a "paper" trail for administrative actions
 5. Metrics will display familiar options resource utilization information, e.g. `CPU Time`
 6. And Log Stream will display a semi-live log with a delay up to 5 min, a bit of a pet peeve
-7. There is also Azure Monitoring you can use to add App Service metrics to add to a dashboard
+7. There is also Azure Monitoring you can navigate to and add App Service metrics to a dashboard
 
 ## GCP
 
