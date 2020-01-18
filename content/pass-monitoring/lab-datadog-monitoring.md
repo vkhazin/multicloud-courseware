@@ -118,7 +118,7 @@
 8. Create a service principal: `az ad sp create-for-rbac --role reader --scopes /subscriptions/{subscription_id}`
 9. Open [Datadog Azure Integration](https://app.datadoghq.com/account/settings#integrations/azure)
 10. Copy `tenantId` from `az account show` command into Datadog `Tenant name/ID` column
-11. Copy the `appID` generated from \```az ad sp create-for-rbac...``` command and paste it into the field `Client ID`
+11. Copy the `appID` generated from \``````az ad sp create-for-rbac...``` command and paste it into the field````Client ID\`
 12. Copy `password` from the same command into `Client Secret`
 13. Enter any desired tenant name e.g. `courseware`
 14. Select `Install Integration` and let the installation finish
@@ -126,7 +126,8 @@
 
 ## GCP
 
-Should you have spare time, you are welcome to update our App Engine deployment based on the following [documentation](https://app.datadoghq.com/account/settings#integrations/google-app-engine)
+1. Should you have spare time, you are welcome to update our App Engine deployment based on the following [documentation](https://app.datadoghq.com/account/settings#integrations/google-app-engine)
+2. A bummer: Node.js is not on the [list](https://docs.datadoghq.com/integrations/google_app_engine/)
 
 
 
