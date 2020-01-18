@@ -9,28 +9,26 @@
 5. Using the terminal panel navigate to the `api` subfolder of the cloned repository: `cd ./environment/courseware-nodejs-container/api/`
 6. Install node.js packages: `npm install`
 7. Need to modify server.js file before deployment, modified content:
-8. const serverless = require\('serverless-http'\);  
-   const express = require\('express'\);  
-   const app = express\(\);  
-   const morgan = require\('morgan'\);
+8. ```
+   const serverless = require('serverless-http');
+   const express = require('express');
+   const app = express();
+   const morgan = require('morgan');
 
-   const personRoutes = require\('./routes/person'\);
+   const personRoutes = require('./routes/person');
 
-   app.use\(express.json\(\)\);  
-   app.use\(morgan\('dev'\)\);  
-   app.use\(personRoutes\);
-
-   app.listen\(process.env.PORT \|\| 3001, \(\) =&gt; {  
-       console.log\("Server is running"\);  
-   }\)
-
-   app.use\(function\(req, res, next\) {  
-       return res.status\(404\).send\({ error: `Route ${req.url} Not found.` }\);  
-   }\);  
-   module.exports.handler = serverless\(app\);
-
+   app.use(express.json());
+   app.use(morgan('dev'));
+   app.use(personRoutes);
+   app.listen(process.env.PORT || 3001, () => {
+       console.log("Server is running");
+   })
+   app.use(function(req, res, next) {
+       return res.status(404).send({ error: Route ${req.url} Not found. });
+   });
+   module.exports.handler = serverless(app);
+   ```
 9. Need to add a new file for deployment:  `aws.yml` with the following content:
-
 10. ```
     service: courseware-nodejs
     provider:
