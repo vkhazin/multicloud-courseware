@@ -148,6 +148,7 @@
 24. Selecting the URL and don't forget to add the `?name=John` parameter
 25. The output will be slightly different as we are now using a completely different event handler compared to AWS lambda with Express.js
 26. Realistically you will need to refactor the code keeping all the logic separate from the handler as it is not possible yet to reuse the handlers across multiple cloud providers
+27. There is a [serverless](https://serverless.com/framework/docs/providers/azure/guide/quick-start/) implementation for Azure Function Apps, does not feel like ready to go mainstream
 
 ## GCP
 
