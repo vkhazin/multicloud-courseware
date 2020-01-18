@@ -6,7 +6,5 @@
 * Select [repository url](https://github.com/vkhazin/multicloud-courseware.git) and then 'fork' link to create a copy of the repo for yourself 
 * Alternatively, you are welcome to use any other method to comment and to take notes
 * You will be using your own laptop and different cloud providers
+* Strongly recommended to register your own personal account for a full autonomy on Aws, Azure, and GCP
 * The only local machine requirement is an [ssh client](https://www.ssh.com/ssh/download/), Linux and macOS have one built-in
-
-
-

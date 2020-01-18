@@ -148,11 +148,4 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 
 ### TODO:
 
-* Aws Terraform setup - key-pair is missing
-
-
-
-
-
-
-
+* Add chapter name to intro slides
