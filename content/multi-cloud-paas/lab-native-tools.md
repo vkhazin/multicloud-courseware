@@ -57,21 +57,22 @@
 ## GCP
 
 1. Navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/)
-2. Select `Activate Cloud Shell` icon and select editor icon to open a new browser tab/window
-3. We should have a folder `/courseware-nodejs-container` 
-4. If it is not there, clone the repo: `git clone https://github.com/vkhazin/courseware-nodejs-container`
-5. Change directory: `cd ./courseware-nodejs-container/api`
-6. Install npm packages: `npm install`
-7. Google App Engine requires a manifest for deployment to succeed
-8. Create a new file under the `api` folder: `app.yaml` with the following content:
+2. Create a new project to make it possible to delete the App Engine after we are done
+3. Select `Activate Cloud Shell` icon and select editor icon to open a new browser tab/window
+4. We should have a folder `/courseware-nodejs-container` 
+5. If it is not there, clone the repo: `git clone https://github.com/vkhazin/courseware-nodejs-container`
+6. Change directory: `cd ./courseware-nodejs-container/api`
+7. Install npm packages: `npm install`
+8. Google App Engine requires a manifest for deployment to succeed
+9. Create a new file under the `api` folder: `app.yaml` with the following content:
    ```
    runtime: nodejs10
    ```
-9. And deploy the application: `gcloud app deploy`
-10. Select the desired deployment region and confirm the deployment
-11. After the deployment is complete, type `gcloud app browse`
-12. It will list a URL of app engine, navigate to the URL provided
-13. Don't forget the end-point requires a parameter e.g. `/?name=John`
+10. And deploy the application: `gcloud app deploy`
+11. Select the desired deployment region and confirm the deployment
+12. After the deployment is complete, type `gcloud app browse`
+13. It will list a URL of app engine, navigate to the URL provided
+14. Don't forget the end-point requires a parameter e.g. `/?name=John`
 
 
 
