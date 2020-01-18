@@ -157,27 +157,25 @@
 4. If it is not there, clone the repo: `git clone https://github.com/vkhazin/courseware-nodejs-container`
 5. Change directory: `cd ./courseware-nodejs-container/api`
 6. Modify `server.js`:
-7.     const express = require('express');
-       const app = express();
-       const morgan = require('morgan');
-
-       const personRoutes = require('./routes/person');
-
-       app.use(express.json());
-       app.use(morgan('dev'));
-       app.use(personRoutes);
-
-       app.listen(process.env.PORT || 3001, () => {
-           console.log("Server is running");
-       })
-
-       app.use(function(req, res, next) {
-           return res.status(404).send({ error: `Route ${req.url} Not found.` });
-       });
-       // module.exports = app
-       module.exports = {
-            app
-        };
+7. ```
+   const express = require('express');
+   const app = express();
+   const morgan = require('morgan');
+   const personRoutes = require('./routes/person');
+   app.use(express.json());
+   app.use(morgan('dev'));
+   app.use(personRoutes);
+   app.listen(process.env.PORT || 3001, () => {
+       console.log("Server is running");
+   })
+   app.use(function(req, res, next) {
+       return res.status(404).send({ error: Route ${req.url} Not found. });
+   });
+   // module.exports = app
+   module.exports = {
+        app
+    };
+   ```
 8. Install npm packages: `npm install`
 9. Get list of GCP projects: `gcloud projects list` and copy `PROJECT_ID` for the projects where cloud function API has been enabled by navigating to the `Cloud Function` on cloud console
 10. Replace the project id in the following command and execute using cloud shell:
