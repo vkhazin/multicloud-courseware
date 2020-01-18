@@ -137,7 +137,7 @@
 
 ## Course Summary
 
-* [Summary](/content/course-intro/summary.md)
+* [Summary](/content/course-summary/summary.md)
 
 
 
