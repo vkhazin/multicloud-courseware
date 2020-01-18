@@ -84,7 +84,7 @@
           "Resource": "*"
         }
       ]
-    } 
+    }
     ```
 11. Select `Review Policy`
 12. Provide a name for the policy: `DatadogAWSIntegrationPolicy`  and select `Create Policy`
@@ -108,7 +108,25 @@
 
 ## Azure
 
+1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+2. After the shell has been loaded
+3. Select `bash` shell
+4. Select `Open editor` icon from the toolbar
+5. Run `az login` in the terminal panel and follow the instructions
+6. Run `az account show` 
+7. Copy value for `id` field, this is the subscription id we need in the next command
+8. Create a service principal: `az ad sp create-for-rbac --role reader --scopes /subscriptions/{subscription_id}`
+9. Open [Datadog Azure Integration](https://app.datadoghq.com/account/settings#integrations/azure)
+10. Copy `tenantId` from `az account show` command into Datadog `Tenant name/ID` column
+11. Copy the `appID` generated from \```az ad sp create-for-rbac...``` command and paste it into the field `Client ID`
+12. Copy `password` from the same command into `Client Secret`
+13. Enter any desired tenant name e.g. `courseware`
+14. Select `Install Integration` and let the installation finish
+15. After quite a while, azure specific metrics will appear in the Datadog Metrics Explorer
 
+## GCP
+
+Should you have spare time, you are welcome to update our App Engine deployment based on the following [documentation](https://app.datadoghq.com/account/settings#integrations/google-app-engine)
 
 
 
