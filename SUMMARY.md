@@ -138,6 +138,7 @@
 ## Course Summary
 
 * [Summary](/content/course-summary/summary.md)
+* [Thank you!](/content/course-summary/thank-you.md)
 
 
 
