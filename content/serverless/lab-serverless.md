@@ -60,105 +60,99 @@
 
 ## Azure
 
-Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+2. After the shell has been loaded, select `bash` shell
+3. Select `Open editor` icon from the toolbar
+4. Clone the repository with node.js end-point, if not present:
+5. `git clone https://github.com/vkhazin/courseware-nodejs-container`
+6. Change directory: `cd ~/courseware-nodejs-container/api`
+7. Install npm packages: `npm install`
+8. Run in the terminal panel to create a new resource group and storage account:
+9. ```
+   az group create \
+     --name courseware-functionapp \
+     --location centralus
 
-After the shell has been loaded, select `bash` shell
-
-Select `Open editor` icon from the toolbar
-
-Clone the repository with node.js end-point, if not present:
-
-`git clone https://github.com/vkhazin/courseware-nodejs-container`
-
-Change directory: `cd ~/courseware-nodejs-container/api`
-
-Install npm packages: `npm install`
-
-Run in the terminal panel to create a new resource group and storage account:
-
-```
-az group create \
-  --name courseware-functionapp \
-  --location centralus
-
-az storage account create \
-  --name coursewarefunctionapp \
-  --location centralus \
-  --resource-group courseware-functionapp \
-  --sku Standard_LRS
-```
-
-Create a function:
-
-```
-az functionapp create \
-  --resource-group courseware-functionapp \
-  --name courseware-nodejs \
-  --consumption-plan-location centralus \
-  --storage-account coursewarefunctionapp \
-  --runtime node
-```
-
-Azure requires to add `host.json` file to the same folder where the function code resides:
-
-```
-{
-    "version": "2.0",
-    "extensionBundle": {
-        "id": "Microsoft.Azure.Functions.ExtensionBundle",
-        "version": "[1.*, 2.0.0)"
-    }
-}
-```
-
-Also a `function.json` file
-
-```
-{
-  "bindings": [
+   az storage account create \
+     --name coursewarefunctionapp \
+     --location centralus \
+     --resource-group courseware-functionapp \
+     --sku Standard_LRS
+   ```
+10. Authenticate to az cli: `az login`
+11. Create a function:
+12. ```
+    az functionapp create \
+      --resource-group courseware-functionapp \
+      --name courseware-nodejs \
+      --consumption-plan-location centralus \
+      --storage-account coursewarefunctionapp \
+      --runtime node
+    ```
+13. Azure requires to add `~/courseware-nodejs-container/host.json` file to the same folder where the function code resides:
+14. ```
     {
-      "authLevel": "function",
-      "type": "httpTrigger",
-      "direction": "in",
-      "name": "req",
-      "methods": [
-        "get"
+        "version": "2.0",
+        "extensionBundle": {
+            "id": "Microsoft.Azure.Functions.ExtensionBundle",
+            "version": "[1.*, 2.0.0)"
+        }
+    }
+    ```
+15. Also a `~/courseware-nodejs-container/api/function.json` file
+16. ```
+    {
+      "bindings": [
+        {
+          "authLevel": "Anonymous",
+          "type": "httpTrigger",
+          "direction": "in",
+          "name": "req",
+          "methods": [
+            "get"
+          ]
+        },
+        {
+          "type": "http",
+          "direction": "out",
+          "name": "res"
+        }
       ]
-    },
-    {
-      "type": "http",
-      "direction": "out",
-      "name": "res"
     }
-  ]
-}
-```
+    ```
+17. Additionally, Azure Function App does not support Express.js, therefore, we add a new file to process requests: `index.js`:
+18. ```
+    module.exports = async function (context, req) {
+        context.log('JavaScript HTTP trigger function processed a request.');
 
-Additionally, Azure Function App do not support Express.js, therefore, we add a new file to process requests: `index.js`:
+        if (req.query.name) {
+            context.res = {
+                body: "Hello " + (req.query.name) + "!"
+            };
+        }
+        else {
+            context.res = {
+                status: 400,
+                body: "Invalid parameters!"
+            };
+        }
+    };
+    ```
+19. Deploy function code:
+20. ```
+    func azure functionapp publish courseware-nodejs --node
+    ```
+21. After the deployment has been completed, the function endpoint will be listed e.g.:
+22. ```
+    Invoke url: https://courseware-nodejs.azurewebsites.net/api/api
+    ```
+23. Double `api` in the URL is for the reasons that our folder called `api` and Azure Function Apps adds `api` as well :-\)
+24. Selecting the URL and don't forget to add the `?name=John` parameter
+25. The output will be slightly different as we are now using a completely different event handler compared to AWS lambda with Express.js
 
-```
-module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+## GCP
 
-    if (req.query.name) {
-        context.res = {
-            body: "Hello " + (req.query.name) + "!"
-        };
-    }
-    else {
-        context.res = {
-            status: 400,
-            body: "Invalid parameters!"
-        };
-    }
-};
-```
 
-Deploy function code:
-
-```
-func azure functionapp publish courseware-nodejs
-```
 
 
 
