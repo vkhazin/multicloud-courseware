@@ -1,4 +1,4 @@
-# Lab: Serverless End-Point
+# Lab: Serverless FaaS End-Point
 
 ## Aws
 
@@ -28,7 +28,8 @@
    });
    module.exports.handler = serverless(app);
    ```
-9. Need to add a new file for deployment:  `aws.yml` with the following content:
+9. We will use serverless framework to deploy function and to configure API Gateway
+1. Will need to add a new file for serverless framework deployment:  `aws.yml` with the following content:
 10. ```
     service: courseware-nodejs
     provider:
@@ -50,22 +51,22 @@
               method: ANY
               cors: true
     ```
-11. Add serverless package: `npm i --save serverless-http`
-12. Install serverless cli: `npm install -g serverless`
-13. Deploy the function with API Gateway http end-point: `serverless remove --config ./aws.yml`
-14. After deployment is complete a URL will be listed e.g. `https://hsfeejxnpj.execute-api.us-east-1.amazonaws.com/dev/`
-15. Copy the URL to open in browser and don't forget to add the parameter: `/?name=John`
+11. Add serverless framework package: `npm i --save serverless-http`
+12. Install serverless framework cli: `npm install -g serverless`
+13. Deploy the function with API Gateway http end-point: `serverless deploy --config ./aws.yml`
+14. After the deployment is complete a URL will be listed e.g. `https://hsfeejxnpj.execute-api.us-east-1.amazonaws.com/dev/`
+15. Copy the URL to open in browser and don't forget to add parameter: `/?name=John`
 
 ## Azure
 
-1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/) and login with Microsoft Credentials with access to Azure subscription
+1. Open a web browser to [https://shell.azure.com/](https://shell.azure.com/)
 2. After the shell has been loaded, select `bash` shell
 3. Select `Open editor` icon from the toolbar
 4. Clone the repository with node.js end-point, if not present:
 5. `git clone https://github.com/vkhazin/courseware-nodejs-container`
 6. Change directory: `cd ~/courseware-nodejs-container/api`
 7. Install npm packages: `npm install`
-8. Run in the terminal panel to create a new resource group and storage account:
+8. Run in the terminal panel to create a new resource group and storage account for our function:
 9. ```
    az group create \
      --name courseware-functionapp \
@@ -136,7 +137,7 @@
         }
     };
     ```
-19. Deploy function code:
+19. Deploy the function code:
 20. ```
     func azure functionapp publish courseware-nodejs --node
     ```
@@ -147,14 +148,14 @@
 23. Double `api` in the URL is for the reasons that our folder called `api` and Azure Function Apps adds `api` as well :-\)
 24. Selecting the URL and don't forget to add the `?name=John` parameter
 25. The output will be slightly different as we are now using a completely different event handler compared to AWS lambda with Express.js
-26. Realistically you will need to refactor the code keeping all the logic separate from the handler as it is not possible yet to reuse the handlers across multiple cloud providers
-27. There is a [serverless](https://serverless.com/framework/docs/providers/azure/guide/quick-start/) implementation for Azure Function Apps, does not feel like ready to go mainstream
+26. Realistically you will need to refactor the code keeping all the application logic separate from the handler as it is not possible (yet) to reuse the handlers across multiple cloud providers
+27. There is a [serverless](https://serverless.com/framework/docs/providers/azure/guide/quick-start/) implementation for Azure Function Apps, does not feel ready to go mainstream
 
 ## GCP
 
 1. Navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/)
 2. Select `Activate Cloud Shell` icon and select editor icon to open a new browser tab/window
-3. We should have a folder `/courseware-nodejs-container` 
+3. We should have a folder `/courseware-nodejs-container` already
 4. If it is not there, clone the repo: `git clone https://github.com/vkhazin/courseware-nodejs-container`
 5. Change directory: `cd ./courseware-nodejs-container/api`
 6. Modify `server.js`:
@@ -178,8 +179,10 @@
     };
    ```
 8. Install npm packages: `npm install`
-9. Get list of GCP projects: `gcloud projects list` and copy `PROJECT_ID` for the projects where cloud function API has been enabled by navigating to the `Cloud Function` on cloud console
-10. Replace the project id in the following command and execute using cloud shell:
+1. Navigate to `Cloud Functions`
+1. Select existing or create a new project using Google Cloud Console to enable the Cloud Function API
+9. Get the list of GCP projects: `gcloud projects list` and copy `PROJECT_ID` for the projects where cloud function API has been enabled
+10. Replace the project id in the following command and execute using the terminal panel:
 11. ```
     gcloud functions deploy courseware-nodejs \
         --project {project_id} \

@@ -38,34 +38,24 @@
 14. What we expect to see is `Heartbeat` and `Perf` logs collected in `Log Analytics workspace`
 15. Note the common mistake: not saving the changes
 16. And there is a delay in collecting the logs, rebooting the VM may help
-17. Explorer `Connected Sources`, there is a way to send logs from any Linux host by installing an agent
+17. Explore `Connected Sources`, there is a way to send logs from any Linux host by installing an agent
 
 # GCP
 
-Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)and authenticate
-
-Select project: `gcp-terraform`
-
-Select `Activate Cloud Shell`
-
-Select `Launch Editor`
-
-Apply the terraform templates: `cd ./gcp-terraform && ./bin/terraform apply --auto-approve`Expected outcome:
-
-```
+1. Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/) and authenticate
+1. Select project: `gcp-terraform`
+1. Select `Activate Cloud Shell`
+1. `Select `Launch Editor`
+1. Apply the terraform templates: `cd ./gcp-terraform && ./bin/terraform apply --auto-approve` 
+1. Expected outcome:
+1. ```
 ...
 Apply complete! Resources: X added, 0 changed, 0 destroyed.
 ```
-
-Verify the VM is running using web console, navigate to `Compute Engine` -&gt; `Vm Instances`
-
-Select the VM and then select `Stackdriver Logging`
-
-Review the logs retrieved from the running VM
-
-Select `Monitoring` tab to access standard operating system metrics
-
-Locate CPU, Memory, and Disk utilization
-
-There is also an option to collect more detailed metrics and logs by installing [Stackdriver agent](https://cloud.google.com/monitoring/agent/install-agent)
+1. Verify the VM is running using web console, navigate to `Compute Engine` -&gt; `Vm Instances`
+1. Select the VM and then select `Stackdriver Logging`
+1. Review the logs retrieved from the running VM
+1. Select `Monitoring` tab to access standard operating system metrics
+1. Locate CPU, Memory, and Disk utilization
+1. There is also an option to collect more detailed metrics and logs by installing [Stackdriver agent](https://cloud.google.com/monitoring/agent/install-agent)
 

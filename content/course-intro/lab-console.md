@@ -2,9 +2,9 @@
 
 ## Amazon Web Services \(AWS\)
 
-1. Open a browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
+1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
 2. Create a new account or login with existing credentials
-3. Proceed to Services-&gt;IAM, the location of the link changes over time
+3. Proceed to `Services` -> `IAM`, location of the link changes over time
 4. Follow the links below to educate yourself on the IAM principals
    1. [Root Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) - the owner of AWS account
    2. [IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) - identities to operate AWS account with long-lived credentials
@@ -16,7 +16,7 @@
 
 ## Microsoft Azure Cloud \(Azure\)
 
-1. Open a browser to [https://portal.azure.com/](https://portal.azure.com/)
+1. Open a web browser to [https://portal.azure.com/](https://portal.azure.com/)
 2. Create a new account or login with existing credentials
 3. Search for `Active Directory` and select `Azure Active Directory`
 4. Follow the link below to educate yourself on Azure AD principals

@@ -10,14 +10,14 @@
 8. Select the default version of the cluster from the drop-down list
 9. Select `3` for `Number of nodes`
 10. Select `n1-standard-1` for the node size
-11. Select `Create` link and wait for the cluster to provision - may take a few minutes
+11. Select `Create` link and wait for the cluster to provision, it may take a few minutes
 12. When the cluster is provisioned and ready, select `connect` link next to the cluster name
 13. Select `Run in Cloud Shell` 
 14. Select the `Launch Editor` icon to switch to a full browser window with a terminal panel
 15. In the terminal panel test our connectivity to the cluster: `kubectl get node`
-16. The result should list nodes with a few minutes age since we have created the cluster
+16. The result should list nodes few minutes old since we have created the cluster
 17. To deploy our first application to the cluster we will reuse the node.js end-point from the previous lab
-18. The docker image published to docker hub: [https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container](https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container)
+18. The docker image has been published to the docker hub: [https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container](https://hub.docker.com/repository/docker/vkhazin/courseware-nodejs-container)
 19. Create a new folder
 20. Add a new file under the root of the new folder: `deployment.yml` with the following content:
 21. ```
@@ -65,12 +65,12 @@
       type: "LoadBalancer"
       loadBalancerIP: ""
     ```
-27. To deploy the load-balancer to Kubernetes cluster: `kubectl apply --filename service.yml`
+27. To deploy the load-balancer to Kubernetes cluster, run the following command:
+`kubectl apply --filename service.yml`
 28. To list cluster assets: `kubectl get all`to confirm container and service are deployed
 29. Back to Google Cloud Console, navigate to the Kubernetes clusters, select `Services & Ingress`
 30. Under `Endpoints` column select `external IP address:80` link to test connectivity to the container deployed to the cluster
-31. Don't forget to add a query string parameter: `?name=John`
-32. Alternatively, we can deploy the container and create a service using the Google Cloud Console
-
-
-
+31. Don't forget to add query string parameter: `?name=John`
+32. Alternatively, we could deploy the container and create a service using the Google Cloud Console
+1. Deployment of Kubernetes on other cloud providers are similar
+1. Deploying Kubernetes workloads is identical, almost...

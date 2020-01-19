@@ -32,7 +32,6 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Review the common design patterns deployment models: IaaS, PaaS, KaaS, DBaaS, and Serverless
 * Highlight best design practices for the cloud-native applications: [the twelve factors app](https://12factor.net/)
 * Automate deployment of IaaS to a couple of public cloud providers: Aws, GCP or Azure leveraging [terraform](https://www.terraform.io/)
-* Deploy an end-point application to a virtual machine leveraging an automated deployment process
 * Contrast a cloud-specific logging and monitoring facilities to a centralized logging/monitoring services leveraging 3rd party service
 * Demonstrate the process of authoring a Dockerfile to run the end-point application in a container
 * Make use of Kubernetes as a service to deploy and monitor the created image
@@ -50,7 +49,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Recent hands-on experience with terminal/command line
 * Database and data-modelling awareness
 * The notion of security and compliance concerns
-* Access to AWS, GCP, Azure account, tree trial is sufficient
+* Access to AWS, GCP, Azure account, free trial is sufficient
 * Willingness to register a free trial account on JumpCloud, DataDog and Pivotal Web Services
 
 ## Outline
@@ -84,7 +83,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Compare Containers to Virtual Machines
 * Author a Dockerfile
 * Build Image and Run Container
-* Kubernetes as Container Platform
+* Kubernetes as a Container Platform
 * Author and deploy a pod
 
 ### Kubernetes Monitoring
@@ -144,7 +143,6 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 ### Future Ideas:
 
 * Microsoft Azure Arc
-* Create repos for terraform setup
 
 ### TODO:
 

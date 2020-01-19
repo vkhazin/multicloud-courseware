@@ -2,10 +2,10 @@
 
 * A tool for building, changing, and versioning infrastructure
 * Almost any infrastructure type can be represented as a resource
-* Cloud-specific Provider is responsible for understanding API interactions and exposing resources
-* Configuration files describe the components needed, for an application or fir ab entire data centre
-* Execution plan describes what to do to reach the desired state
-* Sample VM template for the different cloud providers:
+* Cloud-specific provider is responsible for understanding API interactions and exposing resources
+* Configuration files describe the components needed, for an application or for an entire data centre
+* Execution plan describes what to is the desired state, not how to reach it
+* Sample VM template for different cloud providers:
 
 ```
 # Aws

@@ -5,8 +5,6 @@
 * Consolidated monitoring across clusters, regions, and providers
 * Helps to bring all monitoring data under one roof
 * Possibly, more appealing GUI
-* Datadog is one of the services with a free trial and descent market popularity
-* Datadog focuses on monitoring on-premises, on-the-cloud, and container/Kubernetes
-
-
+* Datadog is one of the services with a free trial and decent market popularity
+* Datadog focuses on monitoring on-premises, on-the-cloud infrastructure, hosts, and containers/Kubernetes
 

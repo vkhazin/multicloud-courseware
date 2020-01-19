@@ -1,4 +1,4 @@
-# Monitoring Introduction
+# Monitoring
 
 * Importance of monitoring
 * Cloud-native monitoring

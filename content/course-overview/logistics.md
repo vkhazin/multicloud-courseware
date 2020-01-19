@@ -7,7 +7,8 @@
 * Finish: \_\_\_
 * Materials are available online during and after the course
 * Materials contain external links - please follow them as we paddle along
-* Exercises are mini-hackathons, step-by-step instructions are provided... sometimes!
+* As with the nature of all external links, the links may get broken at any time
+* Exercises are mini-hackathons, step-by-step instructions are provided... sometimes
 * Questions, open discussions, and comments are encouraged
 * Keep it professional and polite
 * Must have fun!

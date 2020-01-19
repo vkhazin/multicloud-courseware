@@ -1,4 +1,4 @@
-# Serverless
+# Serverless or FaaS
 
 * Best of Containers and PaaS or a hype
 * Architectural principals

@@ -6,9 +6,9 @@
 
 1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
 2. From the services select `Cloud9`, please note you may need to select a region where Cloud9 is available
-3. Create a new environment with any name, micro or small instance type and Amazon Linux for the platform
-4. Wait until the environment is created and loads the editor in browser
-5. To install terraform run using terminal panel:
+3. Create a new environment with any name, choose micro or small instance type and Amazon Linux for the platform
+4. Wait until the environment is created and loads editor in your browser
+5. To install terraform run the following commands, using terminal panel of Cloud9 IDE:
 6. ```
    mkdir ./aws-terraform && 
    cd ./aws-terraform/ && 
@@ -17,7 +17,7 @@
    unzip -o terraform.zip -d ./bin &&
    rm -f terraform.zip
    ```
-7. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) `./aws-terraform/variables.tf` file with the following content:
+7. Create new [variables](https://www.terraform.io/docs/configuration/variables.html) file: `./aws-terraform/variables.tf` with the following content:
 8. ```
    variable "aws_region" {
        default = "us-east-1"
@@ -41,7 +41,7 @@
       region     = var.aws_region
     }
     ```
-11. Create a new file `./aws-terraform/network.tf`:
+11. Create a new file for network related resources `./aws-terraform/network.tf`:
 12. ```
     resource "aws_vpc" "vpc" {
       cidr_block           = "10.0.0.0/16"
@@ -86,7 +86,7 @@
       ]
     }
     ```
-13. Create a new file `./aws-terraform/security.tf`:
+13. Create a new file for security related resources `./aws-terraform/security.tf`:
 14. ```
     resource "tls_private_key" "ssh-key" {
         algorithm = "RSA"
@@ -190,7 +190,7 @@
 3. After the shell has been loaded
 4. Select `bash` shell
 5. Select `Open editor`icon from the tool bar
-6. Authenticate to az cli: `az login` and follow the instructions
+6. Authenticate to az cli using terminal panel: `az login` and follow the instructions
 7. In the terminal type `az account list` to confirm a proper authentication
 8. Create a new folder `mkdir azure-terraform` to place the files
 9. Select the `refresh` icon in case folder structure does not reflect the new folder/file
@@ -350,10 +350,10 @@
 
 ## GCP
 
-1. Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/)and authenticate
+1. Open a web browser to [https://console.cloud.google.com/](https://console.cloud.google.com/) and authenticate
 2. GCP API's are eventually consistent we may need to wait here and there before we continue
 3. Create a [new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with the name: `gcp-terraform`
-4. Navigate to the project home and copy `Project ID`, different from the project name
+4. Navigate to the project home and copy `Project ID`, different from the project name, can be found on the project dashboard page
 5. Wait for the creation process to complete...
 6. Navigate to `Compute Engine` and wait for the API getting enabled...
 7. Select `Activate Cloud Shell`
@@ -375,7 +375,7 @@
       gcp_region = "us-central"
     }
     ```
-14. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
+14. Define [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
 15. ```
     provider "google" {
       project = var.project_id
@@ -459,7 +459,5 @@
     ...
     Destroy complete! Resources: X destroyed.
     ```
-32. You may want to delete the project `gcp-terraform` we have created as well
 
-
-
+### Congratulations, you have automated deployment of a VM on three different cloud providers! 

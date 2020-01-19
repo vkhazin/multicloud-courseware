@@ -1,6 +1,6 @@
 # Native vs. 3rd Party Monitoring
 
-* Cloud providers focus on their own stack and objectives
+* Cloud providers focus on their own stack and offerings
 * Monitoring other cloud provider assets is lesser of a priority
 * Some cloud providers offer tools for a hybrid cloud monitoring
 * Ease of setup is secondary for a cloud-native tool

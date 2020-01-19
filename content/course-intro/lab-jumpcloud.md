@@ -4,13 +4,13 @@
 
 1. Open browser to [https://jumpcloud.com/](https://jumpcloud.com/)
 2. Select `Get Started`
-3. Register a new account, an email confirmation may be required
+3. Register a new account and an email confirmation may be required
 
 ## [AWS Integration](https://support.jumpcloud.com/support/s/article/single-sign-on-sso-with-amazon-aws-in-iam-2019-08-21-10-36-47)
 
 1. Sign-in to jump cloud and proceed to `applications` link
 2. Type: `aws` and select `amazon web services` and then `configure` link
-3. Open another browser tab/window and proceed to Aws -&gt; Services -&gt; IAM
+3. Open another browser tab/window and proceed to Aws Console -> `Services` -> `IAM`
 4. We will need Aws `account number` shown under `AWS account ID:` label
 5. JumpCloud Console
    1. For display label type: `Aws Read-Only`
@@ -19,9 +19,9 @@
    4. There is another token we will need to replace later: `ROLE_1`
    5. Select `activate` link and `save`
    6. From the list select the newly configured application
-   7. Select ``export metadata` line and save the file``
+   7. Select `export metadata` line and save the file`
 6. Aws Console
-   1. Proceed to Services -&gt; IAM
+   1. Proceed to `Services` -> `IAM`
    2. Select `Identity Providers`
    3. Add new provider of type `SAML`
    4. Type provider name: `JumpCloud`
@@ -29,15 +29,15 @@
    6. Continue with the next steps until end of the provider setup
    7. Proceed to `Services->IAM->Roles`
    8. We need to create a new Role to associated with the JumpCloud SSO
-   9. Select \`Create role-&gt;SAML 2.0 federation
+   9. Select `Create role` -> `SAML 2.0 federation`
    10. Select the newly created provider and allow console and programmatic access and proceed to `Next: Permissions`
    11. Locate and select `AmazonEC2ReadOnlyAccess` policy
    12. Proceed to `Next:Tags` and then `Next: Review`
-   13. Specify Role name as `SsoEc2ReadOnlyAcces` and select `Create role`
+   13. Specify Role name as `SsoEc2ReadOnlyAccess` and select `Create role`
 7. JumpCloud Console 
    1. Applications -&gt; AWS Read-Only
    2. Locate attribute `https://aws.amazon.com/SAML/Attributes/Role`
-   3. Modify the attribute value to replace `ROLE_1` with the name of the new role we have created in AWS: `SsoEc2ReadOnlyAcces`
+   3. Modify the attribute value to replace `ROLE_1` with the name of the new role we have created in AWS: `SsoEc2ReadOnlyAccess`
    4. Save the changes
    5. Select `Groups`
    6. Create `Group of Users`
