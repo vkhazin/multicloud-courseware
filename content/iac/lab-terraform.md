@@ -372,8 +372,12 @@
 13. ```
     variable "project_id" {
       default = "gcp-terraform"
-      gcp_region = "us-central"
     }
+
+    variable "gcp_region" {
+      default = "us-central"
+    }
+
     ```
 14. Define [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
 15. ```
@@ -460,4 +464,7 @@
     Destroy complete! Resources: X destroyed.
     ```
 
-### Congratulations, you have automated deployment of a VM on three different cloud providers! 
+### Congratulations, you have automated deployment of a VM on three different cloud providers!
+
+
+
