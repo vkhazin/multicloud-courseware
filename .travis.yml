@@ -7,4 +7,4 @@ script:
   - npm install gitbook-cli surge -g
   - gitbook install
   - gitbook build
-  - surge --domain http://multicourse-courseware.surge.sh/ --project ./_book
+  - surge --domain http://multicloud-courseware.surge.sh/ --project ./_book
