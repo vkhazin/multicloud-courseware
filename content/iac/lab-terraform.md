@@ -371,7 +371,7 @@
 12. Create a new file: `variables.tf` with the following content:
 13. ```
     variable "project_id" {
-      default = "gcp-terraform"
+      default = "gcp-terraform" <-- replace with your own project id
     }
 
     variable "gcp_region" {
