@@ -375,9 +375,8 @@
     }
 
     variable "gcp_region" {
-      default = "us-central"
+      default = "us-central1"
     }
-
     ```
 14. Define [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
 15. ```
