@@ -367,7 +367,7 @@
     unzip -o terraform.zip -d ./bin &&
     rm -f terraform.zip
     ```
-11. Generate new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
+11. Generate a new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
 12. Create a new file: `variables.tf` with the following content:
 13. ```
     variable "project_id" {
