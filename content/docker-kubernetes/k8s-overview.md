@@ -6,7 +6,7 @@
 * Networking with dual-stack: IPv4 & IPv6
 * Horizontal Scaling
 * Service Discovery and Load-Balancing
-* Storage Orchestraction
+* Storage Orchestration
 * Containers and Nodes self-healing
 * Secrets and Configuration Management
 
