@@ -29,8 +29,8 @@
    module.exports.handler = serverless(app);
    ```
 9. We will use serverless framework to deploy function and to configure API Gateway
-1. Will need to add a new file for serverless framework deployment:  `aws.yml` with the following content:
-10. ```
+10. Will need to add a new file for serverless framework deployment:  `aws.yml` with the following content:
+11. ```
     service: courseware-nodejs
     provider:
       name: aws
@@ -51,11 +51,11 @@
               method: ANY
               cors: true
     ```
-11. Add serverless framework package: `npm i --save serverless-http`
-12. Install serverless framework cli: `npm install -g serverless`
-13. Deploy the function with API Gateway http end-point: `serverless deploy --config ./aws.yml`
-14. After the deployment is complete a URL will be listed e.g. `https://hsfeejxnpj.execute-api.us-east-1.amazonaws.com/dev/`
-15. Copy the URL to open in browser and don't forget to add parameter: `/?name=John`
+12. Add serverless framework package: `npm i --save serverless-http`
+13. Install serverless framework cli: `npm install -g serverless`
+14. Deploy the function with API Gateway http end-point: `serverless deploy --config ./aws.yml`
+15. After the deployment is complete a URL will be listed e.g. `https://hsfeejxnpj.execute-api.us-east-1.amazonaws.com/dev/`
+16. Copy the URL to open in browser and don't forget to add parameter: `/?name=John`
 
 ## Azure
 
@@ -83,7 +83,7 @@
 12. ```
     az functionapp create \
       --resource-group courseware-functionapp \
-      --name courseware-nodejs \
+      --name your-name-courseware-nodejs \
       --consumption-plan-location centralus \
       --storage-account coursewarefunctionapp \
       --runtime node
@@ -143,12 +143,12 @@
     ```
 21. After the deployment has been completed, the function endpoint will be listed e.g.:
 22. ```
-    Invoke url: https://courseware-nodejs.azurewebsites.net/api/api
+    Invoke url: https://your-name-courseware-nodejs.azurewebsites.net/api/api
     ```
 23. Double `api` in the URL is for the reasons that our folder called `api` and Azure Function Apps adds `api` as well :-\)
 24. Selecting the URL and don't forget to add the `?name=John` parameter
 25. The output will be slightly different as we are now using a completely different event handler compared to AWS lambda with Express.js
-26. Realistically you will need to refactor the code keeping all the application logic separate from the handler as it is not possible (yet) to reuse the handlers across multiple cloud providers
+26. Realistically you will need to refactor the code keeping all the application logic separate from the handler as it is not possible \(yet\) to reuse the handlers across multiple cloud providers
 27. There is a [serverless](https://serverless.com/framework/docs/providers/azure/guide/quick-start/) implementation for Azure Function Apps, does not feel ready to go mainstream
 
 ## GCP
@@ -179,11 +179,11 @@
     };
    ```
 8. Install npm packages: `npm install`
-1. Navigate to `Cloud Functions`
-1. Select existing or create a new project using Google Cloud Console to enable the Cloud Function API
-9. Get the list of GCP projects: `gcloud projects list` and copy `PROJECT_ID` for the projects where cloud function API has been enabled
-10. Replace the project id in the following command and execute using the terminal panel:
-11. ```
+9. Navigate to `Cloud Functions`
+10. Select existing or create a new project using the Google Cloud Console to enable the Cloud Function API
+11. Get the list of GCP projects: `gcloud projects list` and copy `PROJECT_ID` for the projects where cloud function API has been enabled
+12. Replace the project id in the following command and execute using the terminal panel:
+13. ```
     gcloud functions deploy courseware-nodejs \
         --project {project_id} \
         --runtime nodejs8 \
@@ -191,8 +191,8 @@
         --entry-point app \
         --allow-unauthenticated
     ```
-12. After the deployment is complete you will find HTTP trigger URL listed to test in the browser or with a curl command
-13. Don't forget to add a query string parameter: `/?name=John`
+14. After the deployment is complete you will find HTTP trigger URL listed to test in the browser or with a curl command
+15. Don't forget to add a query string parameter: `/?name=John`
 
 
 
