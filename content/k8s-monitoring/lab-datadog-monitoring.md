@@ -1,22 +1,22 @@
-# Datadog Kubernetes Monitoring
+# Lab: Datadog K8s Monitoring
 
 1. Using a web browser navigate to [https://www.datadoghq.com/](https://www.datadoghq.com/)
-3. When you are using a brand new datadog account you will see a message to install your first datadog agent, select `Kubernetes` on the left hand and an api-key will be displayed in the instructions
-4. When you are using an existing datadog account navigate to `Integrations` -&gt; `API's` and copy your Datadog API key
-5. Install \`Datadog-Agent\` on our Kubernetes Cuslter as a \`DaemonSet\`
-6. The cluster we've created earlier has role-based access control \(RBAC\) enabled and we need to provide the \`DataDog-Agent\` necessary permissions for monitoring
-7. Run the following command in Google Cloud Shell connected to the K8S cluster:
-8. ```
+2. When you are using a brand new datadog account you will see a message to install your first datadog agent, select `Kubernetes` on the left hand and an api-key will be displayed in the instructions
+3. When you are using an existing datadog account navigate to `Integrations` -&gt; `API's` and copy your Datadog API key
+4. Install \`Datadog-Agent\` on our Kubernetes Cuslter as a \`DaemonSet\`
+5. The cluster we've created earlier has role-based access control \(RBAC\) enabled and we need to provide the \`DataDog-Agent\` necessary permissions for monitoring
+6. Run the following command in Google Cloud Shell connected to the K8S cluster:
+7. ```
    kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/master/Dockerfiles/manifests/rbac/clusterrole.yaml"
    kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/master/Dockerfiles/manifests/rbac/serviceaccount.yaml"
    kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/master/Dockerfiles/manifests/rbac/clusterrolebinding.yaml"
    ```
-9. Create Datadog secret, make sure to use your own API key copied in the previous steps:
-10. ```
-    kubectl create secret generic datadog-secret --from-literal api-key="{your-api-key}"
-    ```
-11. Create a new manifest file `datadog-agent.yml` with the content:
-12. ```
+8. Create Datadog secret, make sure to use your own API key copied in the previous steps:
+9. ```
+   kubectl create secret generic datadog-secret --from-literal api-key="{your-api-key}"
+   ```
+10. Create a new manifest file `datadog-agent.yml` with the content:
+11. ```
     apiVersion: apps/v1
     kind: DaemonSet
     metadata:
@@ -98,17 +98,17 @@
                 path: /sys/fs/cgroup
               name: cgroups
     ```
-13. Deploy the daemon set by executing in the terminal: `kubectl create --filename datadog-agent.yml`
-14. To validate the deployment run in the terminal: `kubectl get daemonset datadog-agent`
-15. Expected result:
-16. ```
+12. Deploy the daemon set by executing in the terminal: `kubectl create --filename datadog-agent.yml`
+13. To validate the deployment run in the terminal: `kubectl get daemonset datadog-agent`
+14. Expected result:
+15. ```
     NAME            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
     datadog-agent   3         3         3       3            3           <none>          74s
     ```
-17. For more detailed info: `kubectl describe daemonset.apps/datadog-agent`
-18. Using browser Navigate to [https://app.datadoghq.com/containers](https://app.datadoghq.com/containers)
-19. You should see Kubernetes cluster containers and node.js end-point on the list, may take a moment or two to populate
-20. Select the node.js end-point container and you should see the container metrics
+16. For more detailed info: `kubectl describe daemonset.apps/datadog-agent`
+17. Using browser Navigate to [https://app.datadoghq.com/containers](https://app.datadoghq.com/containers)
+18. You should see Kubernetes cluster containers and node.js end-point on the list, may take a moment or two to populate
+19. Select the node.js end-point container and you should see the container metrics
 
 
 
