@@ -12,9 +12,9 @@
 8. Right-click on the zip file  and select `Download` to copy the file to your local machine
 9. Navigate to Elastic Beanstalk
 10. Select `Create New Applciation`
-11. For application name type: `courseware-nodejs`
+11. For application name type: `your-name-courseware-nodejs`
 12. Select `Create`
-13. Select `Actions` -> `Create one now` to create a new environment
+13. Select `Actions` -&gt; `Create one now` to create a new environment
 14. Select `Web server environment`
 15. Type an environment name
 16. Leave domain blank for an auto-generated domain
@@ -36,7 +36,7 @@
 5. Clone the repository with node.js end-point: `git clone https://github.com/vkhazin/courseware-nodejs-container`
 6. Proceed to the App Service on Azure Portal and select `Create app service`
 7. Select a subscription and a resource group
-8. Type in a Name e.g. `courseware-nodejs`
+8. Type in a Name e.g. `your-name-courseware-nodejs`
 9. Select code and run-time `Node 10 LTS` and `Linux`
 10. Select `Free F1` for sku and size
 11. Select `Review + create` and then `Create`
@@ -52,7 +52,7 @@
       --src ./courseware-nodejs.zip
     ```
 18. After the deployment is complete access the URL of the deployment
-19. Don't forget the end-point requires parameter `/?name=John`
+19. Don't forget the end-point requires a parameter `/?name=John`
 
 ## GCP
 
