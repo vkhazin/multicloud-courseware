@@ -147,7 +147,5 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 ### TODO:
 
 * Serverless lab missing double quotes 
-* Add a slide with a list of resources to delete
-* Pivotal lab create an organization before able to deploy
 * Remove FaaS monitoring?
 * Configuration and secrets chapter?
