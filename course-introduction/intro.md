@@ -4,5 +4,5 @@
 * Service Models: IaaS, PaaS, CaaS, Kubernetes, DBaaS, and Serverless
 * Distributed and decentralized workloads
 * The twelve factors app
-* Micro-services principals
+* Micro-services principles
 

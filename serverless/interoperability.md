@@ -6,5 +6,5 @@
 * There is also a cross providers [Serverless Application Framework](https://serverless.com/)
 * How do I multi-cloud? The adapter pattern may help
 
-[![](../.gitbook/assets/adapter-pattern.png)](https://blog.usejournal.com/adapter-design-pattern-acd51418572f)
+[![](../media/adapter-pattern.png)](https://blog.usejournal.com/adapter-design-pattern-acd51418572f)
 

@@ -2,7 +2,7 @@
 
 ## [Fallacies of distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)
 
-![](../.gitbook/assets/distributed-workloads.jpg)
+![](../media/distributed-workloads.jpg)
 
 * Network is reliable
 * Latency is zero

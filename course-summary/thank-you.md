@@ -1,4 +1,4 @@
 # Thank you!
 
-![](../.gitbook/assets/thank-you.jpg)
+![](../media/thank-you.jpg)
 

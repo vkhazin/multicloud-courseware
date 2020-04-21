@@ -1,4 +1,4 @@
 # Concepts
 
-![](../.gitbook/assets/cloud-computing-concepts.png)
+![](../media/cloud-computing-concepts.png)
 

@@ -56,11 +56,11 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Service Models: IaaS, PaaS, CaaS, Kubernetes, DBaaS, and Serverless
 * Distributed and decentralized workloads
 * The twelve factors app
-* Micro-services principals
+* Micro-services principles
 
 ### Infrastructure as a Code
 
-* Objectives, Motivation and Principals
+* Objectives, Motivation and principles
 * Tools and approaches
 * Introduction to Terraform
 * IaaS deployment using Terraform
@@ -106,7 +106,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 ### Serverless
 
 * Best of Containers and PaaS or a hype
-* Architectural principals
+* Architectural principles
 * Coding practices
 * Convert end-point to a function
 * Cloud specific platforms

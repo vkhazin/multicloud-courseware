@@ -1,6 +1,6 @@
 # Why Multi-Cloud
 
-[![](../.gitbook/assets/why-multi-cloud.jpg)](https://shadow-soft.com/multi-cloud-strategy/)
+[![](../media/why-multi-cloud.jpg)](https://shadow-soft.com/multi-cloud-strategy/)
 
 * Avoid vendor lock-in
 * Cost Savings

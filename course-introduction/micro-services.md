@@ -1,6 +1,6 @@
 # Micro-Services
 
-[![](../.gitbook/assets/micro-services.jpg)](https://www.nginx.com/learn/microservices/)
+[![](../media/micro-services.jpg)](https://www.nginx.com/learn/microservices/)
 
 * Highly maintainable and testable
 * Loosely coupled
