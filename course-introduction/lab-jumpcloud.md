@@ -44,7 +44,7 @@
    7. For name type: AwsEC2ReadOnlyAccess
    8. On `Application` tab select `AWS Read-Only` application 
    9. Save the group
-   10. Select `Users` 
+   10. Select `Users` -> `Manual user entry`
    11. Create a new user with the option to `Specify initial password...` selected and provide a password
    12. Select `User Groups` and select the group name created in the previous steps
    13. Select `save user`
