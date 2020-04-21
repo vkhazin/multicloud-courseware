@@ -1,6 +1,7 @@
 # Application Deployment
 
 * VM image can be prepared outside of Terraform templates to contain the application
+* HashiCorp offers [packer](https://www.packer.io/) tool for that
 * Terraform can execute local or remote scripts
 * Terraform supports deployment Platform-as-a-Service components:
   * Elastic Beanstalk on Aws

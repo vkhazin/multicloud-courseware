@@ -200,6 +200,7 @@
 14. ```text
     provider "azurerm" {
       version = ">= 1.3.3"
+      features {}
     }
     ```
 15. Create a new file: `variables.tf` with the following content:

@@ -1,4 +1,4 @@
-# Introduction
+# IaC Introduction
 
 * Objectives, Motivation and principles
 * Tools and approaches

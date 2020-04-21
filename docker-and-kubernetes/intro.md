@@ -1,4 +1,4 @@
-# Introduction
+# Docker & Kubernetes Introduction
 
 * Motivation and Enthusiasm
 * Compare Containers to Virtual Machines

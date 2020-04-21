@@ -1,4 +1,4 @@
-# Introduction
+# Serverless Monitoring Introduction
 
 * Platform native tools
 * Logging and Monitoring Practices
