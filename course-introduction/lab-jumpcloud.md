@@ -8,7 +8,7 @@
 
 ## [AWS Integration](https://support.jumpcloud.com/support/s/article/single-sign-on-sso-with-amazon-aws-in-iam-2019-08-21-10-36-47)
 
-1. Sign-in to jump cloud and proceed to `applications` link
+1. Sign-in to jump cloud, proceed to `applications` link and select plus icon to add a new app
 2. Type: `aws` and select `amazon web services` and then `configure` link
 3. Open another browser tab/window and proceed to Aws Console -&gt; `Services` -&gt; `IAM`
 4. We will need Aws `account number` shown under `AWS account ID:` label
@@ -36,7 +36,7 @@
    13. Specify Role name as `SsoEc2ReadOnlyAccess` and select `Create role`
 7. JumpCloud Console 
    1. Applications -&gt; AWS Read-Only
-   2. Locate attribute `https://aws.amazon.com/SAML/Attributes/Role`
+   2. Under Single Sing On Configuration section locate attribute `https://aws.amazon.com/SAML/Attributes/Role`
    3. Modify the attribute value to replace `ROLE_1` with the name of the new role we have created in AWS: `SsoEc2ReadOnlyAccess`
    4. Save the changes
    5. Select `Groups`
@@ -45,7 +45,7 @@
    8. On `Application` tab select `AWS Read-Only` application 
    9. Save the group
    10. Select `Users` 
-   11. Create a new user with the option `Specify initial password...` selected and provide a password
+   11. Create a new user with the option to `Specify initial password...` selected and provide a password
    12. Select `User Groups` and select the group name created in the previous steps
    13. Select `save user`
 8. Incognito Browser Tab/Window
