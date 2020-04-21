@@ -1,6 +1,4 @@
-# Lab: Cloud-Native Monitoring
-
-## Lab: Cloud-Native IaaS Monitoring
+# Lab: Cloud-Native IaaS Monitoring
 
 ### Aws
 
