@@ -194,14 +194,7 @@
 7. In the terminal type `az account list` to confirm a proper authentication
 8. Create a new folder `mkdir azure-terraform` to place the files
 9. Select the `refresh` icon in case folder structure does not reflect the new folder/file
-10. To install terraform run using the terminal panel:
-11. ```text
-    cd ./azure-terraform/ &&
-    mkdir ./bin &&
-    wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip &&
-    unzip -o terraform.zip -d ./bin &&
-    rm -f terraform.zip
-    ```
+10. Terraform is pre-installed on Azure Shell
 12. Using the terminal create a new file: `touch ./azure-terraform/provider.tf`
 13. Define the [provider](https://www.terraform.io/docs/providers/index.html) in a new file:
 14. ```text
@@ -358,15 +351,7 @@
 6. Navigate to `Compute Engine` and wait for the API getting enabled...
 7. Select `Activate Cloud Shell`
 8. Select `Launch Editor`
-9. To install terraform run using terminal panel:
-10. ```text
-    mkdir ./gcp-terraform && 
-    cd ./gcp-terraform/ && 
-    mkdir ./bin && 
-    wget -O terraform.zip https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip && 
-    unzip -o terraform.zip -d ./bin &&
-    rm -f terraform.zip
-    ```
+9. Terraform is pre-installed on GCP Shell
 11. Generate a new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
 12. Create a new file: `variables.tf` with the following content:
 13. ```text
