@@ -1,7 +1,7 @@
 # Disaster Recovery
 
 * Allows an organization to maintain or quickly resume mission-critical functions following a disaster
-* High-availability is not a replacement for disaster recovery, e.g.: `delete from very-important-table`
+* High-availability is not a replacement for disaster recovery, e.g.: `delete from very_important_table`
 * A multi-tier/multi-component application can be affected at many levels
 * In the worst-case scenario, code can be re-deployed, the data, however, needs to be recovered
 * Where are your backups and how soon the database can be recovered?
