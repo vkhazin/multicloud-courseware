@@ -1,4 +1,4 @@
-# Lab: Pcf Paas
+# Lab: Pcf PaaS
 
 1. Open a browser to [PWS Pivotal Web Services ](https://run.pivotal.io)
 2. Create a new account to get a Cloud Foundry Organization and Space
@@ -16,7 +16,7 @@
 10. Provide email address and password used to create PWS account
 11. We should have a sample [node.js end-point ](https://github.com/vkhazin/courseware-nodejs-container)application cloned in the Cloud9 environment already
 12. Change directory into the `api` folder: `cd ~/environment/courseware-nodejs-container/api/`
-13. Push the application to PWS: `cf push nodejs-end-point -c "node my-app.js"`
+13. Push the application to PWS: `cf push {your-name}-nodejs-end-point -c "node my-app.js"`
 14. The deployment will fail, and you can use see the logs using `cli`: `cf logs nodejs-end-point --recent` or PWS web console
 15. The reason for failure is the start command referencing a non-existent `my-app.js` file
 16. Re-run the command `cf push nodejs-end-point -c "node server.js"` and wait for it to complete

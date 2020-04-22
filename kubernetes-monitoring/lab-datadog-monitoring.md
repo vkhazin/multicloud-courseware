@@ -3,8 +3,8 @@
 1. Using a web browser navigate to [https://www.datadoghq.com/](https://www.datadoghq.com/)
 2. When you are using a brand new datadog account you will see a message to install your first datadog agent, select `Kubernetes` on the left hand and an api-key will be displayed in the instructions
 3. When you are using an existing datadog account navigate to `Integrations` -&gt; `API's` and copy your Datadog API key
-4. Install \`Datadog-Agent\` on our Kubernetes Cuslter as a \`DaemonSet\`
-5. The cluster we've created earlier has role-based access control \(RBAC\) enabled and we need to provide the \`DataDog-Agent\` necessary permissions for monitoring
+4. Install `Datadog-Agent` on our Kubernetes Cuslter as a `DaemonSet`
+5. The cluster we've created earlier has role-based access control (RBAC) enabled and we need to provide the `DataDog-Agent` necessary permissions for monitoring
 6. Run the following command in Google Cloud Shell connected to the K8S cluster:
 7. ```text
    kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/master/Dockerfiles/manifests/rbac/clusterrole.yaml"
