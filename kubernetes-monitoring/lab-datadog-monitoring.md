@@ -1,4 +1,4 @@
-# Lab: DataDog Monitoring
+# Lab: K8s DataDog Monitoring
 
 1. Using a web browser navigate to [https://www.datadoghq.com/](https://www.datadoghq.com/)
 2. When you are using a brand new datadog account you will see a message to install your first datadog agent, select `Kubernetes` on the left hand and an api-key will be displayed in the instructions

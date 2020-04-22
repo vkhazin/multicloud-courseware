@@ -74,7 +74,7 @@
 * [Native Tools](kubernetes-monitoring/native-tools.md)
 * [Lab: K8s Native Monitoring](kubernetes-monitoring/lab-native-tools.md)
 * [3rd Party Services](kubernetes-monitoring/3rd-party-services.md)
-* [Lab: DataDog Monitoring](kubernetes-monitoring/lab-datadog-monitoring.md)
+* [Lab: K8s DataDog Monitoring](kubernetes-monitoring/lab-datadog-monitoring.md)
 * [Native vs. 3rd Party Monitoring](kubernetes-monitoring/native-vs-3rd-party.md)
 * [Summary](kubernetes-monitoring/summary.md)
 
