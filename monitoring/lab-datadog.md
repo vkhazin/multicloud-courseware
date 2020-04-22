@@ -1,12 +1,9 @@
 # Lab: Datadog Monitoring
 
-## Lab: Datadog Monitoring
-
-In this lab, we will enroll previously [terraform provisioned VM's](https://github.com/vkhazin/multicloud-courseware/tree/bc247795fd96e19a2f69555a662a579a53c318da/iac/lab-terraform.md) into Datadog monitoring
-
-First, we will need an API key from the Datadog: [https://app.datadoghq.com/account/settings\#api](https://app.datadoghq.com/account/settings#api)
-
-Take a note of the key we will need it in the following steps
+* Register for a free account up to 10 hosts at https://www.datadog.com
+* In this lab, we will enroll previously [terraform provisioned VM's](https://github.com/vkhazin/multicloud-courseware/tree/bc247795fd96e19a2f69555a662a579a53c318da/iac/lab-terraform.md) into Datadog monitoring
+* First, we will need an API key from the Datadog: [https://app.datadoghq.com/account/settings\#api](https://app.datadoghq.com/account/settings#api)
+* Take a note of the key we will need it in the following steps
 
 ### AWS
 
