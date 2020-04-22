@@ -142,7 +142,8 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 
 ### TODO:
 
-* Serverless lab missing double quotes 
-* Remove FaaS monitoring?
+* Serverless lab missing double quotes
+* Reduce of remove PaaS monitoring!
+* Remove FaaS monitoring!
 * Configuration and secrets chapter?
 

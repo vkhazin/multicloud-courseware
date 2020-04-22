@@ -28,4 +28,3 @@
 22. There is also an integration with [DataDog](https://docs.datadoghq.com/integrations/pivotal_platform/), it takes a bit more time than we have to complete the setup, maybe, do at home
 23. Pivotal offers back-end services through Marketplace e.g. when you need a database or an in-memory cache
 24. When satisfied with your experiments delete the application to avoid future charges: `cf delete -r nodejs-end-point`
-
