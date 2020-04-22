@@ -20,4 +20,3 @@
 18. To delete the container: `sudo docker rm node-end-point -f`
 19. To delete the image: `sudo docker rmi node/end-point`
 20. There are a couple of yml files in the repository we will discuss in the next lab
-
