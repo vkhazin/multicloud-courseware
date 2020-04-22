@@ -6,6 +6,7 @@
 4. From the services select Cloud9 and open the environment we used before for terraform setup
 5. Open a terminal and clone the repo with end-point source code: `git clone https://github.com/vkhazin/courseware-nodejs-container.git`
 6. Review the `*.js` files under `api` folder to get an idea of the source code
+1. Install docker daemon: `sudo apt install docker.io -y`
 7. To build a docker image execute: `sudo docker build ./ -t node/end-point`
 8. Expected result: `...Successfully tagged node/end-point:latest`
 9. To run the newly created image we need to create a container from it
