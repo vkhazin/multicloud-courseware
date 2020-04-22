@@ -1,4 +1,4 @@
-# Summary
+# Course Summary
 
 * What are the different service models available?
 * Why to treat infrastructure as code?
