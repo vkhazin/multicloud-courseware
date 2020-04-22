@@ -9,4 +9,6 @@
 * Even harder to achieve a scalable and highly-available system
 * DBaaS ensures high availability by placing servers in multiple availability zones, read: physical data centres
 * Some DBaaS offer cross-region data availability, e.g. [Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally), [Aurora DB, ](https://aws.amazon.com/rds/aurora/global-database/)and [Cloud Spanner](https://cloud.google.com/blog/products/gcp/with-multi-region-support-in-cloud-spanner-have-your-cake-and-eat-it-too)
+* Third party vendors claim to offer a true multi-cloud solutions, e.g. [MongoDB](https://www.mongodb.com/cloud/atlas/global-clusters), [Cassandra](https://www.datastax.com/products/datastax-astra-beta) and [Couchbase](https://www.couchbase.com/products/cloud)
+* A more detailed comparison of [DBaaS options available today...](https://www.g2.com/categories/database-as-a-service-dbaas)
 
