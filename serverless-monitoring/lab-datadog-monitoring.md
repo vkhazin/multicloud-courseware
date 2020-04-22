@@ -1,4 +1,4 @@
-# Lab: DataDog Monitoring
+# Lab: Serverless DataDog Monitoring
 
 1. Good news: the previous integration we have enabled for PaaS also covers the Serverless monitoring.
 2. You are welcome to poke around Datadog Metrics to find out specific metrics for

@@ -1,4 +1,4 @@
-# Lab: DataDog Monitoring
+# Lab: PaaS DataDog Monitoring
 
 ## AWS
 

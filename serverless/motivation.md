@@ -5,5 +5,5 @@
 * Scales-out automatically
 * Highly available without the management overhead
 * Fault tolerance is built-in
-* A great fit for micro-services and processing pipelines
+* A great fit for micro-services and data processing pipelines
 

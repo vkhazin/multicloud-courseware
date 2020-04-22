@@ -97,7 +97,7 @@
 * [Native Tools](paas-monitoring/native-tools.md)
 * [Lab: Native Monitoring Tools](paas-monitoring/lab-native-tools.md)
 * [3rd Party Services](paas-monitoring/3rd-party-services.md)
-* [Lab: DataDog Monitoring](paas-monitoring/lab-datadog-monitoring.md)
+* [Lab: PaaS DataDog Monitoring](paas-monitoring/lab-datadog-monitoring.md)
 * [Summary](paas-monitoring/summary.md)
 
 ## Serverless
@@ -115,7 +115,7 @@
 * [Native Tools](serverless-monitoring/native-tools.md)
 * [Lab: Native Tools](serverless-monitoring/lab-native-tools.md)
 * [3rd Party Services](serverless-monitoring/3rd-party-services.md)
-* [Lab: DataDog Monitoring](serverless-monitoring/lab-datadog-monitoring.md)
+* [Lab: Serverless DataDog Monitoring](serverless-monitoring/lab-datadog-monitoring.md)
 * [Summary](serverless-monitoring/summary.md)
 
 ## DBaaS
