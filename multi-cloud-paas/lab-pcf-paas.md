@@ -19,7 +19,7 @@
 13. Push the application to PWS: `cf push {your-name}-nodejs-end-point -c "node my-app.js"`
 14. The deployment will fail, and you can use see the logs using `cli`: `cf logs nodejs-end-point --recent` or PWS web console
 15. The reason for failure is the start command referencing a non-existent `my-app.js` file
-16. Re-run the command `cf push nodejs-end-point -c "node server.js"` and wait for it to complete
+16. Re-run the command `cf push {your-name}-nodejs-end-point -c "node server.js"` and wait for it to complete
 17. Locate the deployed application end-point using PWS web console and launch it in a browser, don't forget that our end-point expects a parameter: `?name=John`
 18. Navigate through the PWS console links to see application logs, routes, and uptime monitoring
 19. To monitor the application PWS comes with its own monitoring, you can open from the application overview by selecting: `View in PCF Metrics`
