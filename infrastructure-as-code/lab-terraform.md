@@ -208,6 +208,11 @@
     variable "azure_region" {      
       default = "Central US"      
     }
+
+    output "ubuntu_public_ip" {
+     value = azurerm_public_ip.public_ip.ip_address
+    }
+    
     ```
 17. Create a new file: `resource-group.tf` with the following content:
 18. ```text
@@ -226,7 +231,7 @@
      }
 
      resource "azurerm_subnet" "subnet" {
-        address_prefix = "10.0.0.0/24"
+        address_prefixes = ["10.0.0.0/24"]
         name = "sn-public"
         resource_group_name = azurerm_resource_group.resource-group.name
         virtual_network_name = azurerm_virtual_network.vnet.name
@@ -363,6 +368,10 @@
     variable "gcp_region" {
       default = "us-central1"
     }
+    
+    output "ubuntu_public_ip" {
+      value = google_compute_instance.default.network_interface.0.access_config.0.nat_ip
+    }    
     ```
 13. Define [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
 14. ```text

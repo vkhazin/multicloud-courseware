@@ -46,13 +46,13 @@ cd ./ansible/
       chmod 400 ./ssh_keys/aws-courseware-terraform.pem
    ```
 
-    * Save Azure courseware-terraform.pem as azure-courseware-terraform.pem in ssh_keys folder and be sure to give the right permissions by running the following command:
+    * Save Azure ssh-private-key.pem as azure-courseware-terraform.pem in ssh_keys folder and be sure to give the right permissions by running the following command:
 
    ```
       chmod 400 ./ssh_keys/azure-courseware-terraform.pem
    ```
 
-    * Save GPC courseware-terraform.pem as gcp-courseware-terraform.pem in ssh_keys folder and be sure to give the right permissions by running the following command:
+    * Save GPC gcpadmin-key as gcp-courseware-terraform.pem in ssh_keys folder and be sure to give the right permissions by running the following command:
 
    ```
       chmod 400 ./ssh_keys/gcp-courseware-terraform.pem
@@ -70,7 +70,7 @@ cd ./ansible/
    xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/azure-courseware-terraform.pem ansible_ssh_user=ubuntu
 
    # GCP Ubuntu VM public IP obtained from the terraform apply command output executed in the previous lab.                    
-   xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/gcp-courseware-terraform.pem ansible_ssh_user=ubuntu
+   xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/gcp-courseware-terraform.pem ansible_ssh_user=gcpadmin
 ```
 
 10. Edit the global variables [group_vars/all.yml](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html) file (`./ansible/group_vars/all.yml`) to add the following content:
