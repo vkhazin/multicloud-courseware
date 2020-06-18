@@ -208,6 +208,11 @@
     variable "azure_region" {      
       default = "Central US"      
     }
+
+    output "ubuntu_public_ip" {
+     value = azurerm_public_ip.public_ip.ip_address
+    }
+    
     ```
 17. Create a new file: `resource-group.tf` with the following content:
 18. ```text
@@ -226,7 +231,7 @@
      }
 
      resource "azurerm_subnet" "subnet" {
-        address_prefix = "10.0.0.0/24"
+        address_prefixes = ["10.0.0.0/24"]
         name = "sn-public"
         resource_group_name = azurerm_resource_group.resource-group.name
         virtual_network_name = azurerm_virtual_network.vnet.name
@@ -353,9 +358,9 @@
 7. Select `Activate Cloud Shell`
 8. Select `Launch Editor`
 9. Terraform is pre-installed on GCP Shell
-11. Generate a new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
-12. Create a new file: `variables.tf` with the following content:
-13. ```text
+10. Generate a new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
+11. Create a new file: `variables.tf` with the following content:
+12. ```text
     variable "project_id" {
       default = "gcp-terraform" <-- replace with your own project id
     }
@@ -363,15 +368,19 @@
     variable "gcp_region" {
       default = "us-central1"
     }
+    
+    output "ubuntu_public_ip" {
+      value = google_compute_instance.default.network_interface.0.access_config.0.nat_ip
+    }    
     ```
-14. Define [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
-15. ```text
+13. Define [provider](https://www.terraform.io/docs/providers/index.html) in a new file `./gcp-terraform/provider.tf`:
+14. ```text
     provider "google" {
       project = var.project_id
     }
     ```
-16. Create a new file `./gcp-terraform/network.tf`:
-17. ```text
+15. Create a new file `./gcp-terraform/network.tf`:
+16. ```text
     resource "google_compute_network" "network" {
       name                    = "network"
       auto_create_subnetworks = false
@@ -387,8 +396,8 @@
       project       = var.project_id
     }
     ```
-18. Create a new file `./gcp-terraform/security.tf`:
-19. ```text
+17. Create a new file `./gcp-terraform/security.tf`:
+18. ```text
     resource "google_compute_firewall" "allow-tag-ssh" {
       name          = "${google_compute_network.network.name}-ingress-tag-ssh"
       description   = "Allow SSH to machines with 'ssh' tag"
@@ -403,8 +412,8 @@
       }
     }
     ```
-20. Create a new file `./gcp-terrafrom/ubuntu-vm.tf`:
-21. ```text
+19. Create a new file `./gcp-terrafrom/ubuntu-vm.tf`:
+20. ```text
     resource "google_compute_instance" "default" {
       name         = "ubuntu-vm"
       machine_type = "f1-micro"
@@ -429,24 +438,28 @@
       tags = ["ssh"]
     }
     ```
-22. Validate the templates:
-23. ```text
+21. Validate the templates:
+22. ```text
     ./bin/terraform init &&
     ./bin/terraform validate
     ```
-24. Address any issues reported
-25. Apply the changes: `./bin/terraform apply --auto-approve`
-26. Expected outcome:
-27. ```text
-    ...
+23. Address any issues reported
+24. Apply the changes: `./bin/terraform apply --auto-approve`
+25. Expected outcome:
+    ```text   
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
+
+    Outputs:
+
+    ubuntu_public_ip = XXX.XXX.XXX.XXX 
     ```
-28. Open [GCP Console](https://console.cloud.google.com) and explore the resources created
-29. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
-30. Expected outcome:
-31. ```text
-    ...
-    Destroy complete! Resources: X destroyed.
+26. Open [GCP Console](https://console.cloud.google.com) and explore the resources created
+
+27. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+
+28. Expected outcome:
+    ```text
+        Destroy complete! Resources: X destroyed.
     ```
 
 ### Congratulations, you have automated deployment of a VM on three different cloud providers!
