@@ -6,17 +6,17 @@
 
 1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
 
-2. From the services select `Cloud9`, please note you may need to select a region where Cloud9 is available
+2. Select the environment previously created or create a new one
 
-3. Create a new environment with any name, choose micro or small instance type and Amazon Linux for the platform
+3. For a new environment choose any name, choose micro or small instance type and Amazon Linux for the platform
 
-4. Wait until the environment is created and loads editor in your browser
+4. Wait until the environment is created and loads the editor in your browser
 
 5. Execute Terraform lab in order to create all the necessary resources (do not execute the last destroy step).
 
-6. [Install ansible] (https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) by running the following commands, using terminal panel of Cloud9 IDE:
+6. [Install ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) by running the following commands in Cloud9 terminal:
 
-```text   
+```bash   
 sudo pip install ansible &&
 mkdir ./ansible && 
 cd ./ansible/
@@ -24,62 +24,61 @@ cd ./ansible/
 
 7. Execute the following commands to create the initial folder structure.
 
+```bash
+touch hosts && 
+touch site.yml &&     
+touch webservers.yml &&         
+mkdir ssh_keys &&
+mkdir group_vars &&
+mkdir -p roles/webservers/tasks &&
+mkdir -p roles/webservers/vars &&
+mkdir -p roles/common/tasks &&
+touch group_vars/all.yml && 
+touch roles/common/tasks/main.yml && 
+touch roles/webservers/tasks/main.yml && 
+touch roles/webservers/vars/main.yml        
 ```
-   touch hosts && 
-   touch site.yml &&     
-   touch webservers.yml &&         
-   mkdir ssh_keys &&
-   mkdir group_vars &&
-   mkdir -p roles/webservers/tasks &&
-   mkdir -p roles/webservers/vars &&
-   mkdir -p roles/common/tasks &&
-   touch group_vars/all.yml && 
-   touch roles/common/tasks/main.yml && 
-   touch roles/webservers/tasks/main.yml && 
-   touch roles/webservers/vars/main.yml        
-```
-8. Copy the ssh keys generated in the previous terraform lab into ssh_keys folder and rename them by provider
+8. Copy the ssh keys generated in the terraform lab into ssh_keys folder and rename them by provider
 
     * Save AWS courseware-terraform.pem as aws-courseware-terraform.pem in ssh_keys folder and be sure to give the right permissions by running the following command:
 
    ```
-      chmod 400 ./ssh_keys/aws-courseware-terraform.pem
+    chmod 400 ./ssh_keys/aws-courseware-terraform.pem
    ```
 
     * Save Azure ssh-private-key.pem as azure-courseware-terraform.pem in ssh_keys folder and be sure to give the right permissions by running the following command:
 
    ```
-      chmod 400 ./ssh_keys/azure-courseware-terraform.pem
+    chmod 400 ./ssh_keys/azure-courseware-terraform.pem
    ```
 
     * Save GPC gcpadmin-key as gcp-courseware-terraform.pem in ssh_keys folder and be sure to give the right permissions by running the following command:
 
    ```
-      chmod 400 ./ssh_keys/gcp-courseware-terraform.pem
+    chmod 400 ./ssh_keys/gcp-courseware-terraform.pem
    ```
 
 9. Edit the [inventory file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html) `./ansible/hosts` and add the following content (replacing xxx.xxx.xxx.xxx with each  corresponding IP address):
    
 ```
-   [webservers]
+[webservers]
+# AWS Ubuntu VM public IP obtained from the terraform apply command output  executed in the previous lab.
+xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/aws-courseware-terraform.pem ansible_ssh_user=ubuntu
 
-   # AWS Ubuntu VM public IP obtained from the terraform apply command output  executed in the previous lab.
-   xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/aws-courseware-terraform.pem ansible_ssh_user=ubuntu
-   
-   # Azure Ubuntu VM public IP obtained from the terraform apply command output executed in the previous lab.
-   xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/azure-courseware-terraform.pem ansible_ssh_user=ubuntu
+# Azure Ubuntu VM public IP obtained from the terraform apply command output executed in the previous lab.
+xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/azure-courseware-terraform.pem ansible_ssh_user=ubuntu
 
-   # GCP Ubuntu VM public IP obtained from the terraform apply command output executed in the previous lab.                    
-   xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/gcp-courseware-terraform.pem ansible_ssh_user=gcpadmin
+# GCP Ubuntu VM public IP obtained from the terraform apply command output executed in the previous lab.                    
+xxx.xxx.xxx.xxx ansible_ssh_private_key_file=./ssh_keys/gcp-courseware-terraform.pem ansible_ssh_user=gcpadmin
 ```
 
 10. Edit the global variables [group_vars/all.yml](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html) file (`./ansible/group_vars/all.yml`) to add the following content:
 
-```
+```bash
 ansible_python_interpreter: /usr/bin/python3
-
 ```
-11. Edit the common [role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)  tasks file (`./ansible/roles/common/tasks/main.yml`) with the following content:
+
+11. Edit the common [role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html) tasks file (`./ansible/roles/common/tasks/main.yml`) with the following content:
 ```
 ##### Setup Docker group and user
 
@@ -206,30 +205,30 @@ exposed_host_port             : 3001
 
 16. Run ansible and wait for it to finish
 
-```
+```bash
 export ANSIBLE_HOST_KEY_CHECKING=False; ansible-playbook site.yml -i hosts
 
 ```
 
 17. Expected final outcome:
 
-```
+```bash
 export ANSIBLE_HOST_KEY_CHECKING=False; ansible-playbook site.yml -i hosts
 
 ```
 
 18. shh into AWS server and verify the container is running:
-```
+```bash
 ssh ubuntu@xxx.xxx.xxx.xxx -i ssh_keys/aws-courseware-terraform.pem
 curl 'http://localhost:3001?name=John'
 ```
-Expected Output
-```
+Expected Output:
+```json
 {"message":"Hello John"}
 ```
 
 19. shh into Azure server and verify the container is running:
-```
+```bash
 ssh ubuntu@xxx.xxx.xxx.xxx -i ssh_keys/azure-courseware-terraform.pem 
 curl 'http://localhost:3001?name=John'
 ```
@@ -239,12 +238,12 @@ Expected OUtput
 ```
 
 20. shh into GCP server and verify the container is running:
-```
+```bash
 ssh ubuntu@xxx.xxx.xxx.xxx -i ssh_keys/gcp-courseware-terraform.pem 
 curl 'http://localhost:3001?name=John'
 ```
 Expected OUtput
-```
+```json
 {"message":"Hello John"}
 ```
 
