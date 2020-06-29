@@ -19,7 +19,7 @@
    4. There is another token we will need to replace later: `ROLE_1`
    5. Select `activate` link and `save`
    6. From the list select the newly configured application
-   7. Select `export metadata` line and save the file\`
+   7. Select `export metadata` line and save the file
 6. Aws Console
    1. Proceed to `Services` -&gt; `IAM`
    2. Select `Identity Providers`

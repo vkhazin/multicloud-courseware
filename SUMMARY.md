@@ -53,7 +53,7 @@
 * [Lab: Cloud-Native Monitoring](monitoring/lab-cloud-native-monitoring.md)
 * [3rd Party Monitoring](monitoring/3rd-party-monitoring.md)
 * [Selecting a Provider](monitoring/selecting-provider.md)
-* [Lab: Datadog Monitoring](monitoring/lab-datadog.md)
+* [Lab: DataDog Monitoring](monitoring/lab-datadog.md)
 * [Native vs. 3rd Party Monitoring](monitoring/native-vs-3rd-party.md)
 * [Summary](monitoring/summary.md)
 
@@ -111,15 +111,6 @@
 * [Lab: Serverless End-Point](serverless/lab-serverless.md)
 * [Summary](serverless/summary.md)
 
-## Serverless Monitoring
-
-* [Introduction](serverless-monitoring/intro.md)
-* [Native Tools](serverless-monitoring/native-tools.md)
-* [Lab: Native Tools](serverless-monitoring/lab-native-tools.md)
-* [3rd Party Services](serverless-monitoring/3rd-party-services.md)
-* [Lab: Serverless DataDog Monitoring](serverless-monitoring/lab-datadog-monitoring.md)
-* [Summary](serverless-monitoring/summary.md)
-
 ## DBaaS
 
 * [Introduction](dbaas/intro.md)
@@ -144,4 +135,14 @@
 * [Summary](course-summary/summary.md)
 * [Cleanup](course-summary/cleanup.md)
 * [Thank you!](course-summary/thank-you.md)
+
+## Appendix: Serverless Monitoring
+
+* [Introduction](serverless-monitoring/intro.md)
+* [Native Tools](serverless-monitoring/native-tools.md)
+* [Lab: Native Tools](serverless-monitoring/lab-native-tools.md)
+* [3rd Party Services](serverless-monitoring/3rd-party-services.md)
+* [Lab: Serverless DataDog Monitoring](serverless-monitoring/lab-datadog-monitoring.md)
+* [Summary](serverless-monitoring/summary.md)
+
 
