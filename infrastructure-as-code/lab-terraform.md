@@ -338,7 +338,7 @@
     ...
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
-30. Open [Azure Portal](https://portal.azure.com) and explore the resources created
+30. Open [Azure Portal](https://portal.azure.com) and explore the resources created, you may need to switch region to `us-east-1`
 31. You can log in into the VM using ssh shell: `chmod 400 ./ssh-private-key.pem && ssh -i ./ssh-private-key.pem ubuntu@{public-ip}`
 32. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
 33. Expected outcome:
