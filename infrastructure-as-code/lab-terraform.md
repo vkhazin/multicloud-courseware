@@ -330,9 +330,9 @@
       }
     }
     ```
-25. Validate the templates: `./bin/terraform init && ./bin/terraform validate`
+25. Validate the templates: `terraform init && terraform validate`
 26. Address any issues reported
-27. Apply the changes: `./bin/terraform apply --auto-approve`
+27. Apply the changes: `terraform apply --auto-approve`
 28. Expected outcome:
 29. ```text
     ...
@@ -340,7 +340,7 @@
     ```
 30. Open [Azure Portal](https://portal.azure.com) and explore the resources created, you may need to switch region to `us-east-1`
 31. You can log in into the VM using ssh shell: `chmod 400 ./ssh-private-key.pem && ssh -i ./ssh-private-key.pem ubuntu@{public-ip}`
-32. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+32. When satisfied we can remove the deployment: `terraform destroy --auto-approve`
 33. Expected outcome:
 34. ```text
     ...
@@ -440,11 +440,11 @@
     ```
 21. Validate the templates:
 22. ```text
-    ./bin/terraform init &&
-    ./bin/terraform validate
+    terraform init &&
+    terraform validate
     ```
 23. Address any issues reported
-24. Apply the changes: `./bin/terraform apply --auto-approve`
+24. Apply the changes: `terraform apply --auto-approve`
 25. Expected outcome:
     ```text   
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
@@ -455,7 +455,7 @@
     ```
 26. Open [GCP Console](https://console.cloud.google.com) and explore the resources created
 
-27. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
+27. When satisfied we can remove the deployment: `terraform destroy --auto-approve`
 
 28. Expected outcome:
     ```text
