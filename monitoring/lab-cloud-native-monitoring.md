@@ -16,6 +16,7 @@
 9. Find `EC2` -&gt; `CPUUtilization` to add to the widget
 10. Add as many other metrics as you choose and save the dashboard
 11. To collect syslog an [agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html) will be required
+12. Github Repo with the [Terraform Templates](https://github.com/vkhazin/courseware-aws-terraform)
 
 ### Azure
 
@@ -39,6 +40,7 @@
 15. Note the common mistake: not saving the changes
 16. And there is a delay in collecting the logs, rebooting the VM may help
 17. Explore `Connected Sources`, there is a way to send logs from any Linux host by installing an agent
+18. Github Repo with the [Terraform Templates](https://github.com/vkhazin/courseware-aws-terraform)
 
 ## GCP
 
@@ -58,4 +60,5 @@
 11. Select `Monitoring` tab to access standard operating system metrics
 12. Locate CPU, Memory, and Disk utilization
 13. There is also an option to collect more detailed metrics and logs by installing [Stackdriver agent](https://cloud.google.com/monitoring/agent/install-agent)
+14. Github Repo with the [Terraform Templates](https://github.com/vkhazin/courseware-gcp-terraform)
 
