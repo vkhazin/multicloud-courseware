@@ -459,7 +459,7 @@
 
 28. Expected outcome:
     ```text
-        Destroy complete! Resources: X destroyed.
+     Destroy complete! Resources: X destroyed.
     ```
 
 ### Congratulations, you have automated deployment of a VM on three different cloud providers!

@@ -4,7 +4,7 @@
 
 1. Open a web browser to [https://console.aws.amazon.com](https://console.aws.amazon.com)
 2. From the services select `Cloud9` and launch the environment previously used for Terraform
-3. Apply the terraform templates: cd ./aws-terraform &&`./bin/terraform apply --auto-approve`
+3. Apply the terraform templates: `cd ./aws-terraform && ./bin/terraform apply --auto-approve`
 4. Expected outcome:
 5. ```text
    ...
@@ -23,7 +23,7 @@
 2. Select `bash` shell
 3. Select `Open editor`
 4. Authenticate to az cli: `az login` and follow the instructions
-5. Apply the terraform templates: `cd ./azure-terraform && ./bin/terraform apply --auto-approve`
+5. Apply the terraform templates: `cd ./azure-terraform && terraform apply --auto-approve`
 6. Expected outcome:
 7. ```text
    ...
@@ -46,7 +46,7 @@
 2. Select project: `gcp-terraform`
 3. Select `Activate Cloud Shell`
 4. `Select`Launch Editor\`
-5. Apply the terraform templates: `cd ./gcp-terraform && ./bin/terraform apply --auto-approve` 
+5. Apply the terraform templates: `cd ./gcp-terraform && terraform apply --auto-approve` 
 6. Expected outcome:
 7. ```text
    ...
