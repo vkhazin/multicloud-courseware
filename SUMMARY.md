@@ -41,8 +41,6 @@
 * [Terraform Provider](infrastructure-as-code/terraform-provider.md)
 * [Lab: Terraform](infrastructure-as-code/lab-terraform.md)
 * [Application Deployment](infrastructure-as-code/app-deployment.md)
-<!-- * [Ansible](infrastructure-as-code/ansible.md)
-* [Lab: Ansible](infrastructure-as-code/lab-ansible.md) -->
 * [Summary](infrastructure-as-code/summary.md)
 
 ## Monitoring
