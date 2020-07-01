@@ -14,11 +14,9 @@
 10. Select `Create New Applciation`
 11. For application name type: `your-name-courseware-nodejs`
 12. Select `Create`
-13. Select `Actions` -&gt; `Create one now` to create a new environment
-14. Select `Web server environment`
+13. Select `Actions` -> `Create one now` to create a new environment
 15. Type an environment name
-16. Leave domain blank for an auto-generated domain
-17. Select a pre-configured platform: `Node.js` 
+17. Select platform: `Node.js` with the latest version of Node available
 18. Upload the zip file we have downloaded from Cloud9 environment
 19. Select `Create Environment` 
 20. Wait for the environment to be created and provisioned as a few things are being created behind the scene
