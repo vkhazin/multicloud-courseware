@@ -76,4 +76,5 @@
 32. Alternatively, we could deploy the container and create a service using the Google Cloud Console
 33. Deployment of Kubernetes on other cloud providers are similar
 34. Deploying Kubernetes workloads is identical, almost...
+35. At the end of the lab delete the created Kubernetes cluster to reduce monthly charges
 

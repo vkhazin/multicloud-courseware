@@ -47,3 +47,7 @@
 13. It will take a few minutes before data appears on the DataDog -&gt; Metrics -&gt; gcp\*
 14. You can plot CPU, Memory, and Disk metrics on a dashboard as you would expect from any infrastructure monitoring solution
 
+### Remove the assets
+
+1. Destroy all the VM's created using terraform destroy command to reduce monthly charges
+
