@@ -4,7 +4,6 @@
 
 ## Course Overview
 
-* [Introduction](course-overview/readme.md)
 * [Getting Started](course-overview/getting-started.md)
 * [Objectives](course-overview/objectives.md)
 * [Audience](course-overview/audience.md)
@@ -85,8 +84,6 @@
 * [PaaS vs. IaaS vs. KaaS](multi-cloud-paas/paas-iaas-kaas.md)
 * [Native Tools](multi-cloud-paas/native-tools.md)
 * [Lab: Native PaaS Tools](multi-cloud-paas/lab-native-tools.md)
-* [Pcf PaaS](multi-cloud-paas/pcf-paas.md)
-* [Lab: Pcf Paas](multi-cloud-paas/lab-pcf-paas.md)
 * [Design Considerations](multi-cloud-paas/design-considerations.md)
 * [Deployment Automation](multi-cloud-paas/deployment-automation.md)
 * [Summary](multi-cloud-paas/summary.md)
@@ -134,7 +131,7 @@
 * [Cleanup](course-summary/cleanup.md)
 * [Thank you!](course-summary/thank-you.md)
 
-## Appendix: Serverless Monitoring
+## Appendix I: Serverless Monitoring
 
 * [Introduction](serverless-monitoring/intro.md)
 * [Native Tools](serverless-monitoring/native-tools.md)
@@ -143,4 +140,7 @@
 * [Lab: Serverless DataDog Monitoring](serverless-monitoring/lab-datadog-monitoring.md)
 * [Summary](serverless-monitoring/summary.md)
 
+## Appendix II: Multi-Cloud PaaS
 
+* [Pcf PaaS](multi-cloud-paas/pcf-paas.md)
+* [Lab: Pcf Paas](multi-cloud-paas/lab-pcf-paas.md)

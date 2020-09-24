@@ -10,8 +10,8 @@ The common thought in an organization: we don't want to be locked-in with a clou
 There is a number of possible solutions for maintaining cloud interoperability:
 
 * Run all workloads on virtual machines without a dependency on cloud-specific services
-* Run all workloads in containers leveraging [Kubernetes](https://kubernetes.io/)
-* Rely on a 3rd party Platform-as-a-Service e.g. [Pivotal Cloud Foundry](https://pivotal.io/platform)
+* Host workloads in containers leveraging [Kubernetes](https://kubernetes.io/)
+* Utilize Platform-as-a-Service deployment model with common denominator runtimes
 * Introduce an adapter pattern into your software to abstract business logic from cloud-specific code
 
 The purpose of this course is to analyze the pros and cons of the different approaches  
@@ -31,9 +31,9 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Contrast a cloud-specific logging and monitoring facilities to a centralized logging/monitoring services leveraging 3rd party service
 * Demonstrate the process of authoring a Dockerfile to run the end-point application in a container
 * Make use of Kubernetes as a service to deploy and monitor the created image
-* Get familiar with Pivotal Cloud Foundry PaaS concepts for multi-cloud deployment
-* Deploy end-point to Pivotal PaaS and access logs/monitoring tools
-* Convert the end-point to a serverless function and deploy to a couple of cloud providers: AWS, GCP, or Azure
+* Get familiar with PaaS concepts on different cloud providers
+* Deploy end-point to an end-point to a cloud-specific PaaS and access logs/monitoring tools
+* Convert the end-point to a serverless function and deploy to a couple of cloud providers: AWS, GCP, and Azure
 * Analyze serverless logs and monitoring
 * Discuss the data persistency options compatible with inter-cloud deployments
 * Review common security and regulatory concerns
@@ -46,7 +46,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 * Database and data-modelling awareness
 * The notion of security and compliance concerns
 * Access to AWS, GCP, Azure account, free trial is sufficient
-* Willingness to register a free trial account on JumpCloud, DataDog and Pivotal Web Services
+* Willingness to register a free trial account on JumpCloud and DataDog
 
 ## Outline
 
@@ -136,14 +136,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 
 ### Duration: 2 days
 
-### Future Ideas:
-
-* Microsoft Azure Arc
-
 ### TODO:
 
-* Serverless lab missing double quotes
-* Reduce of remove PaaS monitoring!
-* Remove FaaS monitoring!
 * Configuration and secrets chapter?
 
