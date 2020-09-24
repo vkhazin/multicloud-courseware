@@ -5,6 +5,6 @@
 * In addition to collecting logs, there are facilities to automate alerts and alarms on log's data
 * More of a nuisance with multiple cloud providers where logs need to be consolidated
 * Ideally, access management is fully automated
-* Realistically, manual changes do occur, even, in sensitive environments
+* Realistically, manual changes do occur, even, in the most sensitive environments
 * Monitoring of access control changes is, therefore, highly desirable
 
