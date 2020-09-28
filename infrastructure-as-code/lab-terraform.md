@@ -358,6 +358,7 @@
 7. Select `Activate Cloud Shell`
 8. Select `Launch Editor`
 9. Terraform is pre-installed on GCP Shell
+1. Create a new folder to place the files in: `./gcp-terraform` and `cd` into the new folder
 10. Generate a new ssh key: `ssh-keygen -b 2048 -t rsa -f gcpadmin-key -q -N ""`
 11. Create a new file: `variables.tf` with the following content:
 12. ```text
