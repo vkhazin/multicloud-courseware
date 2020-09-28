@@ -8,8 +8,6 @@
 * Package an application into Docker container
 * Make use of Kubernetes
 * Deploy an end-point to Aws, Azure or GCP PaaS
-* Get to know Pivotal Cloud Foundry PaaS concepts
-* Deploy workload to Pivotal PaaS
 * Serverless end-point on AWS, GCP, or Azure
 * Serverless logs and monitoring
 * Data persistency options

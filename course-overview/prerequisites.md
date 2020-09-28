@@ -6,5 +6,5 @@
 * Database and data-modelling awareness
 * The notion of security and compliance concerns
 * Access to AWS, GCP, Azure account, free trial is sufficient for the purpose of the labs
-* Willingness to register a free trial account on JumpCloud, DataDog and Pivotal Web Services
+* Willingness to register a free trial account on JumpCloud, and DataDog
 

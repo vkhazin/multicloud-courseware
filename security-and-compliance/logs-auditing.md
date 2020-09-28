@@ -7,4 +7,3 @@
 * Ideally, access management is fully automated
 * Realistically, manual changes do occur, even, in the most sensitive environments
 * Monitoring of access control changes is, therefore, highly desirable
-
