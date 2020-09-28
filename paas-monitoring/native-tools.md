@@ -1,6 +1,6 @@
 # Native Tools
 
-* Aws Elastic Beanstalk comes with built-in monitoring for:
+* AWSElastic Beanstalk comes with built-in monitoring for:
   * Number of instances running
   * CPU utilization
   * Average request latency

@@ -10,17 +10,17 @@
 
 1. Sign-in to jump cloud, proceed to `applications` link and select plus icon to add a new app
 2. Type: `aws` and select `amazon web services` and then `configure` link
-3. Open another browser tab/window and proceed to Aws Console -&gt; `Services` -&gt; `IAM`
-4. We will need Aws `account number` shown under `AWS account ID:` label
+3. Open another browser tab/window and proceed to AWSConsole -&gt; `Services` -&gt; `IAM`
+4. We will need AWS`account number` shown under `AWS account ID:` label
 5. JumpCloud Console
-   1. For display label type: `Aws Read-Only`
+   1. For display label type: `AWSRead-Only`
    2. Find the attribute `https://aws.amazon.com/SAML/Attributes/Role`
-   3. In the value for this attribute replace `YOUR_AWS_ACCOUNT_NUMBER` with account number copied from Aws console, _**TWICE!**_
+   3. In the value for this attribute replace `YOUR_AWS_ACCOUNT_NUMBER` with account number copied from AWSconsole, _**TWICE!**_
    4. There is another token we will need to replace later: `ROLE_1`
    5. Select `activate` link and `save`
    6. From the list select the newly configured application
    7. Select `export metadata` line and save the file
-6. Aws Console
+6. AWSConsole
    1. Proceed to `Services` -&gt; `IAM`
    2. Select `Identity Providers`
    3. Add new provider of type `SAML`
@@ -51,8 +51,8 @@
 8. Incognito Browser Tab/Window
    1. Proceed to [https://console.jumpcloud.com](https://console.jumpcloud.com)
    2. Sign-in with credentials for the new user
-   3. Proceed to Aws console
-   4. You should see Aws console as if you have logged in with IAM credentials
+   3. Proceed to AWSconsole
+   4. You should see AWSconsole as if you have logged in with IAM credentials
 9. Troubleshooting
    1. SAML attributes are finicky: name of the provider, name of the role, and Url must match between the two parties exactly to the case-spelling
    2. Watch out for extra spaces in values

@@ -21,7 +21,7 @@ And to experience the different approaches with pragmatic hands-on labs and grou
 
 * Software architects evaluating the strategies for an inter-cloud and multi-cloud deployment models
 * Software developers writing code that needs to run on different or multiple cloud providers
-* DevOps engineers that will be implementing inter-cloud ci/cd
+* DevOps engineers that will be implementing inter-cloud CI/CD
 
 ## Course's Objectives
 

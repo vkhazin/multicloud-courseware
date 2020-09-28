@@ -4,7 +4,7 @@
 2. Create a new account to get a Cloud Foundry Organization and Space
 3. Create an organization, unfortunately, it will ask for a phone number to verify
 4. Without creating an organization, deployment will fail
-5. Login into Aws Cloud9 environment we have used in the previous labs from the Aws [console](https://console.aws.amazon.com/)
+5. Login into AWSCloud9 environment we have used in the previous labs from the AWS[console](https://console.aws.amazon.com/)
 6. Install cf `cli` on Amazon Linux:
 7. ```text
    sudo wget -O /etc/yum.repos.d/cloudfoundry-cli.repo \

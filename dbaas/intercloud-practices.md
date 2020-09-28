@@ -9,7 +9,7 @@
 
 ## Data Access Adapters
 
-* Make use of reasonably compatible DBaaS products, e.g.: Aws MySql Rds, Azure MySql, GCP Cloud Spanner
+* Make use of reasonably compatible DBaaS products, e.g.: AWSMySql Rds, Azure MySql, GCP Cloud Spanner
 * The provider is responsible for provisioning, administration and operation
 * Implement adapters to access different databases to resolve the differences while keeping business logic
 * Data is available on a single data provider or a custom replication is required

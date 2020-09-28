@@ -2,14 +2,14 @@
 
 ## AWS
 
-1. To configure the integration between Aws and DataDog we will need to grant read-only access to Datadog app account
+1. To configure the integration between AWSand DataDog we will need to grant read-only access to Datadog app account
 2. Navigate to IAM from [https://console.aws.amazon.com](https://console.aws.amazon.com)
 3. Proceed to `Roles` and select `Create role`
 4. Select `Another AWS account` for the Role Type
 5. For the account Id enter `464622532012`, a no-secret DataDog AWS account found in DataDog documentation
 6. Enable `Require external ID`
 7. Open [DataDog AWS Integration](https://app.datadoghq.com/account/settings#integrations/amazon_web_services) to copy `AWS External ID`
-8. Paste the copied id into the `External ID` field in Aws Console
+8. Paste the copied id into the `External ID` field in AWSConsole
 9. Make sure you leave `Require MFA` disabled!
 10. Select `Nex: Permissions`
 11. Select `Create Policy` and it will open a new browser tab/window -&gt; `JSON tab` -&gt; paste the [policy snippet from DataDog](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=allpermissions#datadog-aws-iam-policy):
@@ -94,11 +94,11 @@
 16. Search and select the newly created policy
 17. Proceed to the next steps to enter the role name: `DatadogAWSIntegrationRole`
 18. Complete the setup on [Datadog console](https://app.datadoghq.com/account/settings#integrations/amazon_web_services) AWS Integration Tile
-19. Enter your `AWS Account ID` without dashes, e.g. `123456789012` and `Aws Role name` e.g. `DatadogAWSIntegrationRole`
+19. Enter your `AWS Account ID` without dashes, e.g. `123456789012` and `AWSRole name` e.g. `DatadogAWSIntegrationRole`
 20. Your Account ID can be found in the ARN of the role created during the setup of the role e.g.: `arn:aws:iam::123456789012:role/DatadogAWSIntegrationRole` where the numbers are the account number and `DatadogAWSIntegrationRole` is the role name
 21. Select `Install Integration` and give it a moment to finish until you see `AWS Integration successfully updated.` message
 22. To receive `Elastic Beanstalk` metrics, we must enable the Enhanced Health Reporting feature for your environment
-23. Open the Aws Elastic Beanstalk console
+23. Open the AWSElastic Beanstalk console
 24. Navigate to the management page for your application and environment
 25. Select `Configuration`
 26. Scroll to, **don't search for!**, `Monitoring` configuration category and choose `Modify`

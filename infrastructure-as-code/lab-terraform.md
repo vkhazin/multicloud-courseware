@@ -175,7 +175,7 @@
     ...
     Apply complete! Resources: X added, 0 changed, 0 destroyed.
     ```
-22. Open [Aws Console](https://console.aws.amazon.com) and explore the resources created
+22. Open [AWSConsole](https://console.aws.amazon.com) and explore the resources created
 23. When satisfied we can remove the deployment: `./bin/terraform destroy --auto-approve`
 24. Expected output:
 25. ```text

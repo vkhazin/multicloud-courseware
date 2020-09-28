@@ -10,7 +10,7 @@
 ```text
 # Aws
 resource "aws_instance" "web-server" {
-  ami           = "ami-0dacb0c129b49f529" <-- Aws AMI ID
+  ami           = "ami-0dacb0c129b49f529" <-- AWSAMI ID
   instance_type = "t2.micro" <-- Instance type
 }
 ```
