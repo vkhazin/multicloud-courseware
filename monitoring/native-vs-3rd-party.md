@@ -2,7 +2,7 @@
 
 * Cloud providers focus on their own stack and offerings
 * Monitoring other cloud provider assets is lesser of a priority
-* Some cloud providers offer tools for a hybrid cloud monitoring
+* Some cloud providers offer tools for a hybrid cloud monitoring e.g. [Azure Arc](https://docs.microsoft.com/en-us/azure/azure-arc/)
 * Ease of setup is secondary for a cloud-native tool
 * Lock-in for cloud-native tools is a norm
 * For a 3rd party provider, seamless integration with many providers is a competitive advantage
