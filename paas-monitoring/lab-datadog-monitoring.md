@@ -2,7 +2,7 @@
 
 ## AWS
 
-1. To configure the integration between AWSand DataDog we will need to grant read-only access to Datadog app account
+1. To configure the integration between AWS and DataDog we will need to grant read-only access to Datadog app account
 2. Navigate to IAM from [https://console.aws.amazon.com](https://console.aws.amazon.com)
 3. Proceed to `Roles` and select `Create role`
 4. Select `Another AWS account` for the Role Type

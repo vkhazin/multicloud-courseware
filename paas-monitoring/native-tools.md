@@ -1,6 +1,6 @@
 # Native Tools
 
-* AWSElastic Beanstalk comes with built-in monitoring for:
+* AWS Elastic Beanstalk comes with built-in monitoring for:
   * Number of instances running
   * CPU utilization
   * Average request latency

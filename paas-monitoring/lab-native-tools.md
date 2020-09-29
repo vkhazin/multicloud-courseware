@@ -1,6 +1,6 @@
 # Lab: Native Monitoring Tools
 
-## Aws
+## AWS
 
 1. Navigate to Elastic Beanstalk using [https://console.aws.amazon.com](https://console.aws.amazon.com)
 2. Select node.js application we have deployed in the previous lab
@@ -9,7 +9,7 @@
 5. Monitoring will share familiar utilization metrics
 6. Alarms allow automation on metrics, such as too many 500 error codes - send a notification
 7. And Logs allow us to download the logs and find `Server is running` log item our node.js container is writing when started
-8. CloudWatch service on AWSallows us to add Elastic Beanstalk metrics to a dashboard as well
+8. CloudWatch service on AWS allows us to add Elastic Beanstalk metrics to a dashboard as well
 
 ## Azure
 
