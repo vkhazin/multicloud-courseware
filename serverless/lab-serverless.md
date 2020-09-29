@@ -22,9 +22,9 @@
    app.use(personRoutes);
    app.listen(process.env.PORT || 3001, () => {
        console.log("Server is running");
-   })
+   });
    app.use(function(req, res, next) {
-       return res.status(404).send({ error: Route ${req.url} Not found. });
+       return res.status(404).send({ error: `Route ${req.url} Not found.` });
    });
    module.exports.handler = serverless(app);
    ```
