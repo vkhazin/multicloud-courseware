@@ -8,3 +8,4 @@ script:
   - gitbook install
   - gitbook build
   - surge --domain http://multicloud-courseware.surge.sh/ --project ./_book
+  
