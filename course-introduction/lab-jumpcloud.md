@@ -10,12 +10,12 @@
 
 1. Sign-in to jump cloud, proceed to `User Authentication` -> `SSO` link and select plus icon to add a new app
 2. Type: `aws` and select `amazon web services` and then `configure` link
-3. Open another browser tab/window and proceed to AWS Console -&gt; `Services` -&gt; `IAM`
+3. Open another browser tab/window and proceed to `AWS Console` -> `Services` -> `IAM`
 4. We will need AWS`account number` shown under `AWS account ID:` label
 5. JumpCloud Console
    1. For display label type: `AWSRead-Only`
    2. Find the attribute `https://aws.amazon.com/SAML/Attributes/Role`
-   3. In the value for this attribute replace `YOUR_AWS_ACCOUNT_NUMBER` with account number copied from AWSconsole, _**TWICE!**_
+   3. In the value for this attribute replace `YOUR_AWS_ACCOUNT_NUMBER` with account number copied from AWS Console, _**TWICE!**_
    4. There is another token we will need to replace later: `ROLE_1`
    5. Select `activate` link and `save`
    6. From the list select the newly configured application
