@@ -8,7 +8,7 @@
 
 ## [AWS Integration](https://support.jumpcloud.com/support/s/article/single-sign-on-sso-with-amazon-aws-in-iam-2019-08-21-10-36-47)
 
-1. Sign-in to jump cloud, proceed to `applications` link and select plus icon to add a new app
+1. Sign-in to jump cloud, proceed to `User Authentication` -> `SSO` link and select plus icon to add a new app
 2. Type: `aws` and select `amazon web services` and then `configure` link
 3. Open another browser tab/window and proceed to AWS Console -&gt; `Services` -&gt; `IAM`
 4. We will need AWS`account number` shown under `AWS account ID:` label
@@ -35,14 +35,14 @@
    12. Proceed to `Next:Tags` and then `Next: Review`
    13. Specify Role name as `SsoEc2ReadOnlyAccess` and select `Create role`
 7. JumpCloud Console 
-   1. Applications -&gt; AWS Read-Only
+   1. `User Authentication` -> `SSO` -> `AWS Read-Only`
    2. Under Single Sing On Configuration section locate attribute `https://aws.amazon.com/SAML/Attributes/Role`
    3. Modify the attribute value to replace `ROLE_1` with the name of the new role we have created in AWS: `SsoEc2ReadOnlyAccess`
    4. Save the changes
    5. Select `Groups`
    6. Create `Group of Users`
    7. For name type: `AwsEC2ReadOnlyAccess`
-   8. On `Applications` tab select `AWS Read-Only` application and proceed to `User Groups` link on top
+   8. On `User Authentication` -> `SSO` tab select `AWS Read-Only` application and proceed to `User Groups` link on top
    9. Select the newly created user group
    10. Select `Users` -> `Manual user entry`
    11. Create a new user with the option to `Specify initial password...` selected and provide a password
@@ -51,8 +51,8 @@
 8. Incognito Browser Tab/Window
    1. Proceed to [https://console.jumpcloud.com](https://console.jumpcloud.com)
    2. Sign-in with credentials for the new user
-   3. Proceed to AWSconsole
-   4. You should see AWSconsole as if you have logged in with IAM credentials
+   3. Proceed to AWS Console
+   4. You should see AWS Console as if you have logged in with IAM credentials
 9. Troubleshooting
    1. SAML attributes are finicky: name of the provider, name of the role, and Url must match between the two parties exactly to the case-spelling
    2. Watch out for extra spaces in values
