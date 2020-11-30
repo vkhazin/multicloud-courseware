@@ -10,7 +10,7 @@
 
 1. Sign-in to jump cloud, proceed to `applications` link and select plus icon to add a new app
 2. Type: `aws` and select `amazon web services` and then `configure` link
-3. Open another browser tab/window and proceed to AWSConsole -&gt; `Services` -&gt; `IAM`
+3. Open another browser tab/window and proceed to AWS Console -&gt; `Services` -&gt; `IAM`
 4. We will need AWS`account number` shown under `AWS account ID:` label
 5. JumpCloud Console
    1. For display label type: `AWSRead-Only`
