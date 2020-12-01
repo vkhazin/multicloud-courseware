@@ -1,7 +1,7 @@
 # High Availability
 
 * Involves multiple components working together to ensure uninterrupted service during a specific period
-* With 12factor app can scale out and in, across networks, and regions, but where is the data?
+* With 12 factor app can scale out and in, across networks, and regions, but where is the data?
 * Five Nines availability 99.999% translates to 5.25 minutes downtime per year
 * A highly available database on non-highly available infrastructure or electricity/cooling system?
 * The critical element of high availability systems is eliminating single points of failure by achieving redundancy on all levels
